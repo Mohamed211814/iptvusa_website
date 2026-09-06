@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0055ff" />
+      <stop offset="50%" stop-color="#1282ff" />
+      <stop offset="100%" stop-color="#1ce783" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect x="16" y="16" width="480" height="480" rx="105" fill="url(#brandGradient)" />
+
+  <!-- TV Antenna -->
+  <polyline points="336 95 256 185 176 95" 
+    fill="none" 
+    stroke="#050811" 
+    stroke-width="34" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" />
+
+  <!-- TV Screen Outer Frame -->
+  <rect x="76" y="185" width="360" height="240" rx="42" 
+    fill="none" 
+    stroke="#050811" 
+    stroke-width="34" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" />
+
+  <!-- TV Screen Inner Glow / Display -->
+  <rect x="106" y="215" width="300" height="180" rx="24" 
+    fill="#050811" 
+    opacity="0.12" />
+
+  <!-- Play Triangle in Center of Screen -->
+  <polygon points="232 265 232 345 304 305" 
+    fill="#050811" />
+</svg>
