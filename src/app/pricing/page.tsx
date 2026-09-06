@@ -23,21 +23,8 @@ export default function PricingPage() {
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "80px" }}>
       <div className="container">
-        {/* Page Header */}
-        <div className="section-header" style={{ marginBottom: "20px" }}>
-          <span className="section-tag">
-            <Zap size={14} /> Official IPTV USA Pricing & Plans
-          </span>
-          <h1 className="section-title">
-            Best <span className="text-blue">IPTV USA</span> Subscription Plans
-          </h1>
-          <p className="section-subtitle">
-            All IPTV USA packages include full access to 24,000+ live 4K FHD channels, 110,000+ VODs, all live sports and PPVs, Anti Freeze 9.3 stability, and 24/7 dedicated IPTV USA support.
-          </p>
-        </div>
-
         {/* Pricing Component */}
-        <PricingSection onSelectPlan={handlePlanSelect} />
+        <PricingSection onSelectPlan={handlePlanSelect} isH1 />
 
         {/* Comparison Matrix */}
         <div style={{ marginTop: "60px", marginBottom: "60px" }}>

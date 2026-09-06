@@ -7,9 +7,10 @@ import { Check, ShieldCheck, Zap, Sparkles, Tv, Clock, ArrowRight } from "lucide
 
 interface PricingSectionProps {
   onSelectPlan?: (plan: PricingPlan, connections: number) => void;
+  isH1?: boolean;
 }
 
-export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) => {
+export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, isH1 = false }) => {
   const connections = 1;
 
   const handleBuyNow = (plan: PricingPlan) => {
@@ -29,9 +30,15 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
       <div className="container">
         {/* Section Header matching iptvusaofficial.com */}
         <div className="section-header">
-          <h2 className="section-title">
-            <span className="text-blue">IPTV USA</span> Subscription Pricing
-          </h2>
+          {isH1 ? (
+            <h1 className="section-title">
+              <span className="text-blue">IPTV USA</span> Subscription Pricing
+            </h1>
+          ) : (
+            <h2 className="section-title">
+              <span className="text-blue">IPTV USA</span> Subscription Pricing
+            </h2>
+          )}
           <p className="section-subtitle">
             Get instant access to the best IPTV USA service with over 24,000 live IPTV USA channels and 110,000+ VOD movies with high speed streaming and zero freezing.
           </p>
