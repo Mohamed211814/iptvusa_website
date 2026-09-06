@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
               <li>
-                <Link href="/pricing" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
+                <Link href="/refund-and-returns-policy" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
                   Refund and Returns Policy
                 </Link>
               </li>

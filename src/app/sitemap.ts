@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/setup-guide",
     "/free-trial",
     "/contact",
+    "/reseller",
+    "/refund-and-returns-policy",
   ];
 
   return routes.map((route) => ({
