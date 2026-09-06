@@ -1,93 +1,9 @@
 import React from "react";
-import Link from "next/link";
-import { Zap, ShieldCheck, Tv, Server, Headphones, RefreshCw, CheckCircle2 } from "lucide-react";
+import { Zap, ShieldCheck, Server, Headphones } from "lucide-react";
 
 export const FeaturesGrid: React.FC = () => {
   return (
-    <>
-      {/* 1. Stream On Any Device Showcase (from iptvusaofficial.com) */}
-      <section className="section" style={{ backgroundColor: "rgba(10, 14, 24, 0.6)" }}>
-        <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: "40px",
-              alignItems: "center",
-            }}
-          >
-            <div>
-              <span className="section-tag">
-                <Tv size={14} /> Universal Streaming
-              </span>
-              <h2 className="section-title" style={{ textAlign: "left" }}>
-                Stream Live TV, Movies, and TV Shows on <span className="text-blue">Any Device</span> with IPTV USA
-              </h2>
-              <p style={{ fontSize: "1.05rem", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: "24px" }}>
-                Enjoy seamless streaming of live TV, movies, and TV shows with IPTV USA on any device: smartphones, tablets, smart TVs, and more. Access thousands of channels and an extensive library of on demand content with crystal clear quality and no buffering. Affordable plans and easy setup make IPTV USA the perfect choice for your entertainment needs anytime, anywhere.
-              </p>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "30px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <CheckCircle2 size={18} color="var(--color-green)" />
-                  <span style={{ color: "#fff", fontWeight: 600 }}>Zero Satellite Dish or Cable Box Required</span>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <CheckCircle2 size={18} color="var(--color-green)" />
-                  <span style={{ color: "#fff", fontWeight: 600 }}>Instant Setup within 5 Minutes</span>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <CheckCircle2 size={18} color="var(--color-green)" />
-                  <span style={{ color: "#fff", fontWeight: 600 }}>4K & FHD High Bitrate Quality</span>
-                </div>
-              </div>
-
-              <Link href="/pricing" className="btn btn-green">
-                <Zap size={16} />
-                Get Started Today
-              </Link>
-            </div>
-
-            <div
-              className="card-glass"
-              style={{
-                background: "linear-gradient(135deg, rgba(14, 22, 42, 0.9) 0%, rgba(7, 10, 18, 0.95) 100%)",
-                border: "1px solid rgba(0, 85, 255, 0.3)",
-                padding: "36px",
-              }}
-            >
-              <h3 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "16px" }}>
-                Supported Streaming Hardware:
-              </h3>
-              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "14px" }}>
-                <li style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--color-green)" }} />
-                  <span><strong>Amazon Fire TV & Firestick</strong> (Downloader, Smarters, TiviMate)</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--color-green)" }} />
-                  <span><strong>Smart TVs</strong> (Samsung Tizen, LG webOS, Android TV)</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--color-green)" }} />
-                  <span><strong>Apple TV, iPhone & iPad</strong> (IPTVX, GSE Smart IPTV)</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--color-green)" }} />
-                  <span><strong>Android Boxes</strong> (Nvidia Shield, Chromecast with Google TV)</span>
-                </li>
-                <li style={{ display: "flex", alignItems: "center", gap: "12px", color: "var(--text-secondary)" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--color-green)" }} />
-                  <span><strong>Windows PC & Mac</strong> (VLC Media Player, IPTV Smarters)</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Why IPTV USA Is The Best ? (from iptvusaofficial.com) */}
-      <section className="section">
+    <section className="section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
@@ -197,6 +113,5 @@ export const FeaturesGrid: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };

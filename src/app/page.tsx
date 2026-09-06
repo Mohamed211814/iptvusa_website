@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { HeroSection } from "@/components/HeroSection";
-import { LiveServerStatus } from "@/components/LiveServerStatus";
 import { FeaturesGrid } from "@/components/FeaturesGrid";
 import { ChannelExplorer } from "@/components/ChannelExplorer";
 import { DeviceCompatibility } from "@/components/DeviceCompatibility";
@@ -34,12 +33,7 @@ export default function HomePage() {
       {/* 2. Subscription Pricing Plans (Placed right above for maximum conversion) */}
       <PricingSection onSelectPlan={handlePlanSelect} />
 
-      {/* 3. Live Server Cluster Health Widget */}
-      <div className="container" style={{ marginTop: "10px", marginBottom: "40px" }}>
-        <LiveServerStatus />
-      </div>
-
-      {/* 4. Stream On Any Device & Why IPTV USA Is The Best */}
+      {/* 3. Why IPTV USA Is The Best */}
       <FeaturesGrid />
 
       {/* 5. Live Channel & VOD Explorer */}
