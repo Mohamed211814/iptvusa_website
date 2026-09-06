@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { pricingPlans, PricingPlan } from "@/data/pricing";
 import { siteConfig } from "@/config/site";
 import { Check, ShieldCheck, Zap, Sparkles, Tv, Clock, ArrowRight } from "lucide-react";
@@ -10,7 +10,7 @@ interface PricingSectionProps {
 }
 
 export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) => {
-  const [connections, setConnections] = useState<number>(1);
+  const connections = 1;
 
   const handleBuyNow = (plan: PricingPlan) => {
     if (onSelectPlan) {
@@ -35,49 +35,6 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
           <p className="section-subtitle">
             Get instant access to the best IPTV USA service with over 24,000 live IPTV USA channels and 110,000+ VOD movies with high speed streaming and zero freezing.
           </p>
-
-          {/* Connection Switcher */}
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              gap: "6px",
-              padding: "4px",
-              background: "rgba(14, 20, 36, 0.8)",
-              border: "1px solid var(--border-subtle)",
-              borderRadius: "var(--radius-full)",
-              marginTop: "20px",
-              maxWidth: "100%",
-            }}
-          >
-            {[1, 2, 3].map((conn) => (
-              <button
-                key={conn}
-                onClick={() => setConnections(conn)}
-                style={{
-                  padding: "8px 16px",
-                  borderRadius: "var(--radius-full)",
-                  fontSize: "0.85rem",
-                  fontWeight: 700,
-                  background:
-                    connections === conn
-                      ? "var(--color-blue)"
-                      : "transparent",
-                  color: connections === conn ? "#ffffff" : "var(--text-secondary)",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  cursor: "pointer",
-                  transition: "all 0.2s ease",
-                }}
-              >
-                <Tv size={14} />
-                <span>{conn} {conn === 1 ? "Device" : "Devices"}</span>
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* 4 Pricing Cards (Exact iptvusaofficial.com 1, 3, 6, 12 Month columns) */}
