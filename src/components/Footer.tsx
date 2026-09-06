@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
+                <Link href="/privacy-policy" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
                   Privacy Policy
                 </Link>
               </li>
