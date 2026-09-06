@@ -47,13 +47,13 @@ export const DeviceCompatibility: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-tag">
-            <Monitor size={14} /> Universal Compatibility
+            <Monitor size={14} /> Universal IPTV USA Compatibility
           </span>
           <h2 className="section-title">
-            Watch on <span className="highlight">Any Device</span>, Anywhere
+            Watch <span className="text-blue">IPTV USA</span> on Any Device, Anywhere
           </h2>
           <p className="section-subtitle">
-            One subscription works across all your household devices. Stream on your living room 4K TV or take your favorite sports on the road with your mobile phone or tablet.
+            One IPTV USA subscription works across all your household devices. Stream on your living room 4K TV or take your favorite sports on the road with your mobile phone or tablet.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export const DeviceCompatibility: React.FC = () => {
             className="btn btn-secondary"
             style={{ display: "inline-flex" }}
           >
-            <span>View Step by Step Installation Guides</span>
+            <span>View Step by Step IPTV USA Installation Guides</span>
             <ArrowRight size={16} />
           </Link>
         </div>

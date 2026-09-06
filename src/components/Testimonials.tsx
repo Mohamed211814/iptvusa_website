@@ -8,21 +8,21 @@ export const Testimonials: React.FC = () => {
       location: "New York, USA",
       rating: 5,
       comment:
-        "Switching to IPTV USA was one of the best decisions I made for my home entertainment setup. The picture quality is crystal-clear in 4K, and I haven't experienced any lag or buffering even during the biggest sports matches.",
+        "Switching to IPTV USA was one of the best decisions I made for my home entertainment setup. The picture quality is crystal clear in 4K, and I have not experienced any lag or buffering even during the biggest live championship games.",
     },
     {
       name: "David Mitchell",
       location: "Texas, USA",
       rating: 5,
       comment:
-        "I’ve tried several IPTV services, but none compare to IPTV USA in terms of stability and channel selection. With over 24,000 live channels and 110,000+ movies on demand, there's always something great to watch.",
+        "I have tried several IPTV services, but none compare to IPTV USA in terms of stability and channel selection. With over 24,000 live channels and 110,000+ movies on demand, IPTV USA is unmatched for value.",
     },
     {
       name: "Robert Hayes",
       location: "California, USA",
       rating: 5,
       comment:
-        "Customer service is truly top notch. I needed a little help setting up the service on my Firestick, and the support team responded on WhatsApp within minutes and had me streaming right away. Highly recommend!",
+        "Customer service is truly top tier. I needed a little help setting up IPTV USA on my Firestick, and the support team responded on WhatsApp within minutes and had me streaming right away. Highly recommend IPTV USA to anyone!",
     },
   ];
 
@@ -34,7 +34,7 @@ export const Testimonials: React.FC = () => {
             What Say <span className="text-blue">IPTV USA</span> Clients ?
           </h2>
           <p className="section-subtitle">
-            See real reviews and feedback from verified subscribers streaming on Firestick, Smart TVs, and mobile devices across the United States.
+            See real reviews and feedback from verified IPTV USA subscribers streaming on Firestick, Smart TVs, and mobile devices across the United States.
           </p>
         </div>
 

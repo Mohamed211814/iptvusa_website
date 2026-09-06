@@ -106,6 +106,12 @@ button {
   padding: 0 20px;
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 .section {
   padding: 85px 0;
   position: relative;
@@ -120,11 +126,12 @@ button {
   border: 1px solid rgba(0, 85, 255, 0.3);
   border-radius: var(--radius-full);
   color: var(--color-blue-bright);
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 16px;
+  max-width: 100%;
 }
 
 .section-header {
@@ -134,9 +141,10 @@ button {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
   font-weight: 800;
   margin-bottom: 16px;
+  word-break: break-word;
 }
 
 .text-blue {
@@ -148,7 +156,7 @@ button {
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: var(--text-secondary);
   line-height: 1.65;
 }
@@ -164,7 +172,15 @@ button {
   font-weight: 700;
   border-radius: 8px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 .btn-primary {
@@ -307,20 +323,57 @@ button {
   gap: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
-@media (max-width: 640px) {
-  .grid-4, .grid-3, .grid-2 {
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+  .grid-3, .grid-2 {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
   .section {
-    padding: 55px 0;
+    padding: 60px 0;
   }
+  .section-header {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 580px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card-glass {
+    padding: 22px 18px;
+  }
+  .section {
+    padding: 48px 0;
+  }
+}
+
+/* Mobile Form Inputs Optimization (Prevents auto-zoom on iOS Safari) */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Responsive Table and Container Overflow Protection */
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
 }

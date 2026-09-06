@@ -27,6 +27,17 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   const [customerWhatsApp, setCustomerWhatsApp] = useState<string>("");
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const currentPlan = pricingPlans.find((p) => p.id === selectedPlanId) || pricingPlans[3];
@@ -63,25 +74,28 @@ Please send me payment details and instant activation credentials.`
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "rgba(3, 6, 13, 0.85)",
+        backgroundColor: "rgba(3, 6, 13, 0.88)",
         backdropFilter: "blur(14px)",
         WebkitBackdropFilter: "blur(14px)",
         zIndex: 999,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "20px",
+        padding: "16px",
         overflowY: "auto",
       }}
     >
       <div
+        className="card-glass"
         style={{
           background: "linear-gradient(180deg, #10172b 0%, #090e1a 100%)",
           border: "1px solid rgba(0, 229, 255, 0.3)",
-          borderRadius: "var(--radius-xl)",
-          padding: "32px",
-          maxWidth: "580px",
+          borderRadius: "var(--radius-lg)",
+          padding: "24px 20px",
+          maxWidth: "540px",
           width: "100%",
+          maxHeight: "92vh",
+          overflowY: "auto",
           boxShadow: "0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 229, 255, 0.2)",
           position: "relative",
         }}
@@ -89,10 +103,11 @@ Please send me payment details and instant activation credentials.`
         {/* Close button */}
         <button
           onClick={onClose}
+          aria-label="Close Order Modal"
           style={{
             position: "absolute",
-            top: "20px",
-            right: "20px",
+            top: "16px",
+            right: "16px",
             background: "rgba(255, 255, 255, 0.08)",
             border: "1px solid var(--border-subtle)",
             borderRadius: "50%",
@@ -103,6 +118,7 @@ Please send me payment details and instant activation credentials.`
             justifyContent: "center",
             color: "#fff",
             cursor: "pointer",
+            zIndex: 10,
           }}
         >
           <X size={20} />

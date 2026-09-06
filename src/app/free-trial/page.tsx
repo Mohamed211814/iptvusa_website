@@ -19,10 +19,10 @@ export default function FreeTrialPage() {
   const handleInstantWhatsApp = () => {
     const text = encodeURIComponent(
       `Hello IPTV USA Pro!
-I would like to request a 24 Hour Free Trial.
+I would like to request an IPTV USA 24 Hour Free Trial.
 Device: ${device}
 Email: ${email || "Provided upon request"}
-Please send me a test playlist to verify buffer free streaming quality.`
+Please send me an IPTV USA test playlist to verify buffer free streaming quality.`
     );
     window.open(`https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, "")}?text=${text}`, "_blank");
   };
@@ -37,10 +37,10 @@ Please send me a test playlist to verify buffer free streaming quality.`
               <Sparkles size={14} /> 100% Free | No Credit Card Required
             </span>
             <h1 className="section-title">
-              Request Your <span className="text-blue">24 Hour Free Trial</span>
+              Request Your <span className="text-blue">IPTV USA</span> 24 Hour Free Trial
             </h1>
             <p className="section-subtitle">
-              Test our 24,000+ live channels, 4K sports feeds, and Anti Freeze 9.3 stability on your Firestick or Smart TV before spending a single dollar.
+              Test our IPTV USA 24,000+ live channels, 4K sports feeds, and Anti Freeze 9.3 stability on your Firestick or Smart TV before spending a single dollar.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ Please send me a test playlist to verify buffer free streaming quality.`
           <div
             className="card-glass"
             style={{
-              padding: "36px",
+              padding: "clamp(20px, 5vw, 36px)",
               border: "1px solid rgba(0, 85, 255, 0.3)",
               boxShadow: "0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 85, 255, 0.15)",
             }}
@@ -170,7 +170,7 @@ Please send me a test playlist to verify buffer free streaming quality.`
                       style={{ width: "100%", padding: "14px", fontSize: "1rem" }}
                     >
                       <Zap size={18} />
-                      Request 24 Hour Free Pass
+                      Request IPTV USA 24 Hour Free Pass
                     </button>
 
                     <button
@@ -180,18 +180,57 @@ Please send me a test playlist to verify buffer free streaming quality.`
                       style={{ width: "100%", padding: "14px", fontSize: "1rem" }}
                     >
                       <MessageSquare size={18} />
-                      Fast Track: Get Trial Instantly on WhatsApp
+                      Fast Track: Get IPTV USA Trial Instantly on WhatsApp
                     </button>
                   </div>
 
-                  <div style={{ display: "flex", justifyContent: "center", gap: "20px", fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "8px" }}>
+                  <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "12px 20px", fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "8px" }}>
                     <span>✓ No Credit Card</span>
                     <span>✓ Auto Expires in 24h</span>
-                    <span>✓ Full 4K Access</span>
+                    <span>✓ Full IPTV USA 4K Access</span>
                   </div>
                 </div>
               </form>
             )}
+          </div>
+
+          {/* IPTV USA Free Trial Features & SEO Details */}
+          <div style={{ marginTop: "50px", textAlign: "center" }}>
+            <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "14px" }}>
+              Why Test <span className="text-blue">IPTV USA</span> Before You Buy?
+            </h2>
+            <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: "28px" }}>
+              Our IPTV USA free trial provides complete access to all live channels, premium sports networks, local USA regional broadcasts, and high bitrate 4K video on demand. Experience genuine zero buffer playback powered by Anti Freeze 9.3 on your favorite player app.
+            </p>
+
+            <div className="grid-3" style={{ textAlign: "left" }}>
+              <div className="card-glass" style={{ padding: "20px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                  1. Instant IPTV USA Setup
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
+                  Receive your M3U link and Xtream Codes login in minutes with simple configuration instructions.
+                </p>
+              </div>
+
+              <div className="card-glass" style={{ padding: "20px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                  2. All Devices Supported
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
+                  Compatible with Firestick, Smart TVs, Android TV, Apple TV, iPhone, and PC with no extra hardware needed.
+                </p>
+              </div>
+
+              <div className="card-glass" style={{ padding: "20px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                  3. 100% Risk Free
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
+                  No payment method required to start. Your IPTV USA test line simply expires after 24 hours.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

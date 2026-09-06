@@ -10,17 +10,17 @@ export const FaqAccordion: React.FC = () => {
     {
       question: "What is IPTV USA?",
       answer:
-        "IPTV USA is a premium streaming service providing online access to over 24,000 live television channels and 110,000+ movies and TV series directly through your high-speed internet connection. It eliminates traditional cable and satellite subscriptions, allowing you to stream in full 4K and FHD on any device.",
+        "IPTV USA is a premium streaming service providing online access to over 24,000 live television channels and 110,000+ movies and TV series directly through your high speed internet connection. It eliminates traditional cable and satellite subscriptions, allowing you to stream in full 4K and FHD on any device.",
     },
     {
       question: "How many channels does IPTV USA offer?",
       answer:
-        "IPTV USA offers over 24,000 live television channels from the United States, Canada, the United Kingdom, and around the world, along with a massive catalog of more than 110,000 on-demand movies and full series updated daily.",
+        "IPTV USA offers over 24,000 live television channels from the United States, Canada, the United Kingdom, and around the world, along with a massive catalog of more than 110,000 on demand movies and full series updated daily.",
     },
     {
       question: "What devices are compatible with IPTV USA?",
       answer:
-        "IPTV USA is compatible with virtually all modern devices: Amazon Firestick / Fire TV, Android TV (Nvidia Shield, Google TV), Smart TVs (Samsung Tizen and LG webOS via IBO Player, Smart IPTV), Apple TV, iPhone, iPad, Windows PC, Mac, and dedicated MAG boxes.",
+        "IPTV USA is compatible with virtually all modern devices: Amazon Firestick, Fire TV Cube, Android TV (Nvidia Shield, Google TV), Smart TVs (Samsung Tizen and LG webOS via IBO Player, Smart IPTV), Apple TV, iPhone, iPad, Windows PC, Mac, and dedicated MAG boxes.",
     },
     {
       question: "Is IPTV USA legal?",
@@ -35,7 +35,7 @@ export const FaqAccordion: React.FC = () => {
     {
       question: "Can I use IPTV USA while traveling or with a VPN?",
       answer:
-        "Yes! IPTV USA works anywhere in the world as long as you have an internet connection. Our servers are 100% VPN-friendly and do not restrict or throttle connections through popular VPN providers.",
+        "Yes! IPTV USA works anywhere in the world as long as you have an internet connection. Our servers are 100% VPN friendly and do not restrict or throttle connections through popular VPN providers.",
     },
   ];
 
@@ -83,17 +83,17 @@ export const FaqAccordion: React.FC = () => {
                   onClick={() => toggleAccordion(idx)}
                   style={{
                     width: "100%",
-                    padding: "20px 24px",
+                    padding: "clamp(14px, 3vw, 20px) clamp(16px, 3vw, 24px)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
                     background: "transparent",
                     textAlign: "left",
                     color: "#ffffff",
-                    fontSize: "1.05rem",
+                    fontSize: "clamp(0.95rem, 2.5vw, 1.05rem)",
                     fontWeight: 700,
                     cursor: "pointer",
-                    gap: "16px",
+                    gap: "14px",
                   }}
                 >
                   <span>{faq.question}</span>
@@ -111,8 +111,8 @@ export const FaqAccordion: React.FC = () => {
                 {isOpen && (
                   <div
                     style={{
-                      padding: "0 24px 22px 24px",
-                      fontSize: "0.95rem",
+                      padding: "0 clamp(16px, 3vw, 24px) clamp(16px, 3vw, 22px) clamp(16px, 3vw, 24px)",
+                      fontSize: "clamp(0.875rem, 2vw, 0.95rem)",
                       color: "var(--text-secondary)",
                       lineHeight: 1.65,
                       borderTop: "1px solid rgba(255, 255, 255, 0.05)",

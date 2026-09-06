@@ -26,13 +26,13 @@ export default function PricingPage() {
         {/* Page Header */}
         <div className="section-header" style={{ marginBottom: "20px" }}>
           <span className="section-tag">
-            <Zap size={14} /> Official Pricing & Discounts
+            <Zap size={14} /> Official IPTV USA Pricing & Plans
           </span>
           <h1 className="section-title">
-            Choose Your <span className="text-blue">IPTV USA Pro</span> Plan
+            Best <span className="text-blue">IPTV USA</span> Subscription Plans
           </h1>
           <p className="section-subtitle">
-            All plans include full access to 24,000+ live 4K FHD channels, 110,000+ VODs, all live sports & PPVs, Anti Freeze 9.3, and 24/7 dedicated support.
+            All IPTV USA packages include full access to 24,000+ live 4K FHD channels, 110,000+ VODs, all live sports and PPVs, Anti Freeze 9.3 stability, and 24/7 dedicated IPTV USA support.
           </p>
         </div>
 
@@ -43,10 +43,10 @@ export default function PricingPage() {
         <div style={{ marginTop: "60px", marginBottom: "60px" }}>
           <div className="section-header" style={{ marginBottom: "30px" }}>
             <h2 className="section-title" style={{ fontSize: "1.8rem" }}>
-              What&apos;s Included in <span className="text-blue">Every Subscription</span>
+              What is Included in Every <span className="text-blue">IPTV USA</span> Subscription
             </h2>
             <p className="section-subtitle">
-              We never restrict channels or charge extra for sports packages or 4K streams.
+              IPTV USA never restricts channels or charges extra fees for live sports feeds or 4K streams.
             </p>
           </div>
 
@@ -56,10 +56,10 @@ export default function PricingPage() {
                 <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "rgba(0,85,255,0.15)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-blue-bright)" }}>
                   <Zap size={18} />
                 </div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}>Anti Freeze 9.3</h3>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}>IPTV USA Anti Freeze 9.3</h3>
               </div>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                Guaranteed zero stuttering during major live sporting events like Super Bowl, UEFA Finals, and UFC PPV.
+                Guaranteed zero stuttering during major live sporting events, tournament finals, and championship PPV fights with IPTV USA proprietary load balancing.
               </p>
             </div>
 
@@ -68,10 +68,10 @@ export default function PricingPage() {
                 <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "rgba(28,231,131,0.15)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-green)" }}>
                   <ShieldCheck size={18} />
                 </div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}>7 Day Money Back</h3>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}>IPTV USA 7 Day Guarantee</h3>
               </div>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                Try our 6 month or 12 month packages completely risk free. If you are not satisfied, request a full refund.
+                Try our 6 month or 12 month IPTV USA packages completely risk free. If you are not satisfied, request a prompt full refund.
               </p>
             </div>
 
@@ -80,10 +80,10 @@ export default function PricingPage() {
                 <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "rgba(245,158,11,0.15)", display: "flex", alignItems: "center", justifyContent: "center", color: "#f59e0b" }}>
                   <Sparkles size={18} />
                 </div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}>Instant Auto Delivery</h3>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff" }}>Instant IPTV USA Activation</h3>
               </div>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                Receive your Xtream Codes API and M3U playlist link in your email inbox within 5 minutes of checkout.
+                Receive your IPTV USA Xtream Codes API and M3U playlist link directly in your email inbox within 5 minutes of checkout.
               </p>
             </div>
           </div>

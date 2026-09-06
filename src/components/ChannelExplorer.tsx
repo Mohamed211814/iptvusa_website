@@ -38,13 +38,13 @@ export const ChannelExplorer: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-tag">
-            <Tv size={14} /> 25,000+ Channels & 120,000+ VODs
+            <Tv size={14} /> 24,000+ IPTV USA Channels & 110,000+ VODs
           </span>
           <h2 className="section-title">
-            Explore Our <span className="highlight">Live Channel</span> Lineup
+            Explore <span className="text-blue">IPTV USA</span> Live Channel Lineup
           </h2>
           <p className="section-subtitle">
-            All the major sports leagues, movie networks, international bouquets, and local state stations in brilliant 4K UHD and FHD resolution.
+            Discover the full IPTV USA channel catalog with live sports, cinema networks, international packages, and local state stations in brilliant 4K UHD and FHD resolution.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const ChannelExplorer: React.FC = () => {
               />
               <input
                 type="text"
-                placeholder="Search channels (e.g. ESPN, HBO, NFL RedZone, UFC, NBC, Sky Sports)..."
+                placeholder="Search channels (e.g. Sports, News, Movies, Cinema, Football, Live Events)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 style={{
@@ -159,7 +159,7 @@ export const ChannelExplorer: React.FC = () => {
                 color: "var(--text-muted)",
               }}
             >
-              No channels found matching &quot;{searchQuery}&quot;. Try searching for &quot;ESPN&quot; or &quot;HBO&quot;.
+              No channels found matching &quot;{searchQuery}&quot;. Try searching for &quot;Sports&quot; or &quot;Cinema&quot;.
             </div>
           ) : (
             filteredCategories.map((cat) => (

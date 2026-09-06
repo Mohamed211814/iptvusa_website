@@ -47,10 +47,10 @@ export const LiveServerStatus: React.FC = () => {
           </div>
           <div>
             <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff" }}>
-              Live Anti-Freeze™ 9.3 Cluster
+              Live IPTV USA Anti Freeze 9.3 Cluster
             </h4>
             <span style={{ fontSize: "0.75rem", color: "#10b981", display: "flex", alignItems: "center", gap: "6px" }}>
-              <span className="pulse-dot" /> All USA Nodes 100% Online
+              <span className="pulse-dot" /> All IPTV USA Nodes 100% Online
             </span>
           </div>
         </div>
@@ -85,8 +85,8 @@ export const LiveServerStatus: React.FC = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-          gap: "12px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(135px, 1fr))",
+          gap: "10px",
         }}
       >
         {siteConfig.serverLocations.slice(0, 4).map((server, idx) => (

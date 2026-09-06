@@ -116,10 +116,10 @@ export const FeaturesGrid: React.FC = () => {
                 <Zap size={28} />
               </div>
               <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
-                Anti Freeze Technology
+                IPTV USA Anti Freeze
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                Experience 99.9% freeze free streaming during major football, basketball, and UFC PPV fights.
+                Experience 99.9% freeze free IPTV USA streaming during major championship matches, tournament finals, and live title fights.
               </p>
             </div>
 
@@ -140,10 +140,10 @@ export const FeaturesGrid: React.FC = () => {
                 <Server size={28} />
               </div>
               <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
-                10Gbps Server Network
+                IPTV USA 10Gbps Network
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                Ultra-fast load times with load-balanced servers located right across major USA metropolitan nodes.
+                Ultra fast load times with IPTV USA load balanced servers located right across major USA metropolitan nodes.
               </p>
             </div>
 
@@ -164,10 +164,10 @@ export const FeaturesGrid: React.FC = () => {
                 <ShieldCheck size={28} />
               </div>
               <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
-                Server Stability 99%
+                IPTV USA 99% Stability
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                Industry-leading uptime guarantee with automatic failover backup clusters for uninterrupted playback.
+                Industry leading uptime guarantee with IPTV USA automatic failover backup clusters for uninterrupted playback.
               </p>
             </div>
 
@@ -188,10 +188,10 @@ export const FeaturesGrid: React.FC = () => {
                 <Headphones size={28} />
               </div>
               <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
-                24/7 Dedicated Support
+                IPTV USA 24/7 Support
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                IPTV USA support team is available 24/7, providing reliable assistance whenever you need help.
+                The dedicated IPTV USA support team is available 24/7, providing reliable assistance whenever you need help.
               </p>
             </div>
           </div>

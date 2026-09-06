@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "IPTV USA",
   title: "IPTV USA The Official IPTV Subscription Service",
   description:
-    "Official IPTV USA subscription offering over 24,000+ live channels, 110,000+ movies, and TV shows with smooth, reliable streaming on any device. 4K FHD, Anti Freeze, and 24/7 instant support.",
+    "Official IPTV USA subscription offering over 24,000+ live IPTV USA channels, 110,000+ movies, and TV shows. Get the best IPTV USA service with 4K FHD streaming, Anti Freeze servers, and 24/7 IPTV USA support on all devices.",
   url: "https://iptvusa-pro.com",
   domain: "iptvusa-pro.com",
   ogImage: "https://iptvusa-pro.com/og-image.jpg",
@@ -13,7 +13,7 @@ export const siteConfig = {
   whatsappMessage: "Hello IPTV USA Pro! I would like to purchase an IPTV USA subscription or get instant access.",
   telegramUsername: "iptvusapro_official",
   links: {
-    whatsapp: "https://wa.me/15553498822?text=Hello%20IPTV%20USA%20Pro%2C%20I%20want%20to%20order%20an%20official%20subscription.",
+    whatsapp: "https://wa.me/15553498822?text=Hello%20IPTV%20USA%20Pro%2C%20I%20want%20to%20order%20an%20official%20IPTV%20USA%20subscription.",
     telegram: "https://t.me/iptvusapro_official",
   },
   stats: {

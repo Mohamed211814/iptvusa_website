@@ -4,65 +4,65 @@ import { siteConfig } from "@/config/site";
 import { ShieldCheck, Zap, Server, Users, Award, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IPTV Reseller Panel & Subscriptions Program | Start Your Business",
+  title: "IPTV USA Reseller Panel & Subscriptions Program | Start Your Business",
   description:
-    "Become an official IPTV USA reseller. Get full access to our Xtream Codes IPTV Reseller Panel with 10Gbps anti-freeze servers, 24k+ channels, and high profit margins.",
+    "Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins.",
   keywords: [
-    "IPTV reseller",
-    "IPTV reseller panel",
-    "buy IPTV credits",
-    "IPTV business",
-    "Xtream UI reseller",
-    "best IPTV reseller program",
+    "IPTV USA reseller",
+    "IPTV USA reseller panel",
+    "buy IPTV USA credits",
+    "IPTV USA business",
+    "IPTV USA Xtream panel",
+    "best IPTV USA reseller program",
   ],
 };
 
 export default function ResellerPage() {
   const resellerTiers = [
     {
-      name: "Starter Reseller",
+      name: "Starter IPTV USA Reseller",
       credits: "100 Credits",
       price: "$250",
       perCredit: "$2.50 / credit",
       features: [
-        "100 Credits Included",
-        "Official Xtream Codes Panel Access",
-        "Create 1/3/6/12 Month Accounts",
-        "Generate 24h Free Trial Lines",
+        "100 IPTV USA Credits Included",
+        "Official IPTV USA Panel Access",
+        "Create 1, 3, 6, and 12 Month Accounts",
+        "Generate IPTV USA 24h Free Trials",
         "Full Sub-Reseller Control",
-        "99.9% Anti-Freeze 9.3 Servers",
+        "99.9% Anti Freeze 9.3 Server Speed",
         "24/7 WhatsApp VIP Tech Support",
       ],
     },
     {
-      name: "Pro Reseller",
+      name: "Pro IPTV USA Reseller",
       credits: "250 Credits",
       price: "$500",
       perCredit: "$2.00 / credit",
       isPopular: true,
       features: [
-        "250 Credits Included",
-        "Full Web Control Panel + Sub-Resellers",
-        "Unlimited Free Trials (Daily)",
-        "Automated M3U & Portal Generation",
-        "Brandable DNS / Custom Portal URL",
-        "Priority Tier-1 Server Stream Access",
+        "250 IPTV USA Credits Included",
+        "Full IPTV USA Web Control Panel",
+        "Unlimited Daily IPTV USA Free Trials",
+        "Automated M3U and Portal Generation",
+        "Brandable DNS and Custom Portal URL",
+        "Priority Tier 1 IPTV USA Server Stream Access",
         "Dedicated VIP Account Manager",
       ],
     },
     {
-      name: "Master Reseller",
+      name: "Master IPTV USA Reseller",
       credits: "500 Credits",
       price: "$850",
       perCredit: "$1.70 / credit",
       features: [
-        "500 Credits Included",
-        "Highest Margin & Profit Potential",
-        "Custom DNS & Whitelabel Branding",
+        "500 IPTV USA Credits Included",
+        "Highest Margin and Profit Potential",
+        "Custom DNS and Whitelabel Branding",
         "Create Unlimited Sub-Resellers",
         "Direct Load Balancer Allocation",
-        "Bulk Account Management",
-        "Direct Phone / WhatsApp Priority Assistance",
+        "Bulk IPTV USA Account Management",
+        "Priority VIP Assistance",
       ],
     },
   ];
@@ -75,10 +75,10 @@ export default function ResellerPage() {
             <Users size={14} /> Official IPTV USA Reseller Program
           </span>
           <h1 className="section-title">
-            Start Your Own <span className="text-blue">IPTV Business</span> Today
+            Start Your Own <span className="text-blue">IPTV USA Business</span> Today
           </h1>
           <p className="section-subtitle">
-            Join thousands of successful partners selling the highest-rated IPTV service in the USA and Canada. Get access to an intuitive control panel and keep up to 80% profit margins.
+            Join thousands of successful partners selling the highest rated IPTV USA service in the United States and Canada. Get access to an intuitive IPTV USA control panel and keep up to 80% profit margins.
           </p>
         </div>
 
@@ -142,10 +142,51 @@ export default function ResellerPage() {
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <Zap size={16} />
-                Activate Reseller Panel
+                Activate IPTV USA Reseller Panel
               </a>
             </div>
           ))}
+        </div>
+
+        {/* Reseller Benefits Section */}
+        <div style={{ marginTop: "40px" }}>
+          <div className="section-header" style={{ marginBottom: "30px" }}>
+            <h2 className="section-title" style={{ fontSize: "1.7rem" }}>
+              Why Choose the <span className="text-blue">IPTV USA</span> Reseller Program?
+            </h2>
+            <p className="section-subtitle">
+              IPTV USA provides resellers with cutting edge streaming infrastructure and complete independence to grow a recurring income stream.
+            </p>
+          </div>
+
+          <div className="grid-3">
+            <div className="card-glass">
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+                High Profit Margin
+              </h3>
+              <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                Buy IPTV USA credits at wholesale rates starting from $1.70 and sell subscriptions at retail prices to make substantial profit on every customer.
+              </p>
+            </div>
+
+            <div className="card-glass">
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+                Zero Maintenance Overhead
+              </h3>
+              <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                Our engineers manage server uptime, feed updates, EPG electronic program guides, and VOD uploads so you can focus entirely on customer acquisition.
+              </p>
+            </div>
+
+            <div className="card-glass">
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+                Credits Never Expire
+              </h3>
+              <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                Your purchased IPTV USA credits remain in your balance indefinitely until you allocate them to new or renewing subscriber accounts.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "40px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 200px), 1fr))",
+            gap: "clamp(24px, 4vw, 40px)",
             marginBottom: "40px",
           }}
         >
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.6, marginBottom: "16px" }}>
-              Official IPTV USA subscription offering over 24,000 live channels, 110,000+ movies, and shows with smooth, reliable streaming on any device.
+              Official IPTV USA subscription service offering over 24,000 live channels, 110,000+ movies, and premium sports feeds. High speed IPTV USA servers with Anti Freeze 9.3 for uninterrupted entertainment across North America.
             </p>
             <div style={{ fontSize: "0.85rem", color: "var(--color-green)", display: "flex", alignItems: "center", gap: "8px" }}>
               <span className="pulse-dot" />
@@ -168,7 +168,7 @@ export const Footer: React.FC = () => {
           }}
         >
           <div>
-            &copy; {new Date().getFullYear()} {siteConfig.domain}. All Rights Reserved. The Official IPTV Subscription Service.
+            &copy; {new Date().getFullYear()} {siteConfig.domain}. All Rights Reserved. Official IPTV USA Subscription Service.
           </div>
           <div style={{ display: "flex", gap: "18px" }}>
             <Link href="/pricing" style={{ color: "var(--text-muted)" }}>Refund Policy</Link>

@@ -31,10 +31,10 @@ export const HeroSection: React.FC = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "48px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+            gap: "36px",
             alignItems: "center",
-            marginBottom: "70px",
+            marginBottom: "60px",
           }}
         >
           {/* Left Column */}
@@ -52,20 +52,22 @@ export const HeroSection: React.FC = () => {
                 color: "var(--color-blue-bright)",
                 fontWeight: 700,
                 marginBottom: "20px",
+                maxWidth: "100%",
               }}
             >
-              <span className="pulse-dot" />
-              <span>Official IPTV Provider in USA & Worldwide</span>
+              <span className="pulse-dot" style={{ flexShrink: 0 }} />
+              <span>Official IPTV USA Provider | Premium IPTV USA Service</span>
             </div>
 
             {/* Headline matching iptvusaofficial.com */}
             <h1
               style={{
-                fontSize: "clamp(2.5rem, 5vw, 3.8rem)",
+                fontSize: "clamp(2.1rem, 4.8vw, 3.8rem)",
                 fontWeight: 900,
                 lineHeight: 1.15,
                 letterSpacing: "-0.03em",
                 marginBottom: "20px",
+                wordBreak: "break-word",
               }}
             >
               <span className="text-blue">IPTV USA</span> <br />
@@ -75,14 +77,14 @@ export const HeroSection: React.FC = () => {
             {/* Subtitle matching iptvusaofficial.com */}
             <p
               style={{
-                fontSize: "1.1rem",
+                fontSize: "clamp(0.95rem, 2vw, 1.1rem)",
                 color: "var(--text-secondary)",
                 lineHeight: 1.7,
                 marginBottom: "32px",
                 maxWidth: "540px",
               }}
             >
-              Get the best USA IPTV subscription with reliable, high-quality streaming of live TV, sports, movies, and more. Affordable plans, easy setup, and 24/7 support. Enjoy thousands of channels on any device.
+              Get the best IPTV USA subscription with reliable high quality streaming of live TV, sports, movies, and more. Affordable IPTV USA plans, easy setup, and 24/7 support. Enjoy over 24,000 IPTV USA channels on any device.
             </p>
 
             {/* CTAs */}
@@ -91,7 +93,7 @@ export const HeroSection: React.FC = () => {
                 display: "flex",
                 alignItems: "center",
                 flexWrap: "wrap",
-                gap: "16px",
+                gap: "14px",
                 marginBottom: "32px",
               }}
             >
@@ -100,11 +102,13 @@ export const HeroSection: React.FC = () => {
                 className="btn btn-green"
                 style={{
                   fontSize: "1rem",
-                  padding: "14px 32px",
+                  padding: "14px 28px",
+                  flex: "1 1 auto",
+                  minWidth: "220px",
                 }}
               >
                 <Zap size={18} />
-                Get Subscription Now
+                Get IPTV USA Subscription Now
               </Link>
 
               <Link
@@ -112,7 +116,8 @@ export const HeroSection: React.FC = () => {
                 className="btn btn-secondary"
                 style={{
                   fontSize: "1rem",
-                  padding: "14px 28px",
+                  padding: "14px 24px",
+                  flex: "1 1 auto",
                 }}
               >
                 <Headphones size={18} />
@@ -132,7 +137,7 @@ export const HeroSection: React.FC = () => {
             >
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="var(--color-green)" />
-                <span>+24,000 Live Channels</span>
+                <span>+24,000 Live IPTV USA Channels</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="var(--color-green)" />
@@ -140,7 +145,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <CheckCircle2 size={16} color="var(--color-green)" />
-                <span>Zero Buffering</span>
+                <span>IPTV USA Zero Buffering</span>
               </div>
             </div>
           </div>
@@ -210,7 +215,7 @@ export const HeroSection: React.FC = () => {
 
               <div style={{ margin: "20px 0" }}>
                 <h3 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "8px" }}>
-                  NFL, NBA, MLB, NHL & UFC Fight Night
+                  Live Football, Basketball, Baseball, Hockey & Title Fights
                 </h3>
                 <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
                   Crystal clear 4K UHD resolution with no blackouts or lag on any device.
@@ -284,10 +289,10 @@ export const HeroSection: React.FC = () => {
               <Film size={26} />
             </div>
             <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
-              Streaming IPTV
+              Streaming IPTV USA
             </h2>
             <p style={{ fontSize: "0.925rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-              Experience seamless, lag free IPTV streaming powered by powerful servers, delivering instant access to the newest movies, shows, and live channels.
+              Experience seamless lag free IPTV USA streaming powered by powerful servers, delivering instant access to the newest movies, shows, and live channels.
             </p>
           </div>
 
@@ -309,10 +314,10 @@ export const HeroSection: React.FC = () => {
               <Globe size={26} />
             </div>
             <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
-              Live TV
+              Live IPTV USA TV
             </h2>
             <p style={{ fontSize: "0.925rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-              Access over 24,000 IPTV channels, featuring a vast selection of global content from nearly every country around the world.
+              Access over 24,000 IPTV USA channels, featuring a vast selection of global content from nearly every country around the world.
             </p>
           </div>
 
@@ -334,7 +339,7 @@ export const HeroSection: React.FC = () => {
               <PlayCircle size={26} />
             </div>
             <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
-              Movies & Series
+              IPTV USA Movies & Series
             </h2>
             <p style={{ fontSize: "0.925rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
               IPTV USA offers more than 110,000 daily updated VOD titles, neatly categorized by country and language for effortless browsing and instant streaming.

@@ -4,9 +4,9 @@ import { siteConfig } from "@/config/site";
 import { MessageSquare, Zap, Mail, Phone, Clock, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact 24/7 VIP Customer Support & Technical Assistance",
+  title: "Contact IPTV USA Support | 24/7 VIP Customer & Technical Assistance",
   description:
-    "Get in touch with StreamPulse IPTV support via WhatsApp, Telegram, or Email for instant activation, device configuration, or subscription queries.",
+    "Get in touch with official IPTV USA customer support via WhatsApp, Telegram, or Email for instant IPTV USA activation, setup guidance, or subscription queries.",
 };
 
 export default function ContactPage() {
@@ -15,13 +15,13 @@ export default function ContactPage() {
       <div className="container">
         <div className="section-header">
           <span className="section-tag">
-            <Clock size={14} /> 24/7 Live Technical Assistance
+            <Clock size={14} /> 24/7 Live IPTV USA Assistance
           </span>
           <h1 className="section-title">
-            We Are Always Here to <span className="highlight">Help You Stream</span>
+            Official <span className="text-blue">IPTV USA Support</span> & Help
           </h1>
           <p className="section-subtitle">
-            Have questions before ordering or need help installing your playlist on your device? Our team is online 24/7.
+            Have questions before ordering or need help installing your IPTV USA playlist on your device? Our IPTV USA technical team is online 24/7.
           </p>
         </div>
 
@@ -44,10 +44,10 @@ export default function ContactPage() {
               <MessageSquare size={28} />
             </div>
             <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
-              WhatsApp Live Chat
+              IPTV USA WhatsApp Live
             </h3>
             <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", marginBottom: "20px", flex: 1 }}>
-              Fastest response for instant orders, free trial requests, and real-time setup guidance.
+              Fastest response for instant IPTV USA orders, free trial requests, and real time setup guidance.
             </p>
             <a
               href={siteConfig.links.whatsapp}
@@ -78,10 +78,10 @@ export default function ContactPage() {
               <Zap size={28} />
             </div>
             <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
-              Telegram Support & News
+              IPTV USA Telegram Support
             </h3>
             <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", marginBottom: "20px", flex: 1 }}>
-              Join our Telegram channel for server status announcements, sports schedules, and direct agent support.
+              Join our Telegram channel for IPTV USA server status announcements, sports schedules, and direct agent support.
             </p>
             <a
               href={siteConfig.links.telegram}
@@ -112,10 +112,10 @@ export default function ContactPage() {
               <Mail size={28} />
             </div>
             <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
-              Email Helpdesk
+              IPTV USA Email Helpdesk
             </h3>
             <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", marginBottom: "20px", flex: 1 }}>
-              Send us inquiries, billing questions, or renewal requests. We reply within 2 hours.
+              Send us IPTV USA inquiries, billing questions, or renewal requests. We reply within 2 hours.
             </p>
             <a
               href={`mailto:${siteConfig.supportEmail}`}

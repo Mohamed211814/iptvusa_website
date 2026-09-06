@@ -5,17 +5,17 @@ import { siteConfig } from "@/config/site";
 import { Tv, Terminal, CheckCircle2, AlertCircle, HelpCircle, ArrowRight, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Step by Step IPTV Installation and Setup Guides (Firestick, Smart TV, Apple TV)",
+  title: "Step by Step IPTV USA Installation and Setup Guides (Firestick, Smart TV, Apple TV)",
   description:
     "Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes.",
   keywords: [
-    "install IPTV on Firestick",
-    "IPTV Smarters setup guide",
-    "TiviMate IPTV setup",
-    "Smart TV IPTV setup",
-    "Apple TV IPTV setup",
-    "Downloader code IPTV",
-    "Xtream Codes API setup",
+    "IPTV USA setup",
+    "install IPTV USA on Firestick",
+    "IPTV USA Smart TV",
+    "IPTV USA Apple TV",
+    "IPTV USA Android TV",
+    "IPTV USA subscription guide",
+    "how to install IPTV USA",
   ],
 };
 
@@ -26,13 +26,13 @@ export default function SetupGuidePage() {
         {/* Header */}
         <div className="section-header">
           <span className="section-tag">
-            <Terminal size={14} /> Quick Start Tutorials
+            <Terminal size={14} /> Official IPTV USA Setup Tutorials
           </span>
           <h1 className="section-title">
-            How to Install <span className="text-blue">IPTV USA Pro</span> on Any Device
+            How to Install and Setup <span className="text-blue">IPTV USA</span> on Any Device
           </h1>
           <p className="section-subtitle">
-            Follow our verified 3 minute setup instructions to configure your Amazon Firestick, Android TV, Samsung or LG Smart TV, Apple TV, or computer.
+            Follow our verified step by step IPTV USA setup instructions to configure your IPTV USA subscription on Amazon Firestick, Android TV, Samsung or LG Smart TV, Apple TV, or computer.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function SetupGuidePage() {
               className="card-glass"
               style={{
                 border: "1px solid var(--border-subtle)",
-                padding: "36px",
+                padding: "clamp(20px, 4vw, 36px)",
               }}
             >
               {/* Guide Header */}
@@ -62,7 +62,7 @@ export default function SetupGuidePage() {
                 }}
               >
                 <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px", flexWrap: "wrap" }}>
                     <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff" }}>
                       {guide.device}
                     </h2>
@@ -128,7 +128,7 @@ export default function SetupGuidePage() {
                       {idx + 1}
                     </div>
 
-                    <div style={{ flex: 1 }}>
+                    <div style={{ flex: 1, minWidth: 0 }}>
                       <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff", marginBottom: "4px" }}>
                         {step.title}
                       </h3>
@@ -148,6 +148,8 @@ export default function SetupGuidePage() {
                             fontSize: "0.95rem",
                             color: "var(--color-blue-bright)",
                             display: "inline-block",
+                            maxWidth: "100%",
+                            wordBreak: "break-all",
                           }}
                         >
                           {step.code}
@@ -166,7 +168,7 @@ export default function SetupGuidePage() {
           style={{
             maxWidth: "920px",
             margin: "50px auto 0 auto",
-            padding: "32px",
+            padding: "clamp(20px, 4vw, 32px)",
             background: "rgba(14, 22, 42, 0.8)",
             border: "1px solid rgba(0, 85, 255, 0.25)",
             borderRadius: "var(--radius-lg)",

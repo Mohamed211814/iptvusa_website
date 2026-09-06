@@ -19,6 +19,17 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Pricing", href: "/pricing" },
@@ -56,42 +67,46 @@ export const Navbar: React.FC = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            gap: "12px",
           }}
         >
-          {/* Logo - Styled like iptvusaofficial.com */}
+          {/* Logo */}
           <Link
             href="/"
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "12px",
+              gap: "10px",
               textDecoration: "none",
+              flexShrink: 0,
             }}
           >
             <div
               style={{
-                width: "44px",
-                height: "44px",
+                width: "40px",
+                height: "40px",
                 borderRadius: "10px",
                 background: "linear-gradient(135deg, #0055ff 0%, #1ce783 100%)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 boxShadow: "0 0 16px rgba(0, 85, 255, 0.4)",
+                flexShrink: 0,
               }}
             >
-              <Tv size={24} color="#050811" strokeWidth={2.5} />
+              <Tv size={22} color="#050811" strokeWidth={2.5} />
             </div>
             <div>
               <div
                 style={{
-                  fontSize: "1.35rem",
+                  fontSize: "1.25rem",
                   fontWeight: 900,
                   letterSpacing: "-0.03em",
                   color: "#ffffff",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
+                  lineHeight: 1.1,
                 }}
               >
                 IPTV <span style={{ color: "var(--color-blue-bright)" }}>USA</span>
@@ -110,12 +125,14 @@ export const Navbar: React.FC = () => {
                 </span>
               </div>
               <div
+                className="logo-subtext"
                 style={{
-                  fontSize: "0.68rem",
+                  fontSize: "0.65rem",
                   color: "var(--text-muted)",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                   fontWeight: 600,
+                  marginTop: "2px",
                 }}
               >
                 Official IPTV Subscription
@@ -128,7 +145,7 @@ export const Navbar: React.FC = () => {
             style={{
               display: "none",
               alignItems: "center",
-              gap: "30px",
+              gap: "28px",
             }}
             className="desktop-nav"
           >
@@ -165,24 +182,24 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* Right Action Button: Contact Us */}
+          {/* Right Action Buttons */}
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "12px",
+              gap: "10px",
             }}
           >
             <Link
               href="/contact"
-              className="btn btn-primary"
+              className="btn btn-primary nav-contact-btn"
               style={{
-                padding: "10px 22px",
-                fontSize: "0.875rem",
+                padding: "9px 18px",
+                fontSize: "0.85rem",
                 borderRadius: "8px",
               }}
             >
-              <Headphones size={16} />
+              <Headphones size={15} />
               <span>Contact us</span>
             </Link>
 
@@ -201,6 +218,7 @@ export const Navbar: React.FC = () => {
                 justifyContent: "center",
                 color: "#ffffff",
                 cursor: "pointer",
+                flexShrink: 0,
               }}
               className="mobile-toggle"
             >
@@ -221,12 +239,15 @@ export const Navbar: React.FC = () => {
             bottom: 0,
             backgroundColor: "rgba(7, 9, 15, 0.98)",
             backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
             zIndex: 99,
-            padding: "24px 20px",
+            padding: "20px",
             display: "flex",
             flexDirection: "column",
-            gap: "12px",
+            gap: "10px",
             borderTop: "1px solid var(--border-subtle)",
+            overflowY: "auto",
+            maxHeight: "calc(100vh - var(--header-height))",
           }}
         >
           {navLinks.map((link) => (
@@ -235,19 +256,19 @@ export const Navbar: React.FC = () => {
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
               style={{
-                padding: "12px 16px",
-                fontSize: "1.05rem",
+                padding: "13px 16px",
+                fontSize: "1rem",
                 fontWeight: 600,
                 color: pathname === link.href ? "var(--color-blue-bright)" : "#ffffff",
                 background:
                   pathname === link.href
-                    ? "rgba(0, 85, 255, 0.1)"
+                    ? "rgba(0, 85, 255, 0.12)"
                     : "rgba(255, 255, 255, 0.03)",
                 borderRadius: "8px",
                 border: "1px solid",
                 borderColor:
                   pathname === link.href
-                    ? "rgba(0, 85, 255, 0.3)"
+                    ? "rgba(0, 85, 255, 0.35)"
                     : "transparent",
               }}
             >
@@ -255,7 +276,7 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
 
-          <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div style={{ marginTop: "auto", paddingTop: "20px", display: "flex", flexDirection: "column", gap: "10px" }}>
             <Link
               href="/pricing"
               onClick={() => setMobileMenuOpen(false)}
@@ -284,6 +305,14 @@ export const Navbar: React.FC = () => {
             display: flex !important;
           }
           .mobile-toggle {
+            display: none !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .nav-contact-btn {
+            display: none !important;
+          }
+          .logo-subtext {
             display: none !important;
           }
         }

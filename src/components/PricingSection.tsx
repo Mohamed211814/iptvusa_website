@@ -30,10 +30,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
         {/* Section Header matching iptvusaofficial.com */}
         <div className="section-header">
           <h2 className="section-title">
-            <span className="text-blue">IPTV USA</span> Pricing
+            <span className="text-blue">IPTV USA</span> Subscription Pricing
           </h2>
           <p className="section-subtitle">
-            Get instant access to over 24,000 live channels and 110,000+ VOD movies with high-speed streaming and zero freezing.
+            Get instant access to the best IPTV USA service with over 24,000 live IPTV USA channels and 110,000+ VOD movies with high speed streaming and zero freezing.
           </p>
 
           {/* Connection Switcher */}
@@ -41,12 +41,15 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
             style={{
               display: "inline-flex",
               alignItems: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
               gap: "6px",
               padding: "4px",
               background: "rgba(14, 20, 36, 0.8)",
               border: "1px solid var(--border-subtle)",
               borderRadius: "var(--radius-full)",
               marginTop: "20px",
+              maxWidth: "100%",
             }}
           >
             {[1, 2, 3].map((conn) => (
@@ -54,7 +57,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
                 key={conn}
                 onClick={() => setConnections(conn)}
                 style={{
-                  padding: "8px 18px",
+                  padding: "8px 16px",
                   borderRadius: "var(--radius-full)",
                   fontSize: "0.85rem",
                   fontWeight: 700,
@@ -195,23 +198,29 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
           style={{
             marginTop: "40px",
             textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <div
             style={{
               display: "inline-flex",
               alignItems: "center",
+              justifyContent: "center",
               gap: "10px",
-              padding: "10px 24px",
+              padding: "12px 20px",
               background: "rgba(255, 255, 255, 0.04)",
               border: "1px solid var(--border-subtle)",
-              borderRadius: "var(--radius-full)",
-              fontSize: "0.9rem",
+              borderRadius: "12px",
+              fontSize: "0.875rem",
               color: "var(--text-main)",
+              maxWidth: "100%",
+              lineHeight: 1.5,
+              textAlign: "center",
             }}
           >
-            <Tv size={18} color="var(--color-green)" />
-            <span>Compatibility for All Devices: Firestick, Android TV, Smart TV, Apple TV, PC/Mac</span>
+            <Tv size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
+            <span>Compatibility for All Devices: Best IPTV USA for Firestick, Android TV, Smart TV, Apple TV, PC and Mac</span>
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ export const setupGuides: SetupGuide[] = [
         code: "78522 (or firestick.iptvusa-pro.com)",
       },
       {
-        title: "Login with your Xtream Codes API",
+        title: "Login with your IPTV USA Xtream Codes API",
         description: "Launch the app, choose Login with Xtream Codes API, enter your username, password, and portal server URL provided in your activation email.",
       },
     ],
@@ -83,7 +83,7 @@ export const setupGuides: SetupGuide[] = [
         description: "Open IBO Player; your screen will display a unique Device ID and Device Key (MAC Address).",
       },
       {
-        title: "Link your Subscription",
+        title: "Link your IPTV USA Subscription",
         description: "Send your Device ID and Key to our 24/7 WhatsApp support or upload your M3U link directly to the IBO Player management portal.",
       },
       {
@@ -131,7 +131,7 @@ export const setupGuides: SetupGuide[] = [
         description: "Download IPTV Smarters for Windows or Mac from the direct link in your activation email.",
       },
       {
-        title: "Login via Xtream Codes",
+        title: "Login with IPTV USA Xtream Codes",
         description: "Launch the installer, open the application, and enter your credentials.",
       },
       {

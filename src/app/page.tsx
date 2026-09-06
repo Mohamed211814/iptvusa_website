@@ -71,35 +71,36 @@ export default function HomePage() {
               background: "linear-gradient(135deg, rgba(16, 28, 54, 0.9) 0%, rgba(10, 16, 32, 0.95) 100%)",
               border: "1px solid rgba(0, 229, 255, 0.3)",
               borderRadius: "var(--radius-xl)",
-              padding: "50px 30px",
+              padding: "clamp(28px, 6vw, 50px) clamp(16px, 4vw, 30px)",
               textAlign: "center",
               boxShadow: "0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 229, 255, 0.15)",
               position: "relative",
             }}
           >
             <span className="section-tag" style={{ marginBottom: "16px" }}>
-              <Sparkles size={14} /> Ready to Experience Next-Gen TV?
+              <Sparkles size={14} /> Ready to Experience IPTV USA?
             </span>
             <h2
               style={{
-                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                fontSize: "clamp(1.7rem, 3.5vw, 2.6rem)",
                 fontWeight: 800,
                 color: "#fff",
                 marginBottom: "16px",
+                wordBreak: "break-word",
               }}
             >
-              Start Streaming Today with a Risk-Free 24h Pass
+              Start Streaming IPTV USA Today with a Risk Free 24h Pass
             </h2>
             <p
               style={{
-                fontSize: "1.05rem",
+                fontSize: "clamp(0.95rem, 2vw, 1.05rem)",
                 color: "var(--text-secondary)",
                 maxWidth: "680px",
                 margin: "0 auto 32px auto",
                 lineHeight: 1.6,
               }}
             >
-              Join over 48,500 subscribers who eliminated overpriced cable bills. Instant activation within 5 minutes on your Firestick, Smart TV, or phone.
+              Join over 48,500 IPTV USA subscribers who eliminated overpriced cable bills. Instant activation within 5 minutes on your Firestick, Smart TV, or phone.
             </p>
 
             <div
@@ -108,7 +109,7 @@ export default function HomePage() {
                 alignItems: "center",
                 justifyContent: "center",
                 flexWrap: "wrap",
-                gap: "16px",
+                gap: "14px",
               }}
             >
               <button
@@ -117,19 +118,19 @@ export default function HomePage() {
                   setModalOpen(true);
                 }}
                 className="btn btn-primary"
-                style={{ padding: "15px 36px", fontSize: "1rem" }}
+                style={{ padding: "14px 30px", fontSize: "1rem", flex: "1 1 240px" }}
               >
                 <Zap size={18} />
-                Get Your Subscription Now
+                Get Your IPTV USA Subscription Now
               </button>
 
               <Link
                 href="/free-trial"
                 className="btn btn-secondary"
-                style={{ padding: "15px 30px", fontSize: "1rem" }}
+                style={{ padding: "14px 26px", fontSize: "1rem", flex: "1 1 220px" }}
               >
                 <Sparkles size={18} color="var(--primary)" />
-                Claim Free 24h Trial
+                Claim Free IPTV USA 24h Trial
               </Link>
             </div>
           </div>
