@@ -193,44 +193,61 @@ export const HeroSection: React.FC = () => {
               </span>
             </div>
 
-            {/* Mockup screen */}
+            {/* Mockup screen with real IPTV player interface */}
             <div
               style={{
-                borderRadius: "10px",
-                background: "radial-gradient(ellipse at center, #0f1c38 0%, #060a14 100%)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
-                padding: "28px 24px",
-                minHeight: "240px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
+                position: "relative",
+                borderRadius: "12px",
+                overflow: "hidden",
+                border: "1px solid rgba(0, 229, 255, 0.25)",
+                boxShadow: "0 16px 36px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 85, 255, 0.2)",
+                background: "#060a14",
               }}
             >
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontSize: "0.8rem", color: "var(--color-blue-bright)", fontWeight: 700 }}>
-                  USA LIVE SPORTS & PPV
-                </span>
-                <span style={{ fontSize: "0.75rem", color: "#10b981" }}>Anti Freeze Active</span>
-              </div>
+              <img
+                src="/images/iptv_player_screen.webp"
+                alt="IPTV USA Pro Live Player Interface"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  aspectRatio: "882 / 526",
+                  objectFit: "cover",
+                }}
+              />
 
-              <div style={{ margin: "20px 0" }}>
-                <h3 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff", marginBottom: "8px" }}>
-                  Live Football, Basketball, Baseball, Hockey & Title Fights
-                </h3>
-                <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-                  Crystal clear 4K UHD resolution with no blackouts or lag on any device.
-                </p>
-              </div>
-
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "12px", borderTop: "1px solid var(--border-subtle)" }}>
-                <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>
-                  Compatibility for All Devices
-                </span>
+              {/* Bottom bar overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: "10px 14px",
+                  background: "linear-gradient(180deg, rgba(6, 10, 20, 0) 0%, rgba(6, 10, 20, 0.95) 100%)",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                  <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--color-green)" }} />
+                  <span style={{ fontSize: "0.8rem", color: "#ffffff", fontWeight: 700 }}>
+                    Live Sports, PPV Events & VOD Movies
+                  </span>
+                </div>
                 <Link
                   href="/channels"
-                  style={{ fontSize: "0.85rem", color: "var(--color-green)", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}
+                  style={{
+                    fontSize: "0.8rem",
+                    color: "var(--color-green)",
+                    fontWeight: 700,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "4px",
+                  }}
                 >
-                  View Lineup <ArrowRight size={14} />
+                  View Lineup <ArrowRight size={13} />
                 </Link>
               </div>
             </div>
