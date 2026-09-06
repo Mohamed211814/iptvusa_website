@@ -296,13 +296,22 @@ Please send me payment details and instant activation credentials.`
 
             {/* Action buttons */}
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              <a
+                href={currentPlan.checkoutUrl}
+                className="btn btn-green"
+                style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "0.95rem", textDecoration: "none" }}
+              >
+                <Zap size={18} />
+                Order Now - Instant Online Checkout
+              </a>
+
               <button
                 onClick={handleWhatsAppCheckout}
                 className="btn btn-whatsapp"
-                style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "0.95rem" }}
+                style={{ width: "100%", justifyContent: "center", padding: "12px", fontSize: "0.9rem" }}
               >
-                <MessageSquare size={18} />
-                Instant Order via WhatsApp (Fastest)
+                <MessageSquare size={16} />
+                Order via WhatsApp Support
               </button>
 
               <button

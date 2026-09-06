@@ -13,18 +13,6 @@ interface PricingSectionProps {
 export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, isH1 = false }) => {
   const connections = 1;
 
-  const handleBuyNow = (plan: PricingPlan) => {
-    if (onSelectPlan) {
-      onSelectPlan(plan, connections);
-    } else {
-      const price = plan.prices[connections].current;
-      const text = encodeURIComponent(
-        `Hello IPTV USA Pro! I would like to buy the ${plan.name} subscription ($${price}) with instant activation.`
-      );
-      window.open(`https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, "")}?text=${text}`, "_blank");
-    }
-  };
-
   return (
     <section id="pricing" className="section">
       <div className="container">
@@ -169,9 +157,9 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                   </ul>
                 </div>
 
-                {/* Buy Now Button */}
-                <button
-                  onClick={() => handleBuyNow(plan)}
+                {/* Order Now Button */}
+                <a
+                  href={plan.checkoutUrl}
                   className={`btn ${isFeatured ? "btn-green" : "btn-primary"}`}
                   style={{
                     width: "100%",
@@ -179,11 +167,12 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     borderRadius: "6px",
                     fontWeight: 800,
                     letterSpacing: "0.02em",
+                    textDecoration: "none",
                   }}
                 >
                   <Zap size={16} />
-                  <span>Buy Now</span>
-                </button>
+                  <span>Order Now</span>
+                </a>
               </div>
             );
           })}

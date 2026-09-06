@@ -4,6 +4,7 @@ export interface PricingPlan {
   name: string;
   badge?: string;
   isPopular?: boolean;
+  checkoutUrl: string;
   prices: {
     [connections: number]: {
       current: number;
@@ -20,6 +21,7 @@ export const pricingPlans: PricingPlan[] = [
     durationMonths: 1,
     name: "1 Month",
     badge: "17% Discount !",
+    checkoutUrl: "https://t.co/sFoqxJHJbb",
     prices: {
       1: { current: 14.95, original: 19.99, monthlyEquivalent: 14.95 },
       2: { current: 24.95, original: 34.99, monthlyEquivalent: 24.95 },
@@ -44,6 +46,7 @@ export const pricingPlans: PricingPlan[] = [
     durationMonths: 3,
     name: "3 Months",
     badge: "Save 30%",
+    checkoutUrl: "https://t.co/MBu8edK8QC",
     prices: {
       1: { current: 29.95, original: 44.99, monthlyEquivalent: 9.98 },
       2: { current: 49.95, original: 74.99, monthlyEquivalent: 16.65 },
@@ -68,6 +71,7 @@ export const pricingPlans: PricingPlan[] = [
     durationMonths: 6,
     name: "6 Months",
     badge: "Save 45%",
+    checkoutUrl: "https://t.co/8xLelc22j0",
     prices: {
       1: { current: 44.95, original: 79.99, monthlyEquivalent: 7.49 },
       2: { current: 74.95, original: 129.99, monthlyEquivalent: 12.49 },
@@ -93,6 +97,7 @@ export const pricingPlans: PricingPlan[] = [
     name: "12 Months",
     badge: "🔥 Best Value Save 65%",
     isPopular: true,
+    checkoutUrl: "https://t.co/GRqLfVu8wg",
     prices: {
       1: { current: 59.95, original: 149.99, monthlyEquivalent: 4.99 },
       2: { current: 99.95, original: 219.99, monthlyEquivalent: 8.32 },
