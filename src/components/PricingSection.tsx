@@ -52,14 +52,42 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
                   flexDirection: "column",
                   justifyContent: "space-between",
                   textAlign: "center",
-                  padding: "30px 20px",
-                  borderColor: isFeatured ? "var(--color-green)" : "var(--border-subtle)",
-                  boxShadow: isFeatured ? "var(--shadow-green), var(--shadow-md)" : "var(--shadow-sm)",
+                  padding: "32px 20px 26px 20px",
+                  position: "relative",
+                  border: isFeatured
+                    ? "2px solid var(--color-green)"
+                    : "1.5px solid rgba(41, 121, 255, 0.45)",
+                  borderRadius: "var(--radius-md)",
+                  boxShadow: isFeatured
+                    ? "0 0 30px rgba(28, 231, 131, 0.3), var(--shadow-md)"
+                    : "0 0 20px rgba(0, 85, 255, 0.15), var(--shadow-sm)",
                   background: isFeatured
-                    ? "linear-gradient(180deg, rgba(14, 28, 48, 0.9) 0%, rgba(8, 14, 24, 0.95) 100%)"
-                    : "var(--bg-card)",
+                    ? "linear-gradient(180deg, rgba(14, 28, 48, 0.95) 0%, rgba(8, 14, 24, 0.98) 100%)"
+                    : "linear-gradient(180deg, rgba(12, 19, 34, 0.88) 0%, rgba(7, 11, 20, 0.92) 100%)",
                 }}
               >
+                {isFeatured && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "-13px",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "var(--color-green)",
+                      color: "#050811",
+                      padding: "4px 14px",
+                      borderRadius: "var(--radius-full)",
+                      fontSize: "0.72rem",
+                      fontWeight: 800,
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      boxShadow: "0 4px 14px rgba(28, 231, 131, 0.45)",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    ★ Most Popular Choice
+                  </div>
+                )}
                 <div>
                   {/* Plan Name */}
                   <h3
@@ -107,8 +135,12 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
                       gap: "10px",
                       textAlign: "left",
                       padding: "16px 0",
-                      borderTop: "1px solid var(--border-subtle)",
-                      borderBottom: "1px solid var(--border-subtle)",
+                      borderTop: isFeatured
+                        ? "1px solid rgba(28, 231, 131, 0.25)"
+                        : "1px solid rgba(41, 121, 255, 0.22)",
+                      borderBottom: isFeatured
+                        ? "1px solid rgba(28, 231, 131, 0.25)"
+                        : "1px solid rgba(41, 121, 255, 0.22)",
                       marginBottom: "24px",
                     }}
                   >
