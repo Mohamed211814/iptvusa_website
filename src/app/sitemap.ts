@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/channels",
     "/pricing",
     "/setup-guide",
-    "/free-trial",
     "/contact",
     "/reseller",
     "/refund-and-returns-policy",

@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { channelCategories, ChannelCategory } from "@/data/channels";
-import { Search, Tv, Trophy, Film, Globe, Sparkles, Check, ArrowRight } from "lucide-react";
+import { Search, Tv, Trophy, Film, Globe, Sparkles, Check, ArrowRight, Zap } from "lucide-react";
 
 export const ChannelExplorer: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -293,9 +293,9 @@ export const ChannelExplorer: React.FC = () => {
             <Link href="/channels" className="btn btn-secondary">
               View Complete Channel Directory
             </Link>
-            <Link href="/free-trial" className="btn btn-primary">
-              <Sparkles size={16} />
-              Test 24 Hours Free
+            <Link href="/pricing" className="btn btn-primary">
+              <Zap size={16} />
+              View Pricing Plans
             </Link>
           </div>
         </div>

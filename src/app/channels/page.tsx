@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { channelCategories } from "@/data/channels";
 import { siteConfig } from "@/config/site";
-import { Tv, Trophy, Film, Sparkles, CheckCircle2, ArrowRight, ShieldCheck } from "lucide-react";
+import { Tv, Trophy, Film, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD)",
@@ -165,18 +165,18 @@ export default function ChannelsPage() {
           }}
         >
           <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
-            Want to Test IPTV USA Channels on Your TV Right Now?
+            Ready to Experience IPTV USA Channels on Your TV?
           </h3>
           <p style={{ fontSize: "1rem", color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto 24px auto" }}>
-            Request our IPTV USA 24 hour instant test pass and experience the IPTV USA Anti Freeze 9.3 quality before purchasing a full subscription.
+            Get instant access to over 24,000+ live 4K channels, all major sports leagues, PPV events, and 110,000+ VOD titles backed by Anti Freeze 9.3 stability.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
-            <Link href="/free-trial" className="btn btn-primary">
-              <Sparkles size={16} />
-              Request IPTV USA 24h Free Trial
+            <Link href="/pricing" className="btn btn-primary">
+              <Zap size={16} />
+              View Pricing & Order Now
             </Link>
-            <Link href="/pricing" className="btn btn-secondary">
-              View IPTV USA Pricing & Multi Screen Plans
+            <Link href="/contact" className="btn btn-secondary">
+              Contact Support
             </Link>
           </div>
         </div>

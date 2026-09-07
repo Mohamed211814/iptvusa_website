@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     "IPTV USA channels",
     "IPTV USA pricing",
     "buy IPTV USA",
-    "IPTV USA free trial",
     "IPTV USA Firestick",
     "IPTV USA Smart TV",
     "IPTV USA live sports",

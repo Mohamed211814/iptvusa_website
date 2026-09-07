@@ -29,7 +29,7 @@ export default function ResellerPage() {
         "100 IPTV USA Credits Included",
         "Official IPTV USA Panel Access",
         "Create 1, 3, 6, and 12 Month Accounts",
-        "Generate IPTV USA 24h Free Trials",
+        "Generate Instant IPTV USA Subscriptions",
         "Full Sub-Reseller Control",
         "99.9% Anti Freeze 9.3 Server Speed",
         "24/7 VIP Tech Support",
@@ -44,7 +44,7 @@ export default function ResellerPage() {
       features: [
         "250 IPTV USA Credits Included",
         "Full IPTV USA Web Control Panel",
-        "Unlimited Daily IPTV USA Free Trials",
+        "Unlimited Sub-Account Creation",
         "Automated M3U and Portal Generation",
         "Brandable DNS and Custom Portal URL",
         "Priority Tier 1 IPTV USA Server Stream Access",

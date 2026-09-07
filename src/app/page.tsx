@@ -119,12 +119,12 @@ export default function HomePage() {
               </button>
 
               <Link
-                href="/free-trial"
+                href="/channels"
                 className="btn btn-secondary"
                 style={{ padding: "14px 26px", fontSize: "1rem", flex: "1 1 220px" }}
               >
                 <Sparkles size={18} color="var(--primary)" />
-                Claim Free IPTV USA 24h Trial
+                Explore 24,000+ Channels
               </Link>
             </div>
           </div>

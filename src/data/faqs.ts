@@ -49,8 +49,8 @@ export const faqs: FAQItem[] = [
   },
   {
     category: "Payments",
-    question: "Does IPTV USA offer a Money Back Guarantee or Free Trial?",
+    question: "Does IPTV USA offer a Money Back Guarantee?",
     answer:
-      "Yes! IPTV USA offers a 24 Hour Free Trial so you can test our channel speed, stability, and image quality risk free. In addition, all 6 month and 12 month IPTV USA subscriptions are backed by our 7 day money back guarantee.",
+      "Yes! All 6 month and 12 month IPTV USA subscriptions are backed by our 7 day money back guarantee. If you experience technical difficulties our support team cannot resolve, you are eligible for a full refund within 7 days.",
   },
 ];
