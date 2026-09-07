@@ -30,7 +30,7 @@ export const FaqAccordion: React.FC = () => {
     {
       question: "How quickly do I receive my subscription details?",
       answer:
-        "Activation is instantaneous! As soon as your order is confirmed, your M3U playlist link, Xtream Codes API credentials, and server portal information are sent directly to your email address and WhatsApp within 5 minutes.",
+        "Activation is instantaneous! As soon as your order is confirmed, your M3U playlist link, Xtream Codes API credentials, and server portal information are sent directly to your email address and Telegram within 5 minutes.",
     },
     {
       question: "Can I use IPTV USA while traveling or with a VPN?",

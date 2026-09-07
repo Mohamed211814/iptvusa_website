@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { setupGuides } from "@/data/guides";
 import { siteConfig } from "@/config/site";
-import { Tv, Terminal, CheckCircle2, AlertCircle, HelpCircle, ArrowRight, MessageSquare } from "lucide-react";
+import { Tv, Terminal, CheckCircle2, AlertCircle, HelpCircle, ArrowRight, MessageSquare, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Step by Step IPTV USA Installation and Setup Guides (Firestick, Smart TV, Apple TV)",
@@ -184,18 +184,18 @@ export default function SetupGuidePage() {
               Need Help Setting Up Your Device?
             </h3>
             <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
-              Our 24/7 technical team can guide you step by step or activate your TV app remotely via WhatsApp.
+              Our 24/7 technical team can guide you step by step or activate your TV app remotely via Telegram or Email.
             </p>
           </div>
 
           <a
-            href={siteConfig.links.whatsapp}
+            href={siteConfig.links.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-whatsapp"
+            className="btn btn-telegram"
           >
-            <MessageSquare size={18} />
-            Chat with Setup Specialist
+            <Zap size={18} />
+            Chat with Setup Specialist on Telegram
           </a>
         </div>
       </div>

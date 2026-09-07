@@ -7,7 +7,6 @@ import { Sparkles, CheckCircle2, MessageSquare, ShieldCheck, Zap, ArrowRight } f
 
 export default function FreeTrialPage() {
   const [email, setEmail] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
   const [device, setDevice] = useState("Amazon Firestick");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -16,15 +15,8 @@ export default function FreeTrialPage() {
     setIsSubmitted(true);
   };
 
-  const handleInstantWhatsApp = () => {
-    const text = encodeURIComponent(
-      `Hello IPTV USA Pro!
-I would like to request an IPTV USA 24 Hour Free Trial.
-Device: ${device}
-Email: ${email || "Provided upon request"}
-Please send me an IPTV USA test playlist to verify buffer free streaming quality.`
-    );
-    window.open(`https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, "")}?text=${text}`, "_blank");
+  const handleInstantTelegram = () => {
+    window.open(siteConfig.links.telegram, "_blank");
   };
 
   return (
@@ -73,15 +65,15 @@ Please send me an IPTV USA test playlist to verify buffer free streaming quality
                   Trial Request Received!
                 </h3>
                 <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "24px", lineHeight: 1.6 }}>
-                  We are generating your test playlist credentials for <strong>{email}</strong>. For instant delivery in under 3 minutes, confirm with our team on WhatsApp:
+                  We are generating your test playlist credentials for <strong>{email}</strong>. For instant delivery in under 3 minutes, reach out to our team on Telegram:
                 </p>
                 <button
-                  onClick={handleInstantWhatsApp}
-                  className="btn btn-whatsapp"
+                  onClick={handleInstantTelegram}
+                  className="btn btn-telegram"
                   style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "1rem" }}
                 >
-                  <MessageSquare size={18} />
-                  Get Trial Link via WhatsApp Now
+                  <Zap size={18} />
+                  Get Trial Link via Telegram (@{siteConfig.telegramUsername})
                 </button>
               </div>
             ) : (
@@ -98,29 +90,6 @@ Please send me an IPTV USA test playlist to verify buffer free streaming quality
                       placeholder="e.g. john@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      style={{
-                        width: "100%",
-                        padding: "13px 16px",
-                        background: "rgba(7, 9, 15, 0.8)",
-                        border: "1px solid var(--border-subtle)",
-                        borderRadius: "8px",
-                        color: "#fff",
-                        fontSize: "0.95rem",
-                        outline: "none",
-                      }}
-                    />
-                  </div>
-
-                  {/* WhatsApp */}
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "#fff", marginBottom: "8px" }}>
-                      WhatsApp Number (For Instant Activation, Optional)
-                    </label>
-                    <input
-                      type="tel"
-                      placeholder="e.g. +1 555 123 4567"
-                      value={whatsapp}
-                      onChange={(e) => setWhatsapp(e.target.value)}
                       style={{
                         width: "100%",
                         padding: "13px 16px",
@@ -175,12 +144,12 @@ Please send me an IPTV USA test playlist to verify buffer free streaming quality
 
                     <button
                       type="button"
-                      onClick={handleInstantWhatsApp}
-                      className="btn btn-whatsapp"
+                      onClick={handleInstantTelegram}
+                      className="btn btn-telegram"
                       style={{ width: "100%", padding: "14px", fontSize: "1rem" }}
                     >
-                      <MessageSquare size={18} />
-                      Fast Track: Get IPTV USA Trial Instantly on WhatsApp
+                      <Zap size={18} />
+                      Fast Track: Get IPTV USA Trial Instantly on Telegram
                     </button>
                   </div>
 

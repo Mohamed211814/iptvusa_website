@@ -22,7 +22,7 @@ export const Testimonials: React.FC = () => {
       location: "California, USA",
       rating: 5,
       comment:
-        "Customer service is truly top tier. I needed a little help setting up IPTV USA on my Firestick, and the support team responded on WhatsApp within minutes and had me streaming right away. Highly recommend IPTV USA to anyone!",
+        "Customer service is truly top tier. I needed a little help setting up IPTV USA on my Firestick, and the support team responded on Telegram within minutes and had me streaming right away. Highly recommend IPTV USA to anyone!",
     },
   ];
 

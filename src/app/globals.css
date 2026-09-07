@@ -221,16 +221,6 @@ button {
   transform: translateY(-2px);
 }
 
-.btn-whatsapp {
-  background: #25d366;
-  color: #ffffff;
-  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
-}
-
-.btn-whatsapp:hover {
-  background: #20ba59;
-  transform: translateY(-2px);
-}
 
 .btn-telegram {
   background: #229ed9;
@@ -376,4 +366,17 @@ input, select, textarea {
 img, svg, video, canvas {
   max-width: 100%;
   height: auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
 }

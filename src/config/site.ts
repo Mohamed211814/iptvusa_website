@@ -7,14 +7,11 @@ export const siteConfig = {
   url: "https://iptvusa-pro.com",
   domain: "iptvusa-pro.com",
   ogImage: "https://iptvusa-pro.com/og-image.jpg",
-  supportEmail: "support@iptvusa-pro.com",
+  supportEmail: "iptvusapro@gmail.com",
   supportPhone: "+1 (555) 349 8822",
-  whatsappNumber: "+15553498822",
-  whatsappMessage: "Hello IPTV USA Pro! I would like to purchase an IPTV USA subscription or get instant access.",
-  telegramUsername: "iptvusapro_official",
+  telegramUsername: "contactexe",
   links: {
-    whatsapp: "https://wa.me/15553498822?text=Hello%20IPTV%20USA%20Pro%2C%20I%20want%20to%20order%20an%20official%20IPTV%20USA%20subscription.",
-    telegram: "https://t.me/iptvusapro_official",
+    telegram: "https://t.me/contactexe",
   },
   stats: {
     channels: "+24,000",

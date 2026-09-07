@@ -165,7 +165,7 @@ export default function RefundPolicyPage() {
               IPTV USA provides digital streaming subscriptions delivered electronically via M3U playlist URLs, Xtream Codes API credentials, and dedicated portal configurations. Because access credentials are systematically generated and delivered instantly after payment confirmation, the service is considered activated immediately upon delivery.
             </p>
             <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, fontSize: "0.95rem", margin: 0 }}>
-              Before requesting a refund, we strongly encourage clients to reach out to our 24/7 technical team on WhatsApp or Telegram. Over 95% of reported streaming issues (such as audio sync, local ISP throttling, or player cache) can be resolved in under 5 minutes with simple configuration assistance.
+              Before requesting a refund, we strongly encourage clients to reach out to our 24/7 technical team on Telegram or Email. Over 95% of reported streaming issues (such as audio sync, local ISP throttling, or player cache) can be resolved in under 5 minutes with simple configuration assistance.
             </p>
           </div>
 
@@ -275,7 +275,7 @@ export default function RefundPolicyPage() {
                   Submit Request
                 </h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
-                  Contact us via WhatsApp or email with your Order ID, registered email address, and a brief description of the issue.
+                  Contact us via Telegram or email with your Order ID, registered email address, and a brief description of the issue.
                 </p>
               </div>
 
@@ -351,7 +351,7 @@ export default function RefundPolicyPage() {
               We encourage you to contact us directly rather than initiating a credit card chargeback or bank dispute. Bank disputes can take anywhere from 30 to 90 days to resolve, freezing your funds during the investigation period.
             </p>
             <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, fontSize: "0.95rem", margin: 0 }}>
-              By contacting our support team directly via WhatsApp or email, eligible refunds are reviewed and initiated within <strong>24 to 48 hours</strong>, saving you time and avoiding dispute processing fees.
+              By contacting our support team directly via Telegram or email, eligible refunds are reviewed and initiated within <strong>24 to 48 hours</strong>, saving you time and avoiding dispute processing fees.
             </p>
           </div>
         </div>
@@ -401,13 +401,13 @@ export default function RefundPolicyPage() {
             }}
           >
             <a
-              href={siteConfig.links.whatsapp}
+              href={siteConfig.links.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-whatsapp"
+              className="btn btn-telegram"
             >
-              <MessageSquare size={16} />
-              Chat on WhatsApp Live
+              <Zap size={16} />
+              Telegram Support (@{siteConfig.telegramUsername})
             </a>
             <Link href="/contact" className="btn btn-secondary">
               <Mail size={16} />

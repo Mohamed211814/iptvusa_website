@@ -126,19 +126,9 @@ export const Footer: React.FC = () => {
               24/7 Support
             </h4>
             <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "16px" }}>
-              Contact our live support team directly on WhatsApp or Telegram for immediate activation.
+              Contact our live support team directly on Telegram or Email for immediate activation.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-              <a
-                href={siteConfig.links.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp"
-                style={{ padding: "9px 16px", fontSize: "0.85rem", width: "fit-content" }}
-              >
-                <MessageSquare size={16} />
-                WhatsApp Live Help
-              </a>
               <a
                 href={siteConfig.links.telegram}
                 target="_blank"
@@ -147,8 +137,16 @@ export const Footer: React.FC = () => {
                 style={{ padding: "9px 16px", fontSize: "0.85rem", width: "fit-content" }}
               >
                 <Zap size={16} />
-                Telegram Channel
+                Telegram (@{siteConfig.telegramUsername})
               </a>
+              <Link
+                href="/contact"
+                className="btn btn-secondary"
+                style={{ padding: "9px 16px", fontSize: "0.85rem", width: "fit-content" }}
+              >
+                <Mail size={16} />
+                Email: {siteConfig.supportEmail}
+              </Link>
             </div>
           </div>
         </div>
@@ -171,9 +169,9 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} {siteConfig.domain}. All Rights Reserved. Official IPTV USA Subscription Service.
           </div>
           <div style={{ display: "flex", gap: "18px" }}>
-            <Link href="/pricing" style={{ color: "var(--text-muted)" }}>Refund Policy</Link>
-            <Link href="/pricing" style={{ color: "var(--text-muted)" }}>Privacy</Link>
-            <Link href="/contact" style={{ color: "var(--text-muted)" }}>Terms</Link>
+            <Link href="/refund-and-returns-policy" style={{ color: "var(--text-muted)" }}>Refund Policy</Link>
+            <Link href="/privacy-policy" style={{ color: "var(--text-muted)" }}>Privacy</Link>
+            <Link href="/contact" style={{ color: "var(--text-muted)" }}>Contact</Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { ShieldCheck, Zap, Server, Users, Award, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
+import { EmailSupportButton } from "@/components/EmailSupportButton";
+import { ShieldCheck, Zap, Server, Users, Award, CheckCircle2, MessageSquare, ArrowRight, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "IPTV USA Reseller Panel & Subscriptions Program | Start Your Business",
@@ -31,7 +32,7 @@ export default function ResellerPage() {
         "Generate IPTV USA 24h Free Trials",
         "Full Sub-Reseller Control",
         "99.9% Anti Freeze 9.3 Server Speed",
-        "24/7 WhatsApp VIP Tech Support",
+        "24/7 VIP Tech Support",
       ],
     },
     {
@@ -134,18 +135,125 @@ export default function ResellerPage() {
                 </ul>
               </div>
 
-              <a
-                href={`https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, "")}?text=Hello%20IPTV%20USA%20Pro%2C%20I%20want%20to%20order%20the%20${encodeURIComponent(tier.name)}%20(${tier.credits})%20package.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`btn ${tier.isPopular ? "btn-green" : "btn-primary"}`}
-                style={{ width: "100%", justifyContent: "center" }}
-              >
-                <Zap size={16} />
-                Activate IPTV USA Reseller Panel
-              </a>
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "auto" }}>
+                <EmailSupportButton
+                  variant={tier.isPopular ? "green" : "primary"}
+                  label="Order Panel via Email"
+                  subject={`Order IPTV USA Reseller Panel - ${tier.name} (${tier.credits})`}
+                  body={`Hello IPTV USA Reseller Desk,\n\nI want to order the ${tier.name} package (${tier.credits} at ${tier.price}).\n\nPlease provide payment details and panel setup instructions.`}
+                  showQuickLinks={false}
+                />
+                <a
+                  href={siteConfig.links.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                  style={{ width: "100%", justifyContent: "center", fontSize: "0.85rem", padding: "10px" }}
+                >
+                  <Zap size={15} />
+                  Order via Telegram (@{siteConfig.telegramUsername})
+                </a>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* How to Order Reseller Panel via Email Guide Box */}
+        <div
+          className="card-glass"
+          style={{
+            background: "linear-gradient(135deg, rgba(14, 28, 54, 0.95) 0%, rgba(7, 12, 22, 0.98) 100%)",
+            border: "1.5px solid rgba(41, 121, 255, 0.45)",
+            boxShadow: "0 0 35px rgba(0, 85, 255, 0.18), var(--shadow-md)",
+            padding: "clamp(24px, 4vw, 36px)",
+            borderRadius: "var(--radius-lg)",
+            marginBottom: "50px",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px", flexWrap: "wrap" }}>
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "12px",
+                background: "rgba(0, 85, 255, 0.15)",
+                border: "1px solid rgba(0, 85, 255, 0.35)",
+                color: "var(--color-blue-bright)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Mail size={24} />
+            </div>
+            <div>
+              <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+                How to Order Your IPTV USA Reseller Panel via Email
+              </h2>
+              <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", margin: "4px 0 0 0" }}>
+                Direct onboarding via our priority dealer desk at <strong style={{ color: "var(--color-green)" }}>{siteConfig.supportEmail}</strong>
+              </p>
+            </div>
+          </div>
+
+          <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.65, marginBottom: "20px" }}>
+            Prefer to handle your reseller account setup and invoicing over email? Follow these 3 simple steps to get your Master Xtream Codes panel credentials within 2 hours:
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "16px",
+              marginBottom: "24px",
+            }}
+          >
+            <div style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
+              <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-blue-bright)", marginBottom: "6px" }}>
+                STEP 01: SEND EMAIL
+              </div>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                Submit Your Request
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
+                Send an email to <strong>{siteConfig.supportEmail}</strong> specifying your chosen tier (100, 250, or 500 Credits).
+              </p>
+            </div>
+
+            <div style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
+              <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-blue-bright)", marginBottom: "6px" }}>
+                STEP 02: INVOICING
+              </div>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                Select Payment Method
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
+                Our team sends a secure payment invoice (Credit Card, PayPal, or Crypto USDT/BTC) with wholesale pricing.
+              </p>
+            </div>
+
+            <div style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
+              <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-green)", marginBottom: "6px" }}>
+                STEP 03: PANEL DELIVERY
+              </div>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                Instant Access & Training
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
+                Receive your Master Panel URL, login credentials, loaded credit balance, and complete sub-reseller tutorials.
+              </p>
+            </div>
+          </div>
+
+          <div style={{ maxWidth: "440px", margin: "0 auto" }}>
+            <EmailSupportButton
+              variant="green"
+              label="📧 Click Here to Email Us for Reseller Panel"
+              subject="Order IPTV USA Reseller Panel Inquiry"
+              body={`Hello IPTV USA Reseller Desk,\n\nI want to order an IPTV USA Reseller Panel.\n\nPackage Interest: (Starter 100 Credits / Pro 250 Credits / Master 500 Credits)\nPreferred Payment Method:\nMy Name/Company:\n\nPlease send me payment instructions and panel setup details.`}
+              showQuickLinks={true}
+            />
+          </div>
         </div>
 
         {/* Reseller Benefits Section */}

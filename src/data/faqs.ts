@@ -15,7 +15,7 @@ export const faqs: FAQItem[] = [
     category: "General",
     question: "How fast do I receive my IPTV USA login credentials after payment?",
     answer:
-      "Instantly! Once your payment is confirmed, your IPTV USA M3U Playlist, Xtream Codes API credentials, and portal URL are automatically generated and sent to your email address and WhatsApp within 5 to 15 minutes.",
+      "Instantly! Once your payment is confirmed, your IPTV USA M3U Playlist, Xtream Codes API credentials, and portal URL are automatically generated and sent to your email address and Telegram within 5 to 15 minutes.",
   },
   {
     category: "Setup",

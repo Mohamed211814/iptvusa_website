@@ -169,7 +169,7 @@ export default function PrivacyPolicyPage() {
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px", margin: 0, padding: 0 }}>
               <li style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.6 }}>
                 <CheckCircle2 size={18} color="var(--color-green)" style={{ flexShrink: 0, marginTop: "3px" }} />
-                <span><strong>Contact Information:</strong> Email address and WhatsApp/Telegram handle provided during order placement to deliver your playlist URL and login credentials.</span>
+                <span><strong>Contact Information:</strong> Email address and Telegram handle provided during order placement to deliver your playlist URL and login credentials.</span>
               </li>
               <li style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "var(--text-secondary)", fontSize: "0.92rem", lineHeight: 1.6 }}>
                 <CheckCircle2 size={18} color="var(--color-green)" style={{ flexShrink: 0, marginTop: "3px" }} />
@@ -361,13 +361,13 @@ export default function PrivacyPolicyPage() {
             }}
           >
             <a
-              href={siteConfig.links.whatsapp}
+              href={siteConfig.links.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-whatsapp"
+              className="btn btn-telegram"
             >
-              <MessageSquare size={16} />
-              Contact Privacy Team on WhatsApp
+              <Zap size={16} />
+              Contact Privacy Team on Telegram
             </a>
             <Link href="/contact" className="btn btn-secondary">
               <Mail size={16} />

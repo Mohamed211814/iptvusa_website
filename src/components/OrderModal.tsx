@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { pricingPlans, PricingPlan } from "@/data/pricing";
 import { siteConfig } from "@/config/site";
-import { X, Check, MessageSquare, Zap, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
+import { X, Check, Mail, Zap, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -23,9 +23,6 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   );
   const [connections, setConnections] = useState<number>(initialConnections);
   const [deviceType, setDeviceType] = useState<string>("Amazon Firestick");
-  const [customerEmail, setCustomerEmail] = useState<string>("");
-  const [customerWhatsApp, setCustomerWhatsApp] = useState<string>("");
-  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   React.useEffect(() => {
     if (isOpen) {
@@ -43,27 +40,8 @@ export const OrderModal: React.FC<OrderModalProps> = ({
   const currentPlan = pricingPlans.find((p) => p.id === selectedPlanId) || pricingPlans[3];
   const totalPrice = currentPlan.prices[connections].current;
 
-  const handleWhatsAppCheckout = () => {
-    const message = encodeURIComponent(
-      `Hello IPTV USA Pro!
-I would like to order:
-Plan: ${currentPlan.name}
-Devices or Connections: ${connections}
-Device Hardware: ${deviceType}
-Total Price: $${totalPrice}
-Email: ${customerEmail || "Provided upon request"}
-Please send me payment details and instant activation credentials.`
-    );
-    window.open(`https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, "")}?text=${message}`, "_blank");
-  };
-
   const handleTelegramCheckout = () => {
     window.open(siteConfig.links.telegram, "_blank");
-  };
-
-  const handleSubmitForm = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
   };
 
   return (
@@ -124,40 +102,8 @@ Please send me payment details and instant activation credentials.`
           <X size={20} />
         </button>
 
-        {isSubmitted ? (
-          <div style={{ textAlign: "center", padding: "20px 0" }}>
-            <div
-              style={{
-                width: "60px",
-                height: "60px",
-                borderRadius: "50%",
-                background: "rgba(16, 185, 129, 0.15)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "0 auto 16px auto",
-              }}
-            >
-              <CheckCircle2 size={36} color="#10b981" />
-            </div>
-            <h3 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: "10px" }}>
-              Order Request Received!
-            </h3>
-            <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", marginBottom: "24px" }}>
-              Thank you! Our automated system is preparing your playlist for <strong>{customerEmail}</strong>. To receive your M3U and Xtream credentials within 5 minutes, click below to confirm via WhatsApp:
-            </p>
-            <button
-              onClick={handleWhatsAppCheckout}
-              className="btn btn-whatsapp"
-              style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "1rem" }}
-            >
-              <MessageSquare size={18} />
-              Open WhatsApp for Instant Activation
-            </button>
-          </div>
-        ) : (
-          <div>
-            <div style={{ marginBottom: "20px" }}>
+        <div>
+          <div style={{ marginBottom: "20px" }}>
               <div
                 style={{
                   display: "inline-flex",
@@ -305,14 +251,14 @@ Please send me payment details and instant activation credentials.`
                 Order Now - Instant Online Checkout
               </a>
 
-              <button
-                onClick={handleWhatsAppCheckout}
-                className="btn btn-whatsapp"
-                style={{ width: "100%", justifyContent: "center", padding: "12px", fontSize: "0.9rem" }}
+              <a
+                href={`mailto:${siteConfig.supportEmail}?subject=${encodeURIComponent(`Order Inquiry - ${currentPlan.name}`)}`}
+                className="btn btn-secondary"
+                style={{ width: "100%", justifyContent: "center", padding: "12px", fontSize: "0.9rem", textDecoration: "none" }}
               >
-                <MessageSquare size={16} />
-                Order via WhatsApp Support
-              </button>
+                <Mail size={16} />
+                Order via Email Support
+              </a>
 
               <button
                 onClick={handleTelegramCheckout}
@@ -328,8 +274,7 @@ Please send me payment details and instant activation credentials.`
               🔒 256 bit SSL Encrypted | 7 Day Money Back Guarantee
             </div>
           </div>
-        )}
+        </div>
       </div>
-    </div>
   );
 };

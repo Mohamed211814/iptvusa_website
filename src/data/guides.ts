@@ -84,7 +84,7 @@ export const setupGuides: SetupGuide[] = [
       },
       {
         title: "Link your IPTV USA Subscription",
-        description: "Send your Device ID and Key to our 24/7 WhatsApp support or upload your M3U link directly to the IBO Player management portal.",
+        description: "Send your Device ID and Key to our 24/7 Telegram support (@contactexe) or email, or upload your M3U link directly to the IBO Player management portal.",
       },
       {
         title: "Restart and Stream",
@@ -110,7 +110,7 @@ export const setupGuides: SetupGuide[] = [
       },
       {
         title: "Enter your IPTV USA Account Info",
-        description: "Input any name for the playlist, followed by the Username, Password, and Server Portal URL sent to your email or WhatsApp.",
+        description: "Input any name for the playlist, followed by the Username, Password, and Server Portal URL sent to your email or Telegram.",
       },
       {
         title: "Download & Stream",
