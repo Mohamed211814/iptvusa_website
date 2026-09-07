@@ -31,7 +31,7 @@ export const FeaturesGrid: React.FC = () => {
               >
                 <Zap size={28} />
               </div>
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 IPTV USA Anti Freeze
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
@@ -55,7 +55,7 @@ export const FeaturesGrid: React.FC = () => {
               >
                 <Server size={28} />
               </div>
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 IPTV USA 10Gbps Network
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
@@ -79,7 +79,7 @@ export const FeaturesGrid: React.FC = () => {
               >
                 <ShieldCheck size={28} />
               </div>
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 IPTV USA 99% Stability
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>
@@ -103,7 +103,7 @@ export const FeaturesGrid: React.FC = () => {
               >
                 <Headphones size={28} />
               </div>
-              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 IPTV USA 24/7 Support
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)" }}>

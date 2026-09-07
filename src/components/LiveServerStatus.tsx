@@ -46,10 +46,10 @@ export const LiveServerStatus: React.FC = () => {
             <Activity size={20} />
           </div>
           <div>
-            <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff" }}>
+            <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#ffffff" }}>
               Live IPTV USA Anti Freeze 9.3 Cluster
             </h4>
-            <span style={{ fontSize: "0.75rem", color: "#10b981", display: "flex", alignItems: "center", gap: "6px" }}>
+            <span style={{ fontSize: "0.75rem", color: "#34d399", display: "flex", alignItems: "center", gap: "6px" }}>
               <span className="pulse-dot" /> All IPTV USA Nodes 100% Online
             </span>
           </div>
@@ -59,24 +59,26 @@ export const LiveServerStatus: React.FC = () => {
           <span
             style={{
               fontSize: "0.75rem",
-              background: "rgba(255, 255, 255, 0.05)",
+              background: "rgba(255, 255, 255, 0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               padding: "4px 10px",
               borderRadius: "6px",
-              color: "var(--text-secondary)",
+              color: "#ffffff",
             }}
           >
-            Avg Latency: <strong style={{ color: "var(--primary)" }}>15ms</strong>
+            Avg Latency: <strong style={{ color: "#38bdf8" }}>15ms</strong>
           </span>
           <span
             style={{
               fontSize: "0.75rem",
-              background: "rgba(255, 255, 255, 0.05)",
+              background: "rgba(255, 255, 255, 0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               padding: "4px 10px",
               borderRadius: "6px",
-              color: "var(--text-secondary)",
+              color: "#ffffff",
             }}
           >
-            Uptime: <strong style={{ color: "#10b981" }}>99.99%</strong>
+            Uptime: <strong style={{ color: "#34d399" }}>99.99%</strong>
           </span>
         </div>
       </div>
@@ -93,8 +95,9 @@ export const LiveServerStatus: React.FC = () => {
           <div
             key={server.city}
             style={{
-              background: "rgba(255, 255, 255, 0.03)",
+              background: "#ffffff",
               border: "1px solid var(--border-subtle)",
+              boxShadow: "var(--shadow-sm)",
               borderRadius: "10px",
               padding: "12px 14px",
               display: "flex",
@@ -103,10 +106,10 @@ export const LiveServerStatus: React.FC = () => {
             }}
           >
             <div>
-              <div style={{ fontSize: "0.825rem", fontWeight: 600, color: "#fff" }}>
+              <div style={{ fontSize: "0.825rem", fontWeight: 600, color: "#000000" }}>
                 {server.city}
               </div>
-              <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>
+              <div style={{ fontSize: "0.7rem", color: "#64748b" }}>
                 Load: 24%
               </div>
             </div>
@@ -114,7 +117,7 @@ export const LiveServerStatus: React.FC = () => {
               <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--primary)" }}>
                 {server.ping}
               </div>
-              <span style={{ fontSize: "0.65rem", color: "#10b981" }}>Active</span>
+              <span style={{ fontSize: "0.65rem", color: "#059669", fontWeight: 700 }}>Active</span>
             </div>
           </div>
         ))}

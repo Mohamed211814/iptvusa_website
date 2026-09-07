@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
               >
                 <Tv size={22} color="#050811" />
               </div>
-              <span style={{ fontSize: "1.3rem", fontWeight: 900, color: "#fff" }}>
+              <span style={{ fontSize: "1.3rem", fontWeight: 900, color: "#000000" }}>
                 IPTV <span className="text-blue">USA</span>{" "}
                 <span style={{ color: "var(--color-green)", fontSize: "0.85rem" }}>PRO</span>
               </span>
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: | Services (exact heading from iptvusaofficial.com) */}
           <div>
-            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#fff" }}>
+            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
               | Services
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: | Other Pages (exact heading from iptvusaofficial.com) */}
           <div>
-            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#fff" }}>
+            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
               | Other Pages
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: 24/7 Support */}
           <div>
-            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#fff" }}>
+            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
               24/7 Support
             </h4>
             <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "16px" }}>

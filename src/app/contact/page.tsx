@@ -36,7 +36,7 @@ export default function ContactPage() {
         {/* Direct Fast-Track Channels */}
         <div style={{ maxWidth: "860px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "24px" }}>
-            <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>
               Prefer Direct Messaging or Instant Chat?
             </h3>
             <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)" }}>
@@ -71,7 +71,7 @@ export default function ContactPage() {
               >
                 <Zap size={26} />
               </div>
-              <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
+              <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>
                 Telegram Live Agent
               </h4>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "18px", flex: 1 }}>
@@ -114,7 +114,7 @@ export default function ContactPage() {
               >
                 <Mail size={26} />
               </div>
-              <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>
+              <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>
                 Direct Email Helpdesk
               </h4>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "18px", flex: 1 }}>
@@ -137,13 +137,13 @@ export default function ContactPage() {
               justifyContent: "space-between",
               gap: "16px",
               flexWrap: "wrap",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
+              border: "1px solid var(--border-subtle)",
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <BookOpen size={22} color="var(--primary)" />
               <div>
-                <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "#fff" }}>
+                <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "#000000" }}>
                   Need Device Installation Instructions?
                 </div>
                 <div style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>

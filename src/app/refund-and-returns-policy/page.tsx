@@ -100,7 +100,7 @@ export default function RefundPolicyPage() {
 
             <div style={{ flex: 1, minWidth: "260px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px", flexWrap: "wrap" }}>
-                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#ffffff", margin: 0 }}>
                   7-Day 100% Money-Back Guarantee
                 </h2>
                 <span
@@ -108,7 +108,7 @@ export default function RefundPolicyPage() {
                     fontSize: "0.75rem",
                     fontWeight: 800,
                     background: "var(--color-green)",
-                    color: "#050811",
+                    color: "#ffffff",
                     padding: "3px 10px",
                     borderRadius: "var(--radius-full)",
                     textTransform: "uppercase",
@@ -117,7 +117,7 @@ export default function RefundPolicyPage() {
                   Verified Guarantee
                 </span>
               </div>
-              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontSize: "0.95rem", color: "rgba(255, 255, 255, 0.9)", lineHeight: 1.65, margin: 0 }}>
                 If you encounter unresolved technical issues, server disruptions, or channel compatibility problems that our 24/7 technical team cannot solve within the first <strong>7 days of your purchase</strong>, you are entitled to a full refund. No questions asked and no hidden cancellation fees.
               </p>
             </div>
@@ -131,20 +131,20 @@ export default function RefundPolicyPage() {
               gap: "16px",
               marginTop: "24px",
               paddingTop: "20px",
-              borderTop: "1px solid var(--border-subtle)",
+              borderTop: "1px solid rgba(255, 255, 255, 0.15)",
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <CheckCircle2 size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "0.875rem", color: "#fff", fontWeight: 600 }}>24-48h Refund Processing</span>
+              <span style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700 }}>24-48h Refund Processing</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <CheckCircle2 size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "0.875rem", color: "#fff", fontWeight: 600 }}>Direct Credit Card Reversal</span>
+              <span style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700 }}>Direct Credit Card Reversal</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <CheckCircle2 size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "0.875rem", color: "#fff", fontWeight: 600 }}>Zero Cancellation Penalties</span>
+              <span style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700 }}>Zero Cancellation Penalties</span>
             </div>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function RefundPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <FileText size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 1. Nature of Our Digital Subscription Service
               </h2>
             </div>
@@ -175,7 +175,7 @@ export default function RefundPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(28, 231, 131, 0.15)", color: "var(--color-green)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <CheckCircle2 size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 2. Conditions Eligible for a Full Refund
               </h2>
             </div>
@@ -208,7 +208,7 @@ export default function RefundPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(239, 68, 68, 0.15)", color: "#ef4444", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <AlertCircle size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 3. Non-Refundable Circumstances
               </h2>
             </div>
@@ -245,7 +245,7 @@ export default function RefundPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <CreditCard size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 4. Step-by-Step Refund Process
               </h2>
             </div>
@@ -262,7 +262,7 @@ export default function RefundPolicyPage() {
             >
               <div
                 style={{
-                  background: "rgba(255, 255, 255, 0.03)",
+                  background: "#f8fafc",
                   border: "1px solid var(--border-subtle)",
                   borderRadius: "var(--radius-md)",
                   padding: "18px",
@@ -271,7 +271,7 @@ export default function RefundPolicyPage() {
                 <div style={{ fontSize: "0.8rem", fontWeight: 800, color: "var(--color-blue-bright)", marginBottom: "6px" }}>
                   STEP 01
                 </div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
                   Submit Request
                 </h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
@@ -281,7 +281,7 @@ export default function RefundPolicyPage() {
 
               <div
                 style={{
-                  background: "rgba(255, 255, 255, 0.03)",
+                  background: "#f8fafc",
                   border: "1px solid var(--border-subtle)",
                   borderRadius: "var(--radius-md)",
                   padding: "18px",
@@ -290,7 +290,7 @@ export default function RefundPolicyPage() {
                 <div style={{ fontSize: "0.8rem", fontWeight: 800, color: "var(--color-blue-bright)", marginBottom: "6px" }}>
                   STEP 02
                 </div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
                   Technical Verification
                 </h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
@@ -300,7 +300,7 @@ export default function RefundPolicyPage() {
 
               <div
                 style={{
-                  background: "rgba(255, 255, 255, 0.03)",
+                  background: "#f8fafc",
                   border: "1px solid var(--border-subtle)",
                   borderRadius: "var(--radius-md)",
                   padding: "18px",
@@ -309,7 +309,7 @@ export default function RefundPolicyPage() {
                 <div style={{ fontSize: "0.8rem", fontWeight: 800, color: "var(--color-green)", marginBottom: "6px" }}>
                   STEP 03
                 </div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
                   Refund Reversal
                 </h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
@@ -325,7 +325,7 @@ export default function RefundPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <RotateCcw size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 5. Returns Policy for Hardware Devices
               </h2>
             </div>
@@ -343,7 +343,7 @@ export default function RefundPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(28, 231, 131, 0.15)", color: "var(--color-green)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <ShieldCheck size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 6. Avoid Bank Disputes & Chargebacks
               </h2>
             </div>
@@ -363,10 +363,10 @@ export default function RefundPolicyPage() {
             marginTop: "50px",
             textAlign: "center",
             padding: "clamp(30px, 5vw, 44px)",
-            background: "linear-gradient(135deg, rgba(14, 22, 42, 0.95) 0%, rgba(8, 14, 26, 0.98) 100%)",
-            border: "1.5px solid rgba(41, 121, 255, 0.4)",
+            background: "#ffffff",
+            border: "1px solid var(--border-subtle)",
             borderRadius: "var(--radius-lg)",
-            boxShadow: "0 0 35px rgba(0, 85, 255, 0.2)",
+            boxShadow: "var(--shadow-md)",
           }}
         >
           <div
@@ -374,7 +374,7 @@ export default function RefundPolicyPage() {
               width: "52px",
               height: "52px",
               borderRadius: "50%",
-              background: "rgba(0, 85, 255, 0.15)",
+              background: "rgba(0, 85, 255, 0.12)",
               color: "var(--color-blue-bright)",
               display: "flex",
               alignItems: "center",
@@ -384,7 +384,7 @@ export default function RefundPolicyPage() {
           >
             <HelpCircle size={26} />
           </div>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: "10px" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#000000", marginBottom: "10px" }}>
             Need Assistance or Have Questions About Your Plan?
           </h2>
           <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto 24px auto", fontSize: "0.95rem", lineHeight: 1.65 }}>

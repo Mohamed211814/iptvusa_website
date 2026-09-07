@@ -46,13 +46,13 @@ export const DeviceCompatibility: React.FC = () => {
     <section className="section" style={{ backgroundColor: "rgba(11, 16, 30, 0.4)" }}>
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">
+          <span className="section-tag" style={{ background: "rgba(0, 85, 255, 0.25)", color: "#ffffff", borderColor: "rgba(0, 85, 255, 0.5)" }}>
             <Monitor size={14} /> Universal IPTV USA Compatibility
           </span>
-          <h2 className="section-title">
+          <h2 className="section-title" style={{ color: "#ffffff" }}>
             Watch <span className="text-blue">IPTV USA</span> on Any Device, Anywhere
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
             One IPTV USA subscription works across all your household devices. Stream on your living room 4K TV or take your favorite sports on the road with your mobile phone or tablet.
           </p>
         </div>
@@ -65,8 +65,9 @@ export const DeviceCompatibility: React.FC = () => {
                   width: "50px",
                   height: "50px",
                   borderRadius: "12px",
-                  background: "rgba(255, 255, 255, 0.05)",
-                  border: "1px solid var(--border-subtle)",
+                  background: "rgba(0, 85, 255, 0.08)",
+                  border: "1px solid rgba(0, 85, 255, 0.2)",
+                  color: "var(--color-blue)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -78,7 +79,7 @@ export const DeviceCompatibility: React.FC = () => {
 
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff" }}>
+                  <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#000000" }}>
                     {device.name}
                   </h3>
                   <span
@@ -87,8 +88,8 @@ export const DeviceCompatibility: React.FC = () => {
                       fontWeight: 600,
                       padding: "2px 8px",
                       borderRadius: "4px",
-                      background: "rgba(255, 255, 255, 0.08)",
-                      color: "var(--text-secondary)",
+                      background: "rgba(0, 85, 255, 0.08)",
+                      color: "var(--color-blue)",
                     }}
                   >
                     {device.badge}

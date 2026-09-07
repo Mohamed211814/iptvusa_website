@@ -71,10 +71,11 @@ export const FaqAccordion: React.FC = () => {
               <div
                 key={idx}
                 style={{
-                  background: isOpen ? "rgba(14, 22, 40, 0.85)" : "rgba(11, 16, 28, 0.65)",
+                  background: isOpen ? "#f8fafc" : "#ffffff",
                   border: "1px solid",
-                  borderColor: isOpen ? "rgba(0, 85, 255, 0.4)" : "var(--border-subtle)",
-                  borderRadius: "8px",
+                  borderColor: isOpen ? "var(--color-blue)" : "var(--border-subtle)",
+                  borderRadius: "10px",
+                  boxShadow: isOpen ? "0 4px 16px rgba(0, 85, 255, 0.08)" : "var(--shadow-sm)",
                   overflow: "hidden",
                   transition: "all 0.25s ease",
                 }}
@@ -83,13 +84,13 @@ export const FaqAccordion: React.FC = () => {
                   onClick={() => toggleAccordion(idx)}
                   style={{
                     width: "100%",
-                    padding: "clamp(14px, 3vw, 20px) clamp(16px, 3vw, 24px)",
+                    padding: "clamp(16px, 3vw, 20px) clamp(16px, 3vw, 24px)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
                     background: "transparent",
                     textAlign: "left",
-                    color: "#ffffff",
+                    color: "#000000",
                     fontSize: "clamp(0.95rem, 2.5vw, 1.05rem)",
                     fontWeight: 700,
                     cursor: "pointer",
@@ -99,7 +100,7 @@ export const FaqAccordion: React.FC = () => {
                   <span>{faq.question}</span>
                   <ChevronDown
                     size={20}
-                    color={isOpen ? "var(--color-blue-bright)" : "var(--text-muted)"}
+                    color={isOpen ? "var(--color-blue)" : "#64748b"}
                     style={{
                       transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                       transition: "transform 0.25s ease",
@@ -113,9 +114,9 @@ export const FaqAccordion: React.FC = () => {
                     style={{
                       padding: "0 clamp(16px, 3vw, 24px) clamp(16px, 3vw, 22px) clamp(16px, 3vw, 24px)",
                       fontSize: "clamp(0.875rem, 2vw, 0.95rem)",
-                      color: "var(--text-secondary)",
-                      lineHeight: 1.65,
-                      borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+                      color: "#1e293b",
+                      lineHeight: 1.7,
+                      borderTop: "1px solid var(--border-subtle)",
                       paddingTop: "16px",
                     }}
                   >

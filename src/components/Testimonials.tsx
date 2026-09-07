@@ -30,10 +30,10 @@ export const Testimonials: React.FC = () => {
     <section className="section" style={{ backgroundColor: "rgba(10, 14, 24, 0.4)" }}>
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">
+          <h2 className="section-title" style={{ color: "#ffffff" }}>
             What Say <span className="text-blue">IPTV USA</span> Clients ?
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
             See real reviews and feedback from verified IPTV USA subscribers streaming on Firestick, Smart TVs, and mobile devices across the United States.
           </p>
         </div>
@@ -80,11 +80,11 @@ export const Testimonials: React.FC = () => {
                 }}
               >
                 <div>
-                  <div style={{ fontSize: "1rem", fontWeight: 800, color: "#fff", display: "flex", alignItems: "center", gap: "6px" }}>
+                  <div style={{ fontSize: "1rem", fontWeight: 800, color: "#000000", display: "flex", alignItems: "center", gap: "6px" }}>
                     {rev.name}
                     <CheckCircle2 size={16} color="var(--color-green)" />
                   </div>
-                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>
+                  <div style={{ fontSize: "0.8rem", color: "#64748b" }}>
                     {rev.location}
                   </div>
                 </div>

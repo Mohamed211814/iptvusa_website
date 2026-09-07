@@ -60,7 +60,7 @@ export default function ChannelsPage() {
                 }}
               >
                 <div>
-                  <h2 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#fff" }}>
+                  <h2 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#000000" }}>
                     {category.name}
                   </h2>
                   <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", marginTop: "4px" }}>
@@ -71,8 +71,8 @@ export default function ChannelsPage() {
                   style={{
                     padding: "6px 14px",
                     borderRadius: "var(--radius-full)",
-                    background: "rgba(0, 229, 255, 0.12)",
-                    border: "1px solid rgba(0, 229, 255, 0.3)",
+                    background: "rgba(0, 85, 255, 0.1)",
+                    border: "1px solid rgba(0, 85, 255, 0.25)",
                     color: "var(--primary)",
                     fontWeight: 700,
                     fontSize: "0.9rem",
@@ -95,15 +95,16 @@ export default function ChannelsPage() {
                   <div
                     key={i}
                     style={{
-                      background: "rgba(255, 255, 255, 0.03)",
-                      border: "1px solid rgba(255, 255, 255, 0.06)",
+                      background: "#f8fafc",
+                      border: "1px solid var(--border-subtle)",
                       borderRadius: "8px",
                       padding: "10px 14px",
                       display: "flex",
                       alignItems: "center",
                       gap: "10px",
                       fontSize: "0.875rem",
-                      color: "#fff",
+                      color: "#000000",
+                      fontWeight: 500,
                     }}
                   >
                     <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--primary)", flexShrink: 0 }} />
@@ -120,7 +121,7 @@ export default function ChannelsPage() {
                   flexWrap: "wrap",
                   gap: "12px",
                   paddingTop: "14px",
-                  borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                  borderTop: "1px solid var(--border-subtle)",
                 }}
               >
                 <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
@@ -129,10 +130,11 @@ export default function ChannelsPage() {
                       key={i}
                       style={{
                         fontSize: "0.8rem",
-                        color: "#10b981",
+                        color: "var(--color-green)",
                         display: "flex",
                         alignItems: "center",
                         gap: "6px",
+                        fontWeight: 600,
                       }}
                     >
                       <CheckCircle2 size={14} /> {feat}
@@ -158,13 +160,14 @@ export default function ChannelsPage() {
           style={{
             marginTop: "60px",
             textAlign: "center",
-            padding: "clamp(24px, 5vw, 40px)",
-            background: "linear-gradient(135deg, rgba(16, 28, 54, 0.9) 0%, rgba(10, 16, 32, 0.95) 100%)",
-            border: "1px solid rgba(0, 229, 255, 0.3)",
+            padding: "clamp(28px, 5vw, 44px)",
+            background: "#ffffff",
+            border: "1px solid var(--border-subtle)",
+            boxShadow: "var(--shadow-sm)",
             borderRadius: "var(--radius-xl)",
           }}
         >
-          <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
+          <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "#000000", marginBottom: "12px" }}>
             Ready to Experience IPTV USA Channels on Your TV?
           </h3>
           <p style={{ fontSize: "1rem", color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto 24px auto" }}>

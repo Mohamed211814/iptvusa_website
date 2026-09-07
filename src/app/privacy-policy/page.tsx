@@ -102,7 +102,7 @@ export default function PrivacyPolicyPage() {
 
             <div style={{ flex: 1, minWidth: "260px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px", flexWrap: "wrap" }}>
-                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#ffffff", margin: 0 }}>
                   Our Core Privacy Principles
                 </h2>
                 <span
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
                     fontSize: "0.75rem",
                     fontWeight: 800,
                     background: "var(--color-green)",
-                    color: "#050811",
+                    color: "#ffffff",
                     padding: "3px 10px",
                     borderRadius: "var(--radius-full)",
                     textTransform: "uppercase",
@@ -119,7 +119,7 @@ export default function PrivacyPolicyPage() {
                   Strictly Enforced
                 </span>
               </div>
-              <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontSize: "0.95rem", color: "rgba(255, 255, 255, 0.9)", lineHeight: 1.65, margin: 0 }}>
                 We believe in total transparency. We enforce a strict <strong>Zero-Log Streaming Policy</strong>, maintain 256-bit SSL encryption across all data channels, and never sell, rent, or trade your personal information with third-party advertisers.
               </p>
             </div>
@@ -133,20 +133,20 @@ export default function PrivacyPolicyPage() {
               gap: "16px",
               marginTop: "24px",
               paddingTop: "20px",
-              borderTop: "1px solid var(--border-subtle)",
+              borderTop: "1px solid rgba(255, 255, 255, 0.15)",
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <EyeOff size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "0.875rem", color: "#fff", fontWeight: 600 }}>Zero Activity Logging</span>
+              <span style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700 }}>Zero Activity Logging</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <Lock size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "0.875rem", color: "#fff", fontWeight: 600 }}>256-Bit SSL/TLS Security</span>
+              <span style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700 }}>256-Bit SSL/TLS Security</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <UserCheck size={18} color="var(--color-green)" style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "0.875rem", color: "#fff", fontWeight: 600 }}>GDPR & CCPA Compliant</span>
+              <span style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700 }}>GDPR & CCPA Compliant</span>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function PrivacyPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <FileText size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 1. Information We Collect
               </h2>
             </div>
@@ -192,7 +192,7 @@ export default function PrivacyPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(28, 231, 131, 0.15)", color: "var(--color-green)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <EyeOff size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 2. Zero-Log Streaming Activity Policy
               </h2>
             </div>
@@ -221,7 +221,7 @@ export default function PrivacyPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Zap size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 3. How We Use Collected Information
               </h2>
             </div>
@@ -250,7 +250,7 @@ export default function PrivacyPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Database size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 4. Cookies & Web Technologies
               </h2>
             </div>
@@ -268,7 +268,7 @@ export default function PrivacyPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(28, 231, 131, 0.15)", color: "var(--color-green)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <UserCheck size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 5. Your Privacy Rights (GDPR & CCPA)
               </h2>
             </div>
@@ -282,16 +282,16 @@ export default function PrivacyPolicyPage() {
                 gap: "14px",
               }}
             >
-              <div style={{ background: "rgba(255, 255, 255, 0.03)", padding: "16px", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>Right to Access</h3>
+              <div style={{ background: "#f8fafc", padding: "16px", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
+                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>Right to Access</h3>
                 <p style={{ fontSize: "0.825rem", color: "var(--text-secondary)", margin: 0, lineHeight: 1.5 }}>Request a full copy of the contact data associated with your subscription account.</p>
               </div>
-              <div style={{ background: "rgba(255, 255, 255, 0.03)", padding: "16px", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>Right to Erasure</h3>
+              <div style={{ background: "#f8fafc", padding: "16px", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
+                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>Right to Erasure</h3>
                 <p style={{ fontSize: "0.825rem", color: "var(--text-secondary)", margin: 0, lineHeight: 1.5 }}>Request permanent deletion of your email, chat records, and account logs upon plan expiration.</p>
               </div>
-              <div style={{ background: "rgba(255, 255, 255, 0.03)", padding: "16px", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
-                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "6px" }}>Right to Rectification</h3>
+              <div style={{ background: "#f8fafc", padding: "16px", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
+                <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>Right to Rectification</h3>
                 <p style={{ fontSize: "0.825rem", color: "var(--text-secondary)", margin: 0, lineHeight: 1.5 }}>Update or correct your registered email or delivery destination at any time via 24/7 support.</p>
               </div>
             </div>
@@ -303,7 +303,7 @@ export default function PrivacyPolicyPage() {
               <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(0, 85, 255, 0.15)", color: "var(--color-blue-bright)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Globe size={20} />
               </div>
-              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", margin: 0 }}>
                 6. Data Retention and Security
               </h2>
             </div>
@@ -323,10 +323,10 @@ export default function PrivacyPolicyPage() {
             marginTop: "50px",
             textAlign: "center",
             padding: "clamp(30px, 5vw, 44px)",
-            background: "linear-gradient(135deg, rgba(14, 22, 42, 0.95) 0%, rgba(8, 14, 26, 0.98) 100%)",
-            border: "1.5px solid rgba(41, 121, 255, 0.4)",
+            background: "#ffffff",
+            border: "1px solid var(--border-subtle)",
             borderRadius: "var(--radius-lg)",
-            boxShadow: "0 0 35px rgba(0, 85, 255, 0.2)",
+            boxShadow: "var(--shadow-md)",
           }}
         >
           <div
@@ -334,7 +334,7 @@ export default function PrivacyPolicyPage() {
               width: "52px",
               height: "52px",
               borderRadius: "50%",
-              background: "rgba(0, 85, 255, 0.15)",
+              background: "rgba(0, 85, 255, 0.12)",
               color: "var(--color-blue-bright)",
               display: "flex",
               alignItems: "center",
@@ -344,7 +344,7 @@ export default function PrivacyPolicyPage() {
           >
             <Lock size={26} />
           </div>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: "10px" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#000000", marginBottom: "10px" }}>
             Questions About Your Privacy or Data?
           </h2>
           <p style={{ color: "var(--text-secondary)", maxWidth: "600px", margin: "0 auto 24px auto", fontSize: "0.95rem", lineHeight: 1.65 }}>

@@ -38,45 +38,95 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
             const priceData = plan.prices[connections];
             const isFeatured = plan.isPopular;
 
+            const planConfig: Record<
+              string,
+              {
+                className: string;
+                borderColor: string;
+                badgeBg: string;
+                badgeColor: string;
+                priceColor: string;
+                btnClass: string;
+                btnStyle?: React.CSSProperties;
+              }
+            > = {
+              "plan-1m": {
+                className: "pricing-card-1m",
+                borderColor: "#0055ff",
+                badgeBg: "rgba(0, 85, 255, 0.1)",
+                badgeColor: "#0055ff",
+                priceColor: "#0055ff",
+                btnClass: "btn-primary",
+              },
+              "plan-3m": {
+                className: "pricing-card-3m",
+                borderColor: "#8b5cf6",
+                badgeBg: "rgba(139, 92, 246, 0.12)",
+                badgeColor: "#7c3aed",
+                priceColor: "#7c3aed",
+                btnClass: "btn",
+                btnStyle: {
+                  background: "linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)",
+                  color: "#ffffff",
+                  boxShadow: "0 4px 18px rgba(124, 58, 237, 0.35)",
+                },
+              },
+              "plan-6m": {
+                className: "pricing-card-6m",
+                borderColor: "#ea580c",
+                badgeBg: "rgba(234, 88, 12, 0.12)",
+                badgeColor: "#c2410c",
+                priceColor: "#ea580c",
+                btnClass: "btn",
+                btnStyle: {
+                  background: "linear-gradient(135deg, #ea580c 0%, #c2410c 100%)",
+                  color: "#ffffff",
+                  boxShadow: "0 4px 18px rgba(234, 88, 12, 0.35)",
+                },
+              },
+              "plan-12m": {
+                className: "pricing-card-12m",
+                borderColor: "#059669",
+                badgeBg: "#059669",
+                badgeColor: "#ffffff",
+                priceColor: "#059669",
+                btnClass: "btn-green",
+              },
+            };
+
+            const config = planConfig[plan.id] || planConfig["plan-1m"];
+
             return (
               <div
                 key={plan.id}
-                className="card-glass"
+                className={`card-glass ${config.className}`}
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
                   textAlign: "center",
-                  padding: "32px 20px 26px 20px",
+                  padding: "34px 20px 26px 20px",
                   position: "relative",
-                  border: isFeatured
-                    ? "2px solid var(--color-green)"
-                    : "1.5px solid rgba(41, 121, 255, 0.45)",
                   borderRadius: "var(--radius-md)",
-                  boxShadow: isFeatured
-                    ? "0 0 30px rgba(28, 231, 131, 0.3), var(--shadow-md)"
-                    : "0 0 20px rgba(0, 85, 255, 0.15), var(--shadow-sm)",
-                  background: isFeatured
-                    ? "linear-gradient(180deg, rgba(14, 28, 48, 0.95) 0%, rgba(8, 14, 24, 0.98) 100%)"
-                    : "linear-gradient(180deg, rgba(12, 19, 34, 0.88) 0%, rgba(7, 11, 20, 0.92) 100%)",
+                  background: "#ffffff",
                 }}
               >
                 {isFeatured && (
                   <div
                     style={{
                       position: "absolute",
-                      top: "-13px",
+                      top: "-14px",
                       left: "50%",
                       transform: "translateX(-50%)",
-                      background: "var(--color-green)",
-                      color: "#050811",
-                      padding: "4px 14px",
+                      background: "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+                      color: "#ffffff",
+                      padding: "5px 16px",
                       borderRadius: "var(--radius-full)",
                       fontSize: "0.72rem",
                       fontWeight: 800,
                       letterSpacing: "0.06em",
                       textTransform: "uppercase",
-                      boxShadow: "0 4px 14px rgba(28, 231, 131, 0.45)",
+                      boxShadow: "0 4px 14px rgba(5, 150, 105, 0.4)",
                       whiteSpace: "nowrap",
                     }}
                   >
@@ -89,7 +139,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     style={{
                       fontSize: "1.4rem",
                       fontWeight: 800,
-                      color: "#ffffff",
+                      color: "#000000",
                       marginBottom: "10px",
                     }}
                   >
@@ -99,26 +149,32 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                   {/* Price */}
                   <div
                     style={{
-                      fontSize: "2.5rem",
+                      fontSize: "2.6rem",
                       fontWeight: 900,
-                      color: isFeatured ? "var(--color-green)" : "#ffffff",
+                      color: config.priceColor,
                       marginBottom: "6px",
+                      letterSpacing: "-0.03em",
                     }}
                   >
                     ${priceData.current}
                   </div>
 
                   {/* Discount Badge */}
-                  <div
-                    style={{
-                      fontSize: "0.85rem",
-                      fontWeight: 700,
-                      color: isFeatured ? "var(--color-green)" : "var(--color-blue-bright)",
-                      textDecoration: "underline",
-                      marginBottom: "24px",
-                    }}
-                  >
-                    {plan.badge}
+                  <div style={{ marginBottom: "22px" }}>
+                    <span
+                      style={{
+                        display: "inline-block",
+                        fontSize: "0.825rem",
+                        fontWeight: 800,
+                        background: config.badgeBg,
+                        color: config.badgeColor,
+                        padding: "5px 14px",
+                        borderRadius: "var(--radius-full)",
+                        border: `1px solid ${config.borderColor}35`,
+                      }}
+                    >
+                      {plan.badge}
+                    </span>
                   </div>
 
                   {/* Checklist matching iptvusaofficial.com */}
@@ -130,12 +186,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                       gap: "10px",
                       textAlign: "left",
                       padding: "16px 0",
-                      borderTop: isFeatured
-                        ? "1px solid rgba(28, 231, 131, 0.25)"
-                        : "1px solid rgba(41, 121, 255, 0.22)",
-                      borderBottom: isFeatured
-                        ? "1px solid rgba(28, 231, 131, 0.25)"
-                        : "1px solid rgba(41, 121, 255, 0.22)",
+                      borderTop: "1px solid var(--border-subtle)",
+                      borderBottom: "1px solid var(--border-subtle)",
                       marginBottom: "24px",
                     }}
                   >
@@ -144,10 +196,11 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                         key={idx}
                         style={{
                           fontSize: "0.875rem",
-                          color: "var(--text-secondary)",
+                          color: "#000000",
                           display: "flex",
                           alignItems: "center",
                           gap: "8px",
+                          lineHeight: 1.4,
                         }}
                       >
                         <Check size={16} color="var(--color-green)" style={{ flexShrink: 0 }} />
@@ -160,7 +213,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                 {/* Order Now Button */}
                 <a
                   href={plan.checkoutUrl}
-                  className={`btn ${isFeatured ? "btn-green" : "btn-primary"}`}
+                  className={`btn ${config.btnClass}`}
                   style={{
                     width: "100%",
                     padding: "12px",
@@ -168,6 +221,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                     fontWeight: 800,
                     letterSpacing: "0.02em",
                     textDecoration: "none",
+                    ...config.btnStyle,
                   }}
                 >
                   <Zap size={16} />
@@ -193,12 +247,14 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
               alignItems: "center",
               justifyContent: "center",
               gap: "10px",
-              padding: "12px 20px",
-              background: "rgba(255, 255, 255, 0.04)",
+              padding: "14px 24px",
+              background: "#ffffff",
               border: "1px solid var(--border-subtle)",
+              boxShadow: "var(--shadow-sm)",
               borderRadius: "12px",
-              fontSize: "0.875rem",
-              color: "var(--text-main)",
+              fontSize: "0.9rem",
+              color: "#000000",
+              fontWeight: 500,
               maxWidth: "100%",
               lineHeight: 1.5,
               textAlign: "center",

@@ -48,14 +48,12 @@ export const Navbar: React.FC = () => {
           width: "100%",
           height: "var(--header-height)",
           background: isScrolled
-            ? "rgba(7, 9, 15, 0.96)"
-            : "rgba(7, 9, 15, 0.75)",
+            ? "rgba(255, 255, 255, 0.96)"
+            : "rgba(255, 255, 255, 0.90)",
           backdropFilter: "blur(16px)",
           WebkitBackdropFilter: "blur(16px)",
-          borderBottom: "1px solid",
-          borderColor: isScrolled
-            ? "rgba(255, 255, 255, 0.1)"
-            : "rgba(255, 255, 255, 0.05)",
+          borderBottom: "1px solid var(--border-subtle)",
+          boxShadow: isScrolled ? "0 4px 20px rgba(0, 0, 0, 0.06)" : "none",
           transition: "all 0.3s ease",
           display: "flex",
           alignItems: "center",
@@ -102,7 +100,7 @@ export const Navbar: React.FC = () => {
                   fontSize: "1.25rem",
                   fontWeight: 900,
                   letterSpacing: "-0.03em",
-                  color: "#ffffff",
+                  color: "#000000",
                   display: "flex",
                   alignItems: "center",
                   gap: "6px",
@@ -116,7 +114,7 @@ export const Navbar: React.FC = () => {
                     fontWeight: 800,
                     padding: "2px 6px",
                     background: "var(--color-green)",
-                    color: "#050811",
+                    color: "#ffffff",
                     borderRadius: "4px",
                     letterSpacing: "0.05em",
                   }}
@@ -128,7 +126,7 @@ export const Navbar: React.FC = () => {
                 className="logo-subtext"
                 style={{
                   fontSize: "0.65rem",
-                  color: "var(--text-muted)",
+                  color: "#475569",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                   fontWeight: 600,
@@ -208,7 +206,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
               style={{
-                background: "rgba(255, 255, 255, 0.08)",
+                background: "rgba(0, 0, 0, 0.05)",
                 border: "1px solid var(--border-subtle)",
                 borderRadius: "8px",
                 width: "40px",
@@ -216,7 +214,7 @@ export const Navbar: React.FC = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#ffffff",
+                color: "#000000",
                 cursor: "pointer",
                 flexShrink: 0,
               }}
@@ -237,7 +235,7 @@ export const Navbar: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(7, 9, 15, 0.98)",
+            backgroundColor: "#ffffff",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             zIndex: 99,
@@ -259,16 +257,16 @@ export const Navbar: React.FC = () => {
                 padding: "13px 16px",
                 fontSize: "1rem",
                 fontWeight: 600,
-                color: pathname === link.href ? "var(--color-blue-bright)" : "#ffffff",
+                color: pathname === link.href ? "var(--color-blue-bright)" : "#000000",
                 background:
                   pathname === link.href
-                    ? "rgba(0, 85, 255, 0.12)"
-                    : "rgba(255, 255, 255, 0.03)",
+                    ? "rgba(0, 85, 255, 0.08)"
+                    : "rgba(0, 0, 0, 0.02)",
                 borderRadius: "8px",
                 border: "1px solid",
                 borderColor:
                   pathname === link.href
-                    ? "rgba(0, 85, 255, 0.35)"
+                    ? "rgba(0, 85, 255, 0.3)"
                     : "transparent",
               }}
             >

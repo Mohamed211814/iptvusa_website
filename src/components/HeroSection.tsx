@@ -175,7 +175,7 @@ export const HeroSection: React.FC = () => {
                 <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#ef4444" }} />
                 <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#f59e0b" }} />
                 <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#10b981" }} />
-                <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginLeft: "8px" }}>
+                <span style={{ fontSize: "0.8rem", color: "#ffffff", marginLeft: "8px", fontWeight: 600 }}>
                   IPTV USA Player 4K UHD 60FPS
                 </span>
               </div>
@@ -184,7 +184,7 @@ export const HeroSection: React.FC = () => {
                   fontSize: "0.75rem",
                   fontWeight: 700,
                   background: "var(--color-green)",
-                  color: "#050811",
+                  color: "#ffffff",
                   padding: "3px 10px",
                   borderRadius: "4px",
                 }}
@@ -262,25 +262,25 @@ export const HeroSection: React.FC = () => {
                 textAlign: "center",
               }}
             >
-              <div style={{ background: "rgba(255, 255, 255, 0.03)", padding: "10px", borderRadius: "8px" }}>
+              <div style={{ background: "#ffffff", border: "1px solid var(--border-subtle)", padding: "10px", borderRadius: "8px", boxShadow: "var(--shadow-sm)" }}>
                 <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--color-blue-bright)" }}>
                   +24.000
                 </div>
-                <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>Channels</div>
+                <div style={{ fontSize: "0.7rem", color: "#475569", fontWeight: 600 }}>Channels</div>
               </div>
 
-              <div style={{ background: "rgba(255, 255, 255, 0.03)", padding: "10px", borderRadius: "8px" }}>
+              <div style={{ background: "#ffffff", border: "1px solid var(--border-subtle)", padding: "10px", borderRadius: "8px", boxShadow: "var(--shadow-sm)" }}>
                 <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--color-green)" }}>
                   +110.000
                 </div>
-                <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>VOD Movies</div>
+                <div style={{ fontSize: "0.7rem", color: "#475569", fontWeight: 600 }}>VOD Movies</div>
               </div>
 
-              <div style={{ background: "rgba(255, 255, 255, 0.03)", padding: "10px", borderRadius: "8px" }}>
-                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fff" }}>
+              <div style={{ background: "#ffffff", border: "1px solid var(--border-subtle)", padding: "10px", borderRadius: "8px", boxShadow: "var(--shadow-sm)" }}>
+                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#000000" }}>
                   99.9%
                 </div>
-                <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>Uptime</div>
+                <div style={{ fontSize: "0.7rem", color: "#475569", fontWeight: 600 }}>Uptime</div>
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@ export const HeroSection: React.FC = () => {
             >
               <Film size={26} />
             </div>
-            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
+            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#000000", marginBottom: "12px" }}>
               Streaming IPTV USA
             </h2>
             <p style={{ fontSize: "0.925rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
@@ -330,7 +330,7 @@ export const HeroSection: React.FC = () => {
             >
               <Globe size={26} />
             </div>
-            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
+            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#000000", marginBottom: "12px" }}>
               Live IPTV USA TV
             </h2>
             <p style={{ fontSize: "0.925rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
@@ -355,7 +355,7 @@ export const HeroSection: React.FC = () => {
             >
               <PlayCircle size={26} />
             </div>
-            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff", marginBottom: "12px" }}>
+            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#000000", marginBottom: "12px" }}>
               IPTV USA Movies & Series
             </h2>
             <p style={{ fontSize: "0.925rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>

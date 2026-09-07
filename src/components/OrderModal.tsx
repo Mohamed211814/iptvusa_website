@@ -66,15 +66,15 @@ export const OrderModal: React.FC<OrderModalProps> = ({
       <div
         className="card-glass"
         style={{
-          background: "linear-gradient(180deg, #10172b 0%, #090e1a 100%)",
-          border: "1px solid rgba(0, 229, 255, 0.3)",
+          background: "#ffffff",
+          border: "1px solid var(--border-subtle)",
           borderRadius: "var(--radius-lg)",
-          padding: "24px 20px",
+          padding: "28px 24px",
           maxWidth: "540px",
           width: "100%",
           maxHeight: "92vh",
           overflowY: "auto",
-          boxShadow: "0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 229, 255, 0.2)",
+          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.2)",
           position: "relative",
         }}
       >
@@ -86,15 +86,15 @@ export const OrderModal: React.FC<OrderModalProps> = ({
             position: "absolute",
             top: "16px",
             right: "16px",
-            background: "rgba(255, 255, 255, 0.08)",
-            border: "1px solid var(--border-subtle)",
+            background: "#1e293b",
+            border: "1px solid #334155",
             borderRadius: "50%",
             width: "36px",
             height: "36px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            color: "#fff",
+            color: "#ffffff",
             cursor: "pointer",
             zIndex: 10,
           }}
@@ -110,14 +110,14 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   alignItems: "center",
                   gap: "6px",
                   fontSize: "0.75rem",
-                  color: "#10b981",
-                  fontWeight: 600,
+                  color: "var(--color-green)",
+                  fontWeight: 700,
                   marginBottom: "8px",
                 }}
               >
                 <span className="pulse-dot" /> Instant Auto Setup Available
               </div>
-              <h3 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#fff" }}>
+              <h3 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#000000" }}>
                 Complete Your Subscription Order
               </h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
@@ -127,43 +127,55 @@ export const OrderModal: React.FC<OrderModalProps> = ({
 
             {/* Plan selection */}
             <div style={{ marginBottom: "16px" }}>
-              <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#fff", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontSize: "0.85rem", fontWeight: 700, color: "#000000", display: "block", marginBottom: "8px" }}>
                 Select Duration:
               </label>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "8px" }}>
-                {pricingPlans.map((p) => (
-                  <button
-                    key={p.id}
-                    type="button"
-                    onClick={() => setSelectedPlanId(p.id)}
-                    style={{
-                      padding: "10px 12px",
-                      borderRadius: "10px",
-                      background: selectedPlanId === p.id ? "rgba(0, 229, 255, 0.15)" : "rgba(255, 255, 255, 0.04)",
-                      border: "1px solid",
-                      borderColor: selectedPlanId === p.id ? "var(--primary)" : "var(--border-subtle)",
-                      color: selectedPlanId === p.id ? "#fff" : "var(--text-secondary)",
-                      fontSize: "0.85rem",
-                      fontWeight: 600,
-                      textAlign: "left",
-                      cursor: "pointer",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <span>{p.name}</span>
-                    <span style={{ color: "var(--primary)", fontWeight: 700 }}>
-                      ${p.prices[connections].current}
-                    </span>
-                  </button>
-                ))}
+                {pricingPlans.map((p) => {
+                  const isSelected = selectedPlanId === p.id;
+                  const borderColors: Record<string, { border: string; bg: string; shadow: string; text: string }> = {
+                    "plan-1m": { border: "#0055ff", bg: "rgba(0, 85, 255, 0.08)", shadow: "0 0 0 2px rgba(0, 85, 255, 0.2)", text: "#0055ff" },
+                    "plan-3m": { border: "#8b5cf6", bg: "rgba(139, 92, 246, 0.08)", shadow: "0 0 0 2px rgba(139, 92, 246, 0.2)", text: "#7c3aed" },
+                    "plan-6m": { border: "#ea580c", bg: "rgba(234, 88, 12, 0.08)", shadow: "0 0 0 2px rgba(234, 88, 12, 0.2)", text: "#ea580c" },
+                    "plan-12m": { border: "#059669", bg: "rgba(5, 150, 105, 0.08)", shadow: "0 0 0 2px rgba(5, 150, 105, 0.2)", text: "#059669" },
+                  };
+                  const colorConfig = borderColors[p.id] || borderColors["plan-1m"];
+
+                  return (
+                    <button
+                      key={p.id}
+                      type="button"
+                      onClick={() => setSelectedPlanId(p.id)}
+                      style={{
+                        padding: "10px 12px",
+                        borderRadius: "10px",
+                        background: isSelected ? colorConfig.bg : "#f8fafc",
+                        border: isSelected ? `2px solid ${colorConfig.border}` : "1.5px solid var(--border-subtle)",
+                        boxShadow: isSelected ? colorConfig.shadow : "none",
+                        color: "#000000",
+                        fontSize: "0.85rem",
+                        fontWeight: 700,
+                        textAlign: "left",
+                        cursor: "pointer",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        transition: "all 0.2s ease",
+                      }}
+                    >
+                      <span>{p.name}</span>
+                      <span style={{ color: colorConfig.text, fontWeight: 800 }}>
+                        ${p.prices[connections].current}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             {/* Number of screens */}
             <div style={{ marginBottom: "16px" }}>
-              <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#fff", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontSize: "0.85rem", fontWeight: 700, color: "#000000", display: "block", marginBottom: "8px" }}>
                 Simultaneous Devices / Connections:
               </label>
               <div style={{ display: "flex", gap: "8px" }}>
@@ -174,14 +186,14 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                     onClick={() => setConnections(num)}
                     style={{
                       flex: 1,
-                      padding: "8px",
+                      padding: "10px 8px",
                       borderRadius: "8px",
-                      background: connections === num ? "var(--primary)" : "rgba(255, 255, 255, 0.04)",
-                      color: connections === num ? "#030712" : "var(--text-secondary)",
+                      background: connections === num ? "var(--color-blue)" : "#f8fafc",
+                      color: connections === num ? "#ffffff" : "#000000",
                       fontWeight: 700,
                       fontSize: "0.85rem",
-                      border: "1px solid",
-                      borderColor: connections === num ? "var(--primary)" : "var(--border-subtle)",
+                      border: "1.5px solid",
+                      borderColor: connections === num ? "var(--color-blue)" : "var(--border-subtle)",
                       cursor: "pointer",
                     }}
                   >
@@ -193,7 +205,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
 
             {/* Hardware selection */}
             <div style={{ marginBottom: "20px" }}>
-              <label style={{ fontSize: "0.85rem", fontWeight: 600, color: "#fff", display: "block", marginBottom: "8px" }}>
+              <label style={{ fontSize: "0.85rem", fontWeight: 700, color: "#000000", display: "block", marginBottom: "8px" }}>
                 Primary Device Hardware:
               </label>
               <select
@@ -201,11 +213,11 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 onChange={(e) => setDeviceType(e.target.value)}
                 style={{
                   width: "100%",
-                  padding: "10px 14px",
-                  background: "rgba(6, 9, 17, 0.8)",
-                  border: "1px solid var(--border-subtle)",
+                  padding: "11px 14px",
+                  background: "#ffffff",
+                  border: "1px solid var(--border-medium)",
                   borderRadius: "8px",
-                  color: "#fff",
+                  color: "#000000",
                   fontSize: "0.9rem",
                   outline: "none",
                 }}
@@ -225,17 +237,17 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                padding: "12px 16px",
-                background: "rgba(0, 229, 255, 0.06)",
-                border: "1px solid rgba(0, 229, 255, 0.2)",
+                padding: "14px 18px",
+                background: "#f8fafc",
+                border: "1px solid var(--border-subtle)",
                 borderRadius: "10px",
                 marginBottom: "20px",
               }}
             >
-              <span style={{ fontSize: "0.9rem", color: "#fff", fontWeight: 600 }}>
+              <span style={{ fontSize: "0.95rem", color: "#000000", fontWeight: 700 }}>
                 Total One-Time Payment:
               </span>
-              <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--primary)" }}>
+              <span style={{ fontSize: "1.6rem", fontWeight: 900, color: "var(--color-green)" }}>
                 ${totalPrice}
               </span>
             </div>

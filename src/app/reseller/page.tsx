@@ -99,7 +99,7 @@ export default function ResellerPage() {
             >
               <div>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-                  <h3 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#fff" }}>
+                  <h3 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#000000" }}>
                     {tier.name}
                   </h3>
                   <span
@@ -108,8 +108,8 @@ export default function ResellerPage() {
                       fontWeight: 700,
                       padding: "4px 10px",
                       borderRadius: "6px",
-                      background: tier.isPopular ? "var(--color-green)" : "rgba(255,255,255,0.08)",
-                      color: tier.isPopular ? "#050811" : "var(--text-secondary)",
+                      background: tier.isPopular ? "var(--color-green)" : "#f1f5f9",
+                      color: tier.isPopular ? "#ffffff" : "#000000",
                     }}
                   >
                     {tier.credits}
@@ -117,7 +117,7 @@ export default function ResellerPage() {
                 </div>
 
                 <div style={{ padding: "16px 0", borderTop: "1px solid var(--border-subtle)", borderBottom: "1px solid var(--border-subtle)", marginBottom: "20px" }}>
-                  <div style={{ fontSize: "2.4rem", fontWeight: 800, color: "#fff" }}>
+                  <div style={{ fontSize: "2.4rem", fontWeight: 800, color: "#000000" }}>
                     {tier.price}
                   </div>
                   <div style={{ fontSize: "0.85rem", color: "var(--color-green)", fontWeight: 600 }}>
@@ -187,16 +187,16 @@ export default function ResellerPage() {
               <Mail size={24} />
             </div>
             <div>
-              <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#fff", margin: 0 }}>
+              <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#ffffff", margin: 0 }}>
                 How to Order Your IPTV USA Reseller Panel via Email
               </h2>
-              <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", margin: "4px 0 0 0" }}>
+              <p style={{ fontSize: "0.875rem", color: "rgba(255, 255, 255, 0.9)", margin: "4px 0 0 0" }}>
                 Direct onboarding via our priority dealer desk at <strong style={{ color: "var(--color-green)" }}>{siteConfig.supportEmail}</strong>
               </p>
             </div>
           </div>
 
-          <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.65, marginBottom: "20px" }}>
+          <p style={{ color: "rgba(255, 255, 255, 0.9)", fontSize: "0.95rem", lineHeight: 1.65, marginBottom: "20px" }}>
             Prefer to handle your reseller account setup and invoicing over email? Follow these 3 simple steps to get your Master Xtream Codes panel credentials within 2 hours:
           </p>
 
@@ -208,11 +208,11 @@ export default function ResellerPage() {
               marginBottom: "24px",
             }}
           >
-            <div style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
+            <div style={{ background: "#f8fafc", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
               <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-blue-bright)", marginBottom: "6px" }}>
                 STEP 01: SEND EMAIL
               </div>
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
                 Submit Your Request
               </h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
@@ -220,11 +220,11 @@ export default function ResellerPage() {
               </p>
             </div>
 
-            <div style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
+            <div style={{ background: "#f8fafc", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
               <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-blue-bright)", marginBottom: "6px" }}>
                 STEP 02: INVOICING
               </div>
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
                 Select Payment Method
               </h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
@@ -232,11 +232,11 @@ export default function ResellerPage() {
               </p>
             </div>
 
-            <div style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
+            <div style={{ background: "#f8fafc", border: "1px solid var(--border-subtle)", borderRadius: "var(--radius-md)", padding: "18px" }}>
               <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-green)", marginBottom: "6px" }}>
                 STEP 03: PANEL DELIVERY
               </div>
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", marginBottom: "8px" }}>
+              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
                 Instant Access & Training
               </h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
@@ -269,7 +269,7 @@ export default function ResellerPage() {
 
           <div className="grid-3">
             <div className="card-glass">
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 High Profit Margin
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
@@ -278,7 +278,7 @@ export default function ResellerPage() {
             </div>
 
             <div className="card-glass">
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 Zero Maintenance Overhead
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
@@ -287,7 +287,7 @@ export default function ResellerPage() {
             </div>
 
             <div className="card-glass">
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#fff", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "10px" }}>
                 Credits Never Expire
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>

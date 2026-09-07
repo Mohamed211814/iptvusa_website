@@ -89,7 +89,7 @@ export const ContactForm: React.FC = () => {
       ) : (
         <form onSubmit={handleSubmit} noValidate>
           <div style={{ marginBottom: "22px" }}>
-            <h2 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#fff", marginBottom: "6px" }}>
+            <h2 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#000000", marginBottom: "6px" }}>
               Send a Message
             </h2>
             <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)" }}>
@@ -104,7 +104,7 @@ export const ContactForm: React.FC = () => {
                 border: "1px solid rgba(239, 68, 68, 0.3)",
                 borderRadius: "8px",
                 padding: "10px 14px",
-                color: "#f87171",
+                color: "#dc2626",
                 fontSize: "0.85rem",
                 display: "flex",
                 alignItems: "center",
@@ -125,7 +125,7 @@ export const ContactForm: React.FC = () => {
                   display: "block",
                   fontSize: "0.85rem",
                   fontWeight: 600,
-                  color: "#fff",
+                  color: "#000000",
                   marginBottom: "6px",
                 }}
               >
@@ -139,10 +139,10 @@ export const ContactForm: React.FC = () => {
                 style={{
                   width: "100%",
                   padding: "11px 14px",
-                  background: "rgba(6, 9, 17, 0.8)",
-                  border: "1px solid var(--border-subtle)",
+                  background: "#ffffff",
+                  border: "1px solid var(--border-medium)",
                   borderRadius: "8px",
-                  color: "#fff",
+                  color: "#000000",
                   outline: "none",
                 }}
               />
@@ -154,7 +154,7 @@ export const ContactForm: React.FC = () => {
                   display: "block",
                   fontSize: "0.85rem",
                   fontWeight: 600,
-                  color: "#fff",
+                  color: "#000000",
                   marginBottom: "6px",
                 }}
               >
@@ -168,10 +168,10 @@ export const ContactForm: React.FC = () => {
                 style={{
                   width: "100%",
                   padding: "11px 14px",
-                  background: "rgba(6, 9, 17, 0.8)",
-                  border: "1px solid var(--border-subtle)",
+                  background: "#ffffff",
+                  border: "1px solid var(--border-medium)",
                   borderRadius: "8px",
-                  color: "#fff",
+                  color: "#000000",
                   outline: "none",
                 }}
               />
@@ -185,7 +185,7 @@ export const ContactForm: React.FC = () => {
                 display: "block",
                 fontSize: "0.85rem",
                 fontWeight: 600,
-                color: "#fff",
+                color: "#000000",
                 marginBottom: "6px",
               }}
             >
@@ -198,10 +198,10 @@ export const ContactForm: React.FC = () => {
               style={{
                 width: "100%",
                 padding: "11px 14px",
-                background: "rgba(6, 9, 17, 0.8)",
-                border: "1px solid var(--border-subtle)",
+                background: "#ffffff",
+                border: "1px solid var(--border-medium)",
                 borderRadius: "8px",
-                color: "#fff",
+                color: "#000000",
                 outline: "none",
               }}
             />
@@ -214,7 +214,7 @@ export const ContactForm: React.FC = () => {
                 display: "block",
                 fontSize: "0.85rem",
                 fontWeight: 600,
-                color: "#fff",
+                color: "#000000",
                 marginBottom: "6px",
               }}
             >
@@ -228,10 +228,10 @@ export const ContactForm: React.FC = () => {
               style={{
                 width: "100%",
                 padding: "12px 14px",
-                background: "rgba(6, 9, 17, 0.8)",
-                border: "1px solid var(--border-subtle)",
+                background: "#ffffff",
+                border: "1px solid var(--border-medium)",
                 borderRadius: "8px",
-                color: "#fff",
+                color: "#000000",
                 lineHeight: 1.5,
                 outline: "none",
                 resize: "vertical",

@@ -91,12 +91,13 @@ export const ChannelExplorer: React.FC = () => {
                 style={{
                   width: "100%",
                   padding: "14px 16px 14px 46px",
-                  background: "rgba(6, 9, 17, 0.8)",
-                  border: "1px solid var(--border-subtle)",
+                  background: "#ffffff",
+                  border: "1px solid var(--border-medium)",
                   borderRadius: "var(--radius-full)",
-                  color: "#fff",
+                  color: "#000000",
                   fontSize: "0.95rem",
                   outline: "none",
+                  boxShadow: "var(--shadow-sm)",
                 }}
               />
             </div>
@@ -116,10 +117,10 @@ export const ChannelExplorer: React.FC = () => {
                   borderRadius: "var(--radius-full)",
                   fontSize: "0.85rem",
                   fontWeight: 600,
-                  background: selectedCategory === "all" ? "var(--primary)" : "rgba(255, 255, 255, 0.05)",
-                  color: selectedCategory === "all" ? "#000" : "var(--text-secondary)",
+                  background: selectedCategory === "all" ? "var(--primary)" : "rgba(255, 255, 255, 0.1)",
+                  color: "#ffffff",
                   border: "1px solid",
-                  borderColor: selectedCategory === "all" ? "var(--primary)" : "var(--border-subtle)",
+                  borderColor: selectedCategory === "all" ? "var(--primary)" : "rgba(255, 255, 255, 0.2)",
                   cursor: "pointer",
                 }}
               >
@@ -134,10 +135,10 @@ export const ChannelExplorer: React.FC = () => {
                     borderRadius: "var(--radius-full)",
                     fontSize: "0.85rem",
                     fontWeight: 600,
-                    background: selectedCategory === cat.id ? "var(--primary)" : "rgba(255, 255, 255, 0.05)",
-                    color: selectedCategory === cat.id ? "#000" : "var(--text-secondary)",
+                    background: selectedCategory === cat.id ? "var(--primary)" : "rgba(255, 255, 255, 0.1)",
+                    color: "#ffffff",
                     border: "1px solid",
-                    borderColor: selectedCategory === cat.id ? "var(--primary)" : "var(--border-subtle)",
+                    borderColor: selectedCategory === cat.id ? "var(--primary)" : "rgba(255, 255, 255, 0.2)",
                     cursor: "pointer",
                   }}
                 >
@@ -183,7 +184,7 @@ export const ChannelExplorer: React.FC = () => {
                       gap: "8px",
                     }}
                   >
-                    <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#fff" }}>
+                    <h3 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#000000" }}>
                       {cat.name}
                     </h3>
                     <span
@@ -191,9 +192,9 @@ export const ChannelExplorer: React.FC = () => {
                         fontSize: "0.8rem",
                         padding: "4px 10px",
                         borderRadius: "var(--radius-full)",
-                        background: "rgba(0, 229, 255, 0.1)",
+                        background: "rgba(0, 85, 255, 0.08)",
                         color: "var(--primary)",
-                        border: "1px solid rgba(0, 229, 255, 0.25)",
+                        border: "1px solid rgba(0, 85, 255, 0.2)",
                         fontWeight: 600,
                       }}
                     >
@@ -207,14 +208,14 @@ export const ChannelExplorer: React.FC = () => {
 
                   <div
                     style={{
-                      background: "rgba(0, 0, 0, 0.3)",
+                      background: "#f8fafc",
                       borderRadius: "10px",
                       padding: "14px",
                       border: "1px solid var(--border-subtle)",
                       marginBottom: "18px",
                     }}
                   >
-                    <div style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "8px", letterSpacing: "0.05em" }}>
+                    <div style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "#64748b", marginBottom: "8px", letterSpacing: "0.05em", fontWeight: 600 }}>
                       Featured Live Broadcasts:
                     </div>
                     <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "6px" }}>
@@ -223,10 +224,11 @@ export const ChannelExplorer: React.FC = () => {
                           key={idx}
                           style={{
                             fontSize: "0.85rem",
-                            color: "#fff",
+                            color: "#000000",
                             display: "flex",
                             alignItems: "center",
                             gap: "8px",
+                            fontWeight: 500,
                           }}
                         >
                           <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--primary)" }} />
@@ -280,13 +282,14 @@ export const ChannelExplorer: React.FC = () => {
           style={{
             marginTop: "40px",
             textAlign: "center",
-            padding: "24px",
-            background: "rgba(0, 229, 255, 0.04)",
-            border: "1px dashed rgba(0, 229, 255, 0.3)",
+            padding: "28px 20px",
+            background: "#ffffff",
+            border: "1px solid var(--border-subtle)",
+            boxShadow: "var(--shadow-sm)",
             borderRadius: "var(--radius-lg)",
           }}
         >
-          <p style={{ fontSize: "1rem", color: "#fff", marginBottom: "12px" }}>
+          <p style={{ fontSize: "1.05rem", color: "#000000", fontWeight: 700, marginBottom: "14px" }}>
             Looking for a specific regional channel, sport event, or international bouquet?
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "14px", flexWrap: "wrap" }}>

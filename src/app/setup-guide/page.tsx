@@ -63,7 +63,7 @@ export default function SetupGuidePage() {
               >
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px", flexWrap: "wrap" }}>
-                    <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#fff" }}>
+                    <h2 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#000000" }}>
                       {guide.device}
                     </h2>
                     <span
@@ -71,16 +71,16 @@ export default function SetupGuidePage() {
                         fontSize: "0.75rem",
                         padding: "2px 8px",
                         borderRadius: "4px",
-                        background: "rgba(0, 85, 255, 0.15)",
+                        background: "rgba(0, 85, 255, 0.1)",
                         color: "var(--color-blue-bright)",
-                        fontWeight: 600,
+                        fontWeight: 700,
                       }}
                     >
                       {guide.badge}
                     </span>
                   </div>
                   <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
-                    Recommended App: <strong style={{ color: "#fff" }}>{guide.recommendedApp}</strong> | Setup time: ~{guide.timeMinutes} mins
+                    Recommended App: <strong style={{ color: "#000000" }}>{guide.recommendedApp}</strong> | Setup time: ~{guide.timeMinutes} mins
                   </p>
                 </div>
 
@@ -129,7 +129,7 @@ export default function SetupGuidePage() {
                     </div>
 
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#fff", marginBottom: "4px" }}>
+                      <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#000000", marginBottom: "4px" }}>
                         {step.title}
                       </h3>
                       <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
@@ -141,12 +141,13 @@ export default function SetupGuidePage() {
                           style={{
                             marginTop: "10px",
                             padding: "10px 16px",
-                            background: "rgba(0, 0, 0, 0.5)",
-                            border: "1px dashed rgba(0, 85, 255, 0.4)",
+                            background: "#1e293b",
+                            border: "1px solid #334155",
                             borderRadius: "8px",
                             fontFamily: "monospace",
                             fontSize: "0.95rem",
-                            color: "var(--color-blue-bright)",
+                            color: "#ffffff",
+                            fontWeight: 700,
                             display: "inline-block",
                             maxWidth: "100%",
                             wordBreak: "break-all",
@@ -168,9 +169,10 @@ export default function SetupGuidePage() {
           style={{
             maxWidth: "920px",
             margin: "50px auto 0 auto",
-            padding: "clamp(20px, 4vw, 32px)",
-            background: "rgba(14, 22, 42, 0.8)",
-            border: "1px solid rgba(0, 85, 255, 0.25)",
+            padding: "clamp(24px, 4vw, 32px)",
+            background: "#ffffff",
+            border: "1px solid var(--border-subtle)",
+            boxShadow: "var(--shadow-sm)",
             borderRadius: "var(--radius-lg)",
             display: "flex",
             alignItems: "center",
@@ -180,7 +182,7 @@ export default function SetupGuidePage() {
           }}
         >
           <div>
-            <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fff", marginBottom: "6px" }}>
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#000000", marginBottom: "6px" }}>
               Need Help Setting Up Your Device?
             </h3>
             <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
