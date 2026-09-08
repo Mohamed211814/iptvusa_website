@@ -1,43 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle } from "lucide-react";
+import { faqs, FAQItem } from "@/data/faqs";
 
 export const FaqAccordion: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const iptvUsaFaqs = [
-    {
-      question: "What is IPTV USA?",
-      answer:
-        "IPTV USA is a premium streaming service providing online access to over 24,000 live television channels and 110,000+ movies and TV series directly through your high speed internet connection. It eliminates traditional cable and satellite subscriptions, allowing you to stream in full 4K and FHD on any device.",
-    },
-    {
-      question: "How many channels does IPTV USA offer?",
-      answer:
-        "IPTV USA offers over 24,000 live television channels from the United States, Canada, the United Kingdom, and around the world, along with a massive catalog of more than 110,000 on demand movies and full series updated daily.",
-    },
-    {
-      question: "What devices are compatible with IPTV USA?",
-      answer:
-        "IPTV USA is compatible with virtually all modern devices: Amazon Firestick, Fire TV Cube, Android TV (Nvidia Shield, Google TV), Smart TVs (Samsung Tizen and LG webOS via IBO Player, Smart IPTV), Apple TV, iPhone, iPad, Windows PC, Mac, and dedicated MAG boxes.",
-    },
-    {
-      question: "Is IPTV USA legal?",
-      answer:
-        "IPTV technology itself is completely legal. IPTV simply delivers television content over internet protocols rather than traditional cable lines. We recommend users comply with the terms of service in their region.",
-    },
-    {
-      question: "How quickly do I receive my subscription details?",
-      answer:
-        "Activation is instantaneous! As soon as your order is confirmed, your M3U playlist link, Xtream Codes API credentials, and server portal information are sent directly to your email address and Telegram within 5 minutes.",
-    },
-    {
-      question: "Can I use IPTV USA while traveling or with a VPN?",
-      answer:
-        "Yes! IPTV USA works anywhere in the world as long as you have an internet connection. Our servers are 100% VPN friendly and do not restrict or throttle connections through popular VPN providers.",
-    },
-  ];
+  const categories = ["All", "General", "Setup", "Channels", "Payments", "Streaming"];
+
+  const filteredFaqs =
+    selectedCategory === "All"
+      ? faqs
+      : faqs.filter((f) => f.category === selectedCategory);
 
   const toggleAccordion = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
@@ -47,24 +23,68 @@ export const FaqAccordion: React.FC = () => {
     <section id="faqs" className="section">
       <div className="container">
         <div className="section-header">
+          <span className="section-tag">
+            <HelpCircle size={14} /> Clear Answers to Common Questions
+          </span>
           <h2 className="section-title">
             <span className="text-blue">IPTV USA</span> FAQs
           </h2>
           <p className="section-subtitle">
-            Find immediate answers to frequently asked questions about IPTV USA subscription, channel lineups, device compatibility, and instant setup.
+            Find immediate answers to frequently asked questions about legality, setup, subscription pricing, Indian channels, and device compatibility.
           </p>
         </div>
 
+        {/* Category Filter Pills */}
         <div
           style={{
-            maxWidth: "860px",
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "8px",
+            marginBottom: "36px",
+          }}
+        >
+          {categories.map((cat) => {
+            const isSelected = selectedCategory === cat;
+            return (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setOpenIndex(0);
+                }}
+                style={{
+                  padding: "8px 18px",
+                  borderRadius: "var(--radius-full)",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  background: isSelected ? "var(--color-blue)" : "#ffffff",
+                  color: isSelected ? "#ffffff" : "#000000",
+                  border: "1px solid",
+                  borderColor: isSelected ? "var(--color-blue)" : "var(--border-subtle)",
+                  boxShadow: isSelected ? "0 4px 14px rgba(0, 85, 255, 0.25)" : "var(--shadow-sm)",
+                  cursor: "pointer",
+                  transition: "all 0.2s ease",
+                }}
+              >
+                {cat === "All" ? "All FAQs" : cat}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* FAQ Accordion List */}
+        <div
+          style={{
+            maxWidth: "880px",
             margin: "0 auto",
             display: "flex",
             flexDirection: "column",
             gap: "14px",
           }}
         >
-          {iptvUsaFaqs.map((faq, idx) => {
+          {filteredFaqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
             return (
@@ -74,13 +94,14 @@ export const FaqAccordion: React.FC = () => {
                   background: isOpen ? "#f8fafc" : "#ffffff",
                   border: "1px solid",
                   borderColor: isOpen ? "var(--color-blue)" : "var(--border-subtle)",
-                  borderRadius: "10px",
-                  boxShadow: isOpen ? "0 4px 16px rgba(0, 85, 255, 0.08)" : "var(--shadow-sm)",
+                  borderRadius: "12px",
+                  boxShadow: isOpen ? "0 4px 18px rgba(0, 85, 255, 0.09)" : "var(--shadow-sm)",
                   overflow: "hidden",
                   transition: "all 0.25s ease",
                 }}
               >
                 <button
+                  type="button"
                   onClick={() => toggleAccordion(idx)}
                   style={{
                     width: "100%",
@@ -97,7 +118,23 @@ export const FaqAccordion: React.FC = () => {
                     gap: "14px",
                   }}
                 >
-                  <span>{faq.question}</span>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+                    <span
+                      style={{
+                        fontSize: "0.72rem",
+                        fontWeight: 800,
+                        padding: "3px 8px",
+                        borderRadius: "4px",
+                        background: "rgba(0, 85, 255, 0.1)",
+                        color: "var(--color-blue)",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {faq.category}
+                    </span>
+                    <span>{faq.question}</span>
+                  </div>
+
                   <ChevronDown
                     size={20}
                     color={isOpen ? "var(--color-blue)" : "#64748b"}
@@ -112,12 +149,13 @@ export const FaqAccordion: React.FC = () => {
                 {isOpen && (
                   <div
                     style={{
-                      padding: "0 clamp(16px, 3vw, 24px) clamp(16px, 3vw, 22px) clamp(16px, 3vw, 24px)",
+                      padding: "0 clamp(16px, 3vw, 24px) clamp(18px, 3vw, 24px) clamp(16px, 3vw, 24px)",
                       fontSize: "clamp(0.875rem, 2vw, 0.95rem)",
                       color: "#1e293b",
-                      lineHeight: 1.7,
+                      lineHeight: 1.75,
                       borderTop: "1px solid var(--border-subtle)",
                       paddingTop: "16px",
+                      whiteSpace: "pre-line",
                     }}
                   >
                     {faq.answer}
