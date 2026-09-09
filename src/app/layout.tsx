@@ -77,6 +77,9 @@ export const metadata: Metadata = {
     "msapplication-config": "/browserconfig.xml",
     "theme-color": "#0055ff",
   },
+  verification: {
+    google: "9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg",
+  },
   robots: {
     index: true,
     follow: true,
@@ -98,6 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />

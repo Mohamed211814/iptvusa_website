@@ -13,6 +13,7 @@ export const siteConfig = {
   links: {
     telegram: "https://t.me/contactexe",
   },
+  googleSiteVerification: "9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg",
   stats: {
     channels: "+24,000",
     vod: "+110,000",

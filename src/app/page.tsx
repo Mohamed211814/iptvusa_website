@@ -12,6 +12,9 @@ import { ProductOffersSchema } from "@/components/schema/ProductOffersSchema";
 import { FaqSchema } from "@/components/schema/FaqSchema";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg",
+  },
   title: "IPTV USA | The Official IPTV Subscription Service in USA",
   description:
     "Official IPTV USA subscription with 24,000+ live channels, 110,000+ VOD movies, and 4K sports. Anti Freeze 9.3 servers, instant activation, and 24/7 support.",
