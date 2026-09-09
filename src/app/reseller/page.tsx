@@ -22,11 +22,11 @@ export default function ResellerPage() {
   const resellerTiers = [
     {
       name: "Starter IPTV USA Reseller",
-      credits: "100 Credits",
+      credits: "120 Credits",
       price: "$250",
-      perCredit: "$2.50 / credit",
+      perCredit: "$2.08 / credit",
       features: [
-        "100 IPTV USA Credits Included",
+        "120 IPTV USA Credits Included",
         "Official IPTV USA Panel Access",
         "Create 1, 3, 6, and 12 Month Accounts",
         "Generate Instant IPTV USA Subscriptions",
@@ -37,33 +37,18 @@ export default function ResellerPage() {
     },
     {
       name: "Pro IPTV USA Reseller",
-      credits: "250 Credits",
-      price: "$500",
-      perCredit: "$2.00 / credit",
+      credits: "240 Credits",
+      price: "$450",
+      perCredit: "$1.87 / credit",
       isPopular: true,
       features: [
-        "250 IPTV USA Credits Included",
+        "240 IPTV USA Credits Included",
         "Full IPTV USA Web Control Panel",
         "Unlimited Sub-Account Creation",
         "Automated M3U and Portal Generation",
         "Brandable DNS and Custom Portal URL",
         "Priority Tier 1 IPTV USA Server Stream Access",
         "Dedicated VIP Account Manager",
-      ],
-    },
-    {
-      name: "Master IPTV USA Reseller",
-      credits: "500 Credits",
-      price: "$850",
-      perCredit: "$1.70 / credit",
-      features: [
-        "500 IPTV USA Credits Included",
-        "Highest Margin and Profit Potential",
-        "Custom DNS and Whitelabel Branding",
-        "Create Unlimited Sub-Resellers",
-        "Direct Load Balancer Allocation",
-        "Bulk IPTV USA Account Management",
-        "Priority VIP Assistance",
       ],
     },
   ];
@@ -84,7 +69,7 @@ export default function ResellerPage() {
         </div>
 
         {/* Reseller Plans Grid */}
-        <div className="grid-3" style={{ marginBottom: "60px" }}>
+        <div className="grid-2" style={{ maxWidth: "860px", margin: "0 auto 60px auto" }}>
           {resellerTiers.map((tier, idx) => (
             <div
               key={idx}
@@ -216,7 +201,7 @@ export default function ResellerPage() {
                 Submit Your Request
               </h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.5, margin: 0 }}>
-                Send an email to <strong>{siteConfig.supportEmail}</strong> specifying your chosen tier (100, 250, or 500 Credits).
+                Send an email to <strong>{siteConfig.supportEmail}</strong> specifying your chosen tier (120 or 240 Credits).
               </p>
             </div>
 
@@ -250,7 +235,7 @@ export default function ResellerPage() {
               variant="green"
               label="📧 Click Here to Email Us for Reseller Panel"
               subject="Order IPTV USA Reseller Panel Inquiry"
-              body={`Hello IPTV USA Reseller Desk,\n\nI want to order an IPTV USA Reseller Panel.\n\nPackage Interest: (Starter 100 Credits / Pro 250 Credits / Master 500 Credits)\nPreferred Payment Method:\nMy Name/Company:\n\nPlease send me payment instructions and panel setup details.`}
+              body={`Hello IPTV USA Reseller Desk,\n\nI want to order an IPTV USA Reseller Panel.\n\nPackage Interest: (Starter 120 Credits / Pro 240 Credits)\nPreferred Payment Method:\nMy Name/Company:\n\nPlease send me payment instructions and panel setup details.`}
               showQuickLinks={true}
             />
           </div>
@@ -273,7 +258,7 @@ export default function ResellerPage() {
                 High Profit Margin
               </h3>
               <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-                Buy IPTV USA credits at wholesale rates starting from $1.70 and sell subscriptions at retail prices to make substantial profit on every customer.
+                Buy IPTV USA credits at wholesale rates starting from $1.87 and sell subscriptions at retail prices to make substantial profit on every customer.
               </p>
             </div>
 
