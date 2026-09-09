@@ -237,6 +237,7 @@ export default function ResellerPage() {
               subject="Order IPTV USA Reseller Panel Inquiry"
               body={`Hello IPTV USA Reseller Desk,\n\nI want to order an IPTV USA Reseller Panel.\n\nPackage Interest: (Starter 120 Credits / Pro 240 Credits)\nPreferred Payment Method:\nMy Name/Company:\n\nPlease send me payment instructions and panel setup details.`}
               showQuickLinks={true}
+              lightText={true}
             />
           </div>
         </div>

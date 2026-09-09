@@ -10,6 +10,7 @@ interface EmailSupportButtonProps {
   label?: string;
   variant?: "primary" | "secondary" | "green";
   showQuickLinks?: boolean;
+  lightText?: boolean;
 }
 
 export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
@@ -18,6 +19,7 @@ export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
   label,
   variant = "secondary",
   showQuickLinks = true,
+  lightText = false,
 }) => {
   const [copied, setCopied] = useState(false);
   const email = siteConfig.supportEmail;
@@ -129,7 +131,7 @@ export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
             justifyContent: "center",
             gap: "12px",
             fontSize: "0.75rem",
-            color: "var(--text-muted)",
+            color: lightText ? "rgba(255, 255, 255, 0.75)" : "var(--text-muted)",
             marginTop: "2px",
           }}
         >
@@ -138,7 +140,7 @@ export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              color: "var(--color-blue-bright)",
+              color: lightText ? "#93c5fd" : "var(--color-blue-bright)",
               display: "inline-flex",
               alignItems: "center",
               gap: "3px",
@@ -152,8 +154,9 @@ export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
           <a
             href={mailtoUrl}
             style={{
-              color: "var(--text-secondary)",
+              color: lightText ? "#ffffff" : "var(--text-secondary)",
               textDecoration: "underline",
+              fontWeight: lightText ? 600 : "normal",
             }}
           >
             <span>Mail App</span>
@@ -165,7 +168,7 @@ export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
             style={{
               background: "none",
               border: "none",
-              color: "var(--color-green)",
+              color: lightText ? "#34d399" : "var(--color-green)",
               cursor: "pointer",
               padding: 0,
               fontSize: "0.75rem",
