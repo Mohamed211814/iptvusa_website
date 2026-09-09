@@ -70,7 +70,26 @@ export default function BlogAdminPage() {
   };
 
   useEffect(() => {
-    fetchPosts();
+    let ignore = false;
+    async function load() {
+      try {
+        const res = await fetch("/api/blog");
+        if (res.ok) {
+          const data = await res.json();
+          if (!ignore) setPosts(data);
+        } else if (!ignore) {
+          setPosts(initialBlogPosts);
+        }
+      } catch {
+        if (!ignore) setPosts(initialBlogPosts);
+      } finally {
+        if (!ignore) setIsLoading(false);
+      }
+    }
+    load();
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   // Auto-generate slug from title if not manually customized
