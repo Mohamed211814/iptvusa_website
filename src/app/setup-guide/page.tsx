@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   title: "Step-by-Step IPTV USA Installation and Setup Guides | Firestick, Smart TV, Apple TV",
   description:
     "Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes.",
+  keywords: [
+    "IPTV USA setup guide",
+    "how to install IPTV USA on Firestick",
+    "IPTV USA Firestick setup",
+    "IPTV USA TiviMate setup",
+    "IPTV USA Smarters Pro",
+    "IPTV USA Smart TV install",
+    "IPTV USA Apple TV setup",
+    "IPTV USA tutorial",
+  ],
   alternates: {
     canonical: "https://www.iptvusa-pro.com/setup-guide",
   },
@@ -37,15 +47,6 @@ export const metadata: Metadata = {
       "Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes.",
     images: ["/og-image.png"],
   },
-  keywords: [
-    "IPTV USA setup",
-    "install IPTV USA on Firestick",
-    "IPTV USA Smart TV",
-    "IPTV USA Apple TV",
-    "IPTV USA Android TV",
-    "IPTV USA subscription guide",
-    "how to install IPTV USA",
-  ],
 };
 
 export default function SetupGuidePage() {

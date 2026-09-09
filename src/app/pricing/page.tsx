@@ -12,6 +12,18 @@ export const metadata: Metadata = {
   title: "IPTV Subscription Plans & Pricing | IPTV USA Pro",
   description:
     "Compare official IPTV USA subscription packages starting at $14.95/mo. Access 24,000+ live channels, 110,000+ VOD in 4K FHD with 7-day money-back guarantee.",
+  keywords: [
+    "IPTV USA pricing",
+    "IPTV USA plans",
+    "buy IPTV USA",
+    "IPTV USA pro subscription",
+    "cheap IPTV USA",
+    "affordable IPTV USA",
+    "IPTV subscription USA cost",
+    "best IPTV USA deals",
+    "IPTV USA 1 month",
+    "IPTV USA 12 months",
+  ],
   alternates: {
     canonical: "https://www.iptvusa-pro.com/pricing",
   },

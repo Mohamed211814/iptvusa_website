@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "IPTV USA | The Official IPTV Subscription Service in USA",
   description:
     "Official IPTV USA subscription with 24,000+ live channels, 110,000+ VOD movies, and 4K sports. Anti Freeze 9.3 servers, instant activation, and 24/7 support.",
+  keywords: siteConfig.keywords,
   alternates: {
     canonical: "https://www.iptvusa-pro.com/",
   },

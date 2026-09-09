@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD) | IPTV USA",
   description:
     "Explore our complete IPTV USA channel list: All major live sports leagues, championship combat PPVs, premium cinema networks, regional state news affiliates, and 110,000+ VOD movies.",
+  keywords: [
+    "IPTV USA channels list",
+    "IPTV USA channels",
+    "IPTV USA 24000 channels",
+    "IPTV USA live sports",
+    "IPTV USA 4K channels",
+    "IPTV USA PPV events",
+    "IPTV USA Indian channels",
+    "IPTV USA channel lineup",
+    "watch live sports IPTV USA",
+  ],
   alternates: {
     canonical: "https://www.iptvusa-pro.com/channels",
   },
@@ -37,15 +48,6 @@ export const metadata: Metadata = {
       "Explore our complete IPTV USA channel list: All major live sports leagues, championship combat PPVs, premium cinema networks, regional state news affiliates, and 110,000+ VOD movies.",
     images: ["/og-image.png"],
   },
-  keywords: [
-    "IPTV USA channel list",
-    "IPTV sports channels",
-    "live sports streaming IPTV",
-    "championship PPV IPTV",
-    "4K cinema IPTV",
-    "US local channels IPTV",
-    "IPTV Canada UK channels",
-  ],
 };
 
 export default function ChannelsPage() {

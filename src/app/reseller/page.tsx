@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "IPTV USA Reseller Panel & Wholesale Credits Program | IPTV USA",
   description:
     "Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins.",
+  keywords: [
+    "IPTV USA reseller",
+    "IPTV USA reseller panel",
+    "buy IPTV USA credits",
+    "IPTV reseller USA",
+    "IPTV USA wholesale",
+    "best IPTV reseller program USA",
+    "IPTV USA Xtream Codes panel",
+  ],
   alternates: {
     canonical: "https://www.iptvusa-pro.com/reseller",
   },
@@ -36,14 +45,6 @@ export const metadata: Metadata = {
       "Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins.",
     images: ["/og-image.png"],
   },
-  keywords: [
-    "IPTV USA reseller",
-    "IPTV USA reseller panel",
-    "buy IPTV USA credits",
-    "IPTV USA business",
-    "IPTV USA Xtream panel",
-    "best IPTV USA reseller program",
-  ],
 };
 
 export default function ResellerPage() {
