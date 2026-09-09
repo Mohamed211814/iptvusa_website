@@ -2,12 +2,41 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { EmailSupportButton } from "@/components/EmailSupportButton";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { ShieldCheck, Zap, Server, Users, Award, CheckCircle2, MessageSquare, ArrowRight, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IPTV USA Reseller Panel & Subscriptions Program | Start Your Business",
+  title: "IPTV USA Reseller Panel & Wholesale Credits Program | IPTV USA",
   description:
     "Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/reseller",
+  },
+  openGraph: {
+    title: "IPTV USA Reseller Panel & Wholesale Credits Program | IPTV USA",
+    description:
+      "Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins.",
+    url: "https://www.iptvusa-pro.com/reseller",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Reseller Program",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV USA Reseller Panel & Wholesale Credits Program | IPTV USA",
+    description:
+      "Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "IPTV USA reseller",
     "IPTV USA reseller panel",
@@ -55,6 +84,17 @@ export default function ResellerPage() {
 
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "80px" }}>
+      <WebPageSchema
+        title="IPTV USA Reseller Panel & Wholesale Credits Program | IPTV USA"
+        description="Become an official IPTV USA reseller. Get full access to our IPTV USA Xtream Codes Reseller Panel with 10Gbps anti freeze servers, 24,000+ channels, and high profit margins."
+        url="https://www.iptvusa-pro.com/reseller"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.iptvusa-pro.com/" },
+          { name: "Reseller", url: "https://www.iptvusa-pro.com/reseller" },
+        ]}
+      />
       <div className="container">
         <div className="section-header">
           <span className="section-tag">

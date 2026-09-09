@@ -3,17 +3,58 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { EmailSupportButton } from "@/components/EmailSupportButton";
 import { ContactForm } from "@/components/ContactForm";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { Zap, Mail, Clock, ShieldCheck, HelpCircle, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact IPTV USA Support | Buyer Help Desk & Technical Issue Form",
+  title: "Contact IPTV USA Support | Buyer Help Desk & Technical Support",
   description:
     "Have an issue or question before buying? Submit an inquiry ticket to official IPTV USA customer support or reach our team directly via Telegram and Email.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/contact",
+  },
+  openGraph: {
+    title: "Contact IPTV USA Support | Buyer Help Desk & Technical Support",
+    description:
+      "Have an issue or question before buying? Submit an inquiry ticket to official IPTV USA customer support or reach our team directly via Telegram and Email.",
+    url: "https://www.iptvusa-pro.com/contact",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact IPTV USA Customer Support",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact IPTV USA Support | Buyer Help Desk & Technical Support",
+    description:
+      "Have an issue or question before buying? Submit an inquiry ticket to official IPTV USA customer support or reach our team directly via Telegram and Email.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function ContactPage() {
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "80px" }}>
+      <WebPageSchema
+        title="Contact IPTV USA Support | Buyer Help Desk & Technical Support"
+        description="Have an issue or question before buying? Submit an inquiry ticket to official IPTV USA customer support or reach our team directly via Telegram and Email."
+        url="https://www.iptvusa-pro.com/contact"
+        pageType="ContactPage"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.iptvusa-pro.com/" },
+          { name: "Contact Us", url: "https://www.iptvusa-pro.com/contact" },
+        ]}
+      />
       <div className="container">
         {/* Page Header */}
         <div className="section-header" style={{ marginBottom: "36px" }}>

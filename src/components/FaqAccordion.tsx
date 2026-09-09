@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { faqs, FAQItem } from "@/data/faqs";
 
@@ -164,6 +165,34 @@ export const FaqAccordion: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Natural Internal Links Banner */}
+        <div
+          style={{
+            marginTop: "36px",
+            textAlign: "center",
+            padding: "24px 20px",
+            background: "#ffffff",
+            border: "1px solid var(--border-subtle)",
+            borderRadius: "var(--radius-lg)",
+            boxShadow: "var(--shadow-sm)",
+          }}
+        >
+          <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "8px" }}>
+            Have More Questions About Our IPTV USA Subscription?
+          </h3>
+          <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", marginBottom: "16px", maxWidth: "560px", margin: "0 auto 16px auto" }}>
+            Our 24/7 customer assistance desk is ready to help you with activation, playlist setup on any device, and channel requests.
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
+            <Link href="/contact" className="btn btn-secondary" style={{ fontSize: "0.85rem", padding: "10px 18px" }}>
+              Contact Customer Support
+            </Link>
+            <Link href="/pricing" className="btn btn-primary" style={{ fontSize: "0.85rem", padding: "10px 18px" }}>
+              View IPTV Subscription Plans
+            </Link>
+          </div>
         </div>
       </div>
     </section>

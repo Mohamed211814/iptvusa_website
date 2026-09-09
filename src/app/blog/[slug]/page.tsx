@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import fs from "fs/promises";
 import path from "path";
 import { BlogPost, initialBlogPosts } from "@/data/blog";
+import { ArticleSchema } from "@/components/schema/ArticleSchema";
 import { ArrowLeft, Clock, Calendar, User, Tag, Check, Zap, ArrowRight, ShieldCheck, Share2 } from "lucide-react";
 
 async function getPostBySlug(slug: string): Promise<BlogPost | null> {
@@ -111,6 +112,7 @@ export default async function SingleBlogPostPage({
 
   return (
     <article style={{ paddingTop: "40px", paddingBottom: "100px", minHeight: "100vh" }}>
+      <ArticleSchema post={post} />
       <div className="container" style={{ maxWidth: "860px" }}>
         {/* Back Link */}
         <div style={{ marginBottom: "24px" }}>

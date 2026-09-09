@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import {
   ShieldCheck,
   Lock,
@@ -19,9 +21,36 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | IPTV USA Pro Official",
+  title: "Privacy Policy | IPTV USA",
   description:
-    "Learn how IPTV USA Pro protects your personal data, ensures zero streaming activity logging, and maintains end-to-end encryption across all services.",
+    "Learn how IPTV USA protects your personal data, ensures zero streaming activity logging, and maintains end-to-end encryption across all services.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | IPTV USA",
+    description:
+      "Our commitment to your privacy: zero activity logging, 256-bit encryption, and strict data protection standards.",
+    url: "https://www.iptvusa-pro.com/privacy-policy",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Privacy Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | IPTV USA",
+    description:
+      "Our commitment to your privacy: zero activity logging, 256-bit encryption, and strict data protection standards.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "IPTV USA privacy policy",
     "IPTV USA data protection",
@@ -29,19 +58,22 @@ export const metadata: Metadata = {
     "secure IPTV streaming",
     "IPTV USA customer privacy",
   ],
-  openGraph: {
-    title: "Privacy Policy | IPTV USA Pro",
-    description:
-      "Our commitment to your privacy: zero activity logging, 256-bit encryption, and strict data protection standards.",
-    url: `${siteConfig.url}/privacy-policy`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
 };
 
 export default function PrivacyPolicyPage() {
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "90px" }}>
+      <WebPageSchema
+        title="Privacy Policy | IPTV USA"
+        description="Learn how IPTV USA protects your personal data, ensures zero streaming activity logging, and maintains end-to-end encryption across all services."
+        url="https://www.iptvusa-pro.com/privacy-policy"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.iptvusa-pro.com/" },
+          { name: "Privacy Policy", url: "https://www.iptvusa-pro.com/privacy-policy" },
+        ]}
+      />
       <div className="container" style={{ maxWidth: "960px" }}>
         {/* Page Header */}
         <div className="section-header" style={{ marginBottom: "40px" }}>
