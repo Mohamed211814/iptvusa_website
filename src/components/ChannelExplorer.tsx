@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { channelCategories, ChannelCategory } from "@/data/channels";
-import { Search, Tv, Trophy, Film, Globe, Sparkles, Check, ArrowRight, Zap } from "lucide-react";
+import { Search, Tv, Check, ArrowRight, Zap } from "lucide-react";
 
 export const ChannelExplorer: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -85,6 +85,8 @@ export const ChannelExplorer: React.FC = () => {
               />
               <input
                 type="text"
+                name="channel-search"
+                aria-label="Search IPTV USA channels and categories"
                 placeholder="Search channels (e.g. Sports, News, Movies, Cinema, Football, Live Events)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}

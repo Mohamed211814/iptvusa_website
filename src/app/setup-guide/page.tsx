@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { setupGuides } from "@/data/guides";
 import { siteConfig } from "@/config/site";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { HowToSchema } from "@/components/schema/HowToSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
-import { Tv, Terminal, CheckCircle2, AlertCircle, HelpCircle, ArrowRight, MessageSquare, Zap } from "lucide-react";
+import { Terminal, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Step-by-Step IPTV USA Installation and Setup Guides | Firestick, Smart TV, Apple TV",

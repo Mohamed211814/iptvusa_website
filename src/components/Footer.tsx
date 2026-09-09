@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Tv, MessageSquare, Mail, Phone, ShieldCheck, Zap } from "lucide-react";
+import { Tv, Mail, Zap } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
@@ -64,9 +64,9 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: | Services (exact heading from iptvusaofficial.com) */}
           <div>
-            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
               | Services
-            </h4>
+            </h3>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
               <li>
                 <Link href="/" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
@@ -93,9 +93,9 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: | Other Pages (exact heading from iptvusaofficial.com) */}
           <div>
-            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
               | Other Pages
-            </h4>
+            </h3>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
               <li>
                 <Link href="/refund-and-returns-policy" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
@@ -122,9 +122,9 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: 24/7 Support */}
           <div>
-            <h4 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "18px", color: "#000000" }}>
               24/7 Support
-            </h4>
+            </h3>
             <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "16px" }}>
               Contact our live support team directly on Telegram or Email for immediate activation.
             </p>

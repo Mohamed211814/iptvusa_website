@@ -1,19 +1,14 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
+import Image from "next/image";
 import {
   Film,
   Globe,
   PlayCircle,
-  ShieldCheck,
   Zap,
   CheckCircle2,
-  Tv,
   ArrowRight,
   Headphones,
-  Sparkles,
 } from "lucide-react";
 
 export const HeroSection: React.FC = () => {
@@ -204,13 +199,13 @@ export const HeroSection: React.FC = () => {
                 background: "#060a14",
               }}
             >
-              <img
+              <Image
                 src="/images/iptv_player_screen.webp"
                 alt="IPTV USA Pro Live Player Interface"
                 width={882}
                 height={526}
-                loading="eager"
-                decoding="async"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 540px"
                 style={{
                   width: "100%",
                   height: "auto",

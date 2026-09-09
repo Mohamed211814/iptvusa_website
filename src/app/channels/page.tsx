@@ -4,7 +4,7 @@ import { channelCategories } from "@/data/channels";
 import { siteConfig } from "@/config/site";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
-import { Tv, Trophy, Film, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Zap } from "lucide-react";
+import { Tv, CheckCircle2, ArrowRight, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD) | IPTV USA",

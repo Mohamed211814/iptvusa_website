@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { EmailSupportButton } from "@/components/EmailSupportButton";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
-import { ShieldCheck, Zap, Server, Users, Award, CheckCircle2, MessageSquare, ArrowRight, Mail } from "lucide-react";
+import { Zap, Users, CheckCircle2, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "IPTV USA Reseller Panel & Wholesale Credits Program | IPTV USA",

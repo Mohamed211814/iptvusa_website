@@ -10,12 +10,10 @@ import {
   CheckCircle2,
   AlertCircle,
   HelpCircle,
-  MessageSquare,
   Zap,
   CreditCard,
   FileText,
   Mail,
-  ArrowRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {

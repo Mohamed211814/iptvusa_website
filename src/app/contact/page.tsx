@@ -5,7 +5,7 @@ import { EmailSupportButton } from "@/components/EmailSupportButton";
 import { ContactForm } from "@/components/ContactForm";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
-import { Zap, Mail, Clock, ShieldCheck, HelpCircle, BookOpen } from "lucide-react";
+import { Zap, Mail, Clock, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact IPTV USA Support | Buyer Help Desk & Technical Support",
