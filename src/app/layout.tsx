@@ -12,22 +12,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "IPTV USA",
-    "IPTV subscription",
-    "IPTV USA subscription",
-    "IPTV service USA",
-    "IPTV plans",
-    "IPTV channels",
-    "best IPTV USA",
-    "IPTV USA provider",
-    "buy IPTV USA",
-    "IPTV USA Firestick",
-    "IPTV USA Smart TV",
-    "IPTV USA live sports",
-    "IPTV USA 4K",
-    "IPTV USA reseller",
-  ],
+  keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.shortName, url: siteConfig.url }],
   creator: siteConfig.shortName,
   icons: {
@@ -77,6 +62,9 @@ export const metadata: Metadata = {
     "msapplication-config": "/browserconfig.xml",
     "theme-color": "#0055ff",
   },
+  verification: {
+    google: "9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg",
+  },
   robots: {
     index: true,
     follow: true,
@@ -98,6 +86,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />

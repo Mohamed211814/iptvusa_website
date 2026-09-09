@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import { faqs, FAQItem } from "@/data/faqs";
+import { faqs } from "@/data/faqs";
 
 export const FaqAccordion: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -103,6 +103,7 @@ export const FaqAccordion: React.FC = () => {
               >
                 <button
                   type="button"
+                  aria-expanded={isOpen}
                   onClick={() => toggleAccordion(idx)}
                   style={{
                     width: "100%",

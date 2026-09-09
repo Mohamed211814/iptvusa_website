@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { siteConfig } from "@/config/site";
-import { Tv, Menu, X, Headphones, Sparkles, Zap } from "lucide-react";
+import { Tv, Menu, X, Headphones, Zap } from "lucide-react";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

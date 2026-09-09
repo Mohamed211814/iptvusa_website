@@ -1,16 +1,13 @@
-"use client";
-
 import React from "react";
 import { pricingPlans, PricingPlan } from "@/data/pricing";
-import { siteConfig } from "@/config/site";
-import { Check, ShieldCheck, Zap, Sparkles, Tv, Clock, ArrowRight } from "lucide-react";
+import { Check, Zap, Tv } from "lucide-react";
 
 interface PricingSectionProps {
   onSelectPlan?: (plan: PricingPlan, connections: number) => void;
   isH1?: boolean;
 }
 
-export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, isH1 = false }) => {
+export const PricingSection: React.FC<PricingSectionProps> = ({ isH1 = false }) => {
   const connections = 1;
 
   return (
