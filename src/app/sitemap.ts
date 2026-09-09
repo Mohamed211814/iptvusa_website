@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return routes.map((route) => ({
-    url: `${siteConfig.url}${route}`,
+    url: route === "" ? `${siteConfig.url}/` : `${siteConfig.url}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" || route === "/channels" ? "daily" : "weekly",
     priority: route === "" ? 1.0 : route === "/pricing" || route === "/channels" ? 0.9 : 0.8,

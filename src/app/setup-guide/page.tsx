@@ -2,12 +2,42 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { setupGuides } from "@/data/guides";
 import { siteConfig } from "@/config/site";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { HowToSchema } from "@/components/schema/HowToSchema";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { Tv, Terminal, CheckCircle2, AlertCircle, HelpCircle, ArrowRight, MessageSquare, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Step by Step IPTV USA Installation and Setup Guides (Firestick, Smart TV, Apple TV)",
+  title: "Step-by-Step IPTV USA Installation and Setup Guides | Firestick, Smart TV, Apple TV",
   description:
     "Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/setup-guide",
+  },
+  openGraph: {
+    title: "Step-by-Step IPTV USA Installation and Setup Guides | Firestick, Smart TV, Apple TV",
+    description:
+      "Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes.",
+    url: "https://www.iptvusa-pro.com/setup-guide",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Step by Step Setup Guides",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Step-by-Step IPTV USA Installation and Setup Guides | Firestick, Smart TV, Apple TV",
+    description:
+      "Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "IPTV USA setup",
     "install IPTV USA on Firestick",
@@ -22,6 +52,18 @@ export const metadata: Metadata = {
 export default function SetupGuidePage() {
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "80px" }}>
+      <WebPageSchema
+        title="Step-by-Step IPTV USA Installation and Setup Guides | Firestick, Smart TV, Apple TV"
+        description="Easy step by step setup guides to install IPTV USA Pro on Amazon Firestick, Android TV, Smart TV (Samsung and LG), Apple TV, and Windows or Mac in less than 5 minutes."
+        url="https://www.iptvusa-pro.com/setup-guide"
+      />
+      <HowToSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.iptvusa-pro.com/" },
+          { name: "Setup Guides", url: "https://www.iptvusa-pro.com/setup-guide" },
+        ]}
+      />
       <div className="container">
         {/* Header */}
         <div className="section-header">

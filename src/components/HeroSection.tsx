@@ -207,6 +207,10 @@ export const HeroSection: React.FC = () => {
               <img
                 src="/images/iptv_player_screen.webp"
                 alt="IPTV USA Pro Live Player Interface"
+                width={882}
+                height={526}
+                loading="eager"
+                decoding="async"
                 style={{
                   width: "100%",
                   height: "auto",

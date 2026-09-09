@@ -4,9 +4,9 @@ export const siteConfig = {
   title: "IPTV USA The Official IPTV Subscription Service",
   description:
     "Official IPTV USA subscription offering over 24,000+ live IPTV USA channels, 110,000+ movies, and TV shows. Get the best IPTV USA service with 4K FHD streaming, Anti Freeze servers, and 24/7 IPTV USA support on all devices.",
-  url: "https://iptvusa-pro.com",
-  domain: "iptvusa-pro.com",
-  ogImage: "https://iptvusa-pro.com/og-image.jpg",
+  url: "https://www.iptvusa-pro.com",
+  domain: "www.iptvusa-pro.com",
+  ogImage: "https://www.iptvusa-pro.com/og-image.png",
   supportEmail: "iptvusapro@gmail.com",
   supportPhone: "+1 (555) 349 8822",
   telegramUsername: "contactexe",

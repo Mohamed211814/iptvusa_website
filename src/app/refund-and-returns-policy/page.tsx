@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import {
   ShieldCheck,
   RotateCcw,
@@ -17,9 +19,36 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Refund and Returns Policy | Official IPTV USA Subscription",
+  title: "Refund and Returns Policy | IPTV USA",
   description:
     "Review our transparent 7-Day Money-Back Guarantee and Refund & Returns Policy for IPTV USA subscriptions. Fast processing and 24/7 dedicated customer assistance.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/refund-and-returns-policy",
+  },
+  openGraph: {
+    title: "Refund and Returns Policy | IPTV USA",
+    description:
+      "Transparent 7-day money-back guarantee and hassle-free refund policy for IPTV USA subscriptions.",
+    url: "https://www.iptvusa-pro.com/refund-and-returns-policy",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Refund and Returns Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Refund and Returns Policy | IPTV USA",
+    description:
+      "Transparent 7-day money-back guarantee and hassle-free refund policy for IPTV USA subscriptions.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "IPTV USA refund policy",
     "IPTV USA returns policy",
@@ -27,19 +56,22 @@ export const metadata: Metadata = {
     "IPTV USA customer satisfaction",
     "IPTV USA cancellation policy",
   ],
-  openGraph: {
-    title: "Refund and Returns Policy | IPTV USA Pro",
-    description:
-      "Transparent 7-day money-back guarantee and hassle-free refund policy for IPTV USA subscriptions.",
-    url: `${siteConfig.url}/refund-and-returns-policy`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
 };
 
 export default function RefundPolicyPage() {
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "90px" }}>
+      <WebPageSchema
+        title="Refund and Returns Policy | IPTV USA"
+        description="Review our transparent 7-Day Money-Back Guarantee and Refund & Returns Policy for IPTV USA subscriptions. Fast processing and 24/7 dedicated customer assistance."
+        url="https://www.iptvusa-pro.com/refund-and-returns-policy"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.iptvusa-pro.com/" },
+          { name: "Refund Policy", url: "https://www.iptvusa-pro.com/refund-and-returns-policy" },
+        ]}
+      />
       <div className="container" style={{ maxWidth: "960px" }}>
         {/* Page Header */}
         <div className="section-header" style={{ marginBottom: "40px" }}>

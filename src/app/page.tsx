@@ -1,62 +1,54 @@
-"use client";
-
-import React, { useState } from "react";
-import Link from "next/link";
-import { HeroSection } from "@/components/HeroSection";
-import { FeaturesGrid } from "@/components/FeaturesGrid";
-import { ChannelExplorer } from "@/components/ChannelExplorer";
-import { DeviceCompatibility } from "@/components/DeviceCompatibility";
-import { PricingSection } from "@/components/PricingSection";
-import { Testimonials } from "@/components/Testimonials";
-import { FaqAccordion } from "@/components/FaqAccordion";
-import { OrderModal } from "@/components/OrderModal";
-import { PricingPlan } from "@/data/pricing";
-import { Sparkles, ShieldCheck, Zap, ArrowRight, MessageSquare } from "lucide-react";
+import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { HomePageClient } from "@/components/HomePageClient";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { ProductOffersSchema } from "@/components/schema/ProductOffersSchema";
+import { FaqSchema } from "@/components/schema/FaqSchema";
+
+export const metadata: Metadata = {
+  title: "IPTV USA | The Official IPTV Subscription Service in USA",
+  description:
+    "Official IPTV USA subscription with 24,000+ live channels, 110,000+ VOD movies, and 4K sports. Anti Freeze 9.3 servers, instant activation, and 24/7 support.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/",
+  },
+  openGraph: {
+    title: "IPTV USA | The Official IPTV Subscription Service in USA",
+    description:
+      "Official IPTV USA subscription with 24,000+ live channels, 110,000+ VOD movies, and 4K sports. Anti Freeze 9.3 servers, instant activation, and 24/7 support.",
+    url: "https://www.iptvusa-pro.com/",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Official Subscription Service",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV USA | The Official IPTV Subscription Service in USA",
+    description:
+      "Official IPTV USA subscription with 24,000+ live channels, 110,000+ VOD movies, and 4K sports. Anti Freeze 9.3 servers, instant activation, and 24/7 support.",
+    images: ["/og-image.png"],
+  },
+};
 
 export default function HomePage() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null);
-  const [selectedConnections, setSelectedConnections] = useState(1);
-
-  const handlePlanSelect = (plan: PricingPlan, connections: number) => {
-    setSelectedPlan(plan);
-    setSelectedConnections(connections);
-    setModalOpen(true);
-  };
-
   return (
     <>
-      {/* 1. Hero Section & 3 Core Pillar Cards */}
-      <HeroSection />
-
-      {/* 2. Subscription Pricing Plans (Placed right above for maximum conversion) */}
-      <PricingSection onSelectPlan={handlePlanSelect} />
-
-      {/* 3. Why IPTV USA Is The Best */}
-      <FeaturesGrid />
-
-      {/* 5. Live Channel & VOD Explorer */}
-      <ChannelExplorer />
-
-      {/* 6. Device Compatibility Matrix */}
-      <DeviceCompatibility />
-
-      {/* 7. Real Customer Testimonials (What Say IPTV USA Clients ?) */}
-      <Testimonials />
-
-      {/* 8. Frequently Asked Questions (IPTV USA FAQs) */}
-      <FaqAccordion />
-
-
-
-      {/* Interactive Order & Lead Modal */}
-      <OrderModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        initialPlan={selectedPlan}
-        initialConnections={selectedConnections}
+      <WebPageSchema
+        title="IPTV USA | The Official IPTV Subscription Service in USA"
+        description="Official IPTV USA subscription with 24,000+ live channels, 110,000+ VOD movies, and 4K sports. Anti Freeze 9.3 servers, instant activation, and 24/7 support."
+        url="https://www.iptvusa-pro.com/"
       />
+      <ProductOffersSchema />
+      <FaqSchema pageUrl="https://www.iptvusa-pro.com" />
+      <HomePageClient />
     </>
   );
 }

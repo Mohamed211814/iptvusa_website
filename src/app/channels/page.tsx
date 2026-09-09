@@ -2,12 +2,41 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { channelCategories } from "@/data/channels";
 import { siteConfig } from "@/config/site";
+import { WebPageSchema } from "@/components/schema/WebPageSchema";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 import { Tv, Trophy, Film, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD)",
+  title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD) | IPTV USA",
   description:
     "Explore our complete IPTV USA channel list: All major live sports leagues, championship combat PPVs, premium cinema networks, regional state news affiliates, and 110,000+ VOD movies.",
+  alternates: {
+    canonical: "https://www.iptvusa-pro.com/channels",
+  },
+  openGraph: {
+    title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD) | IPTV USA",
+    description:
+      "Explore our complete IPTV USA channel list: All major live sports leagues, championship combat PPVs, premium cinema networks, regional state news affiliates, and 110,000+ VOD movies.",
+    url: "https://www.iptvusa-pro.com/channels",
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Channel Lineup & VOD Library",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD) | IPTV USA",
+    description:
+      "Explore our complete IPTV USA channel list: All major live sports leagues, championship combat PPVs, premium cinema networks, regional state news affiliates, and 110,000+ VOD movies.",
+    images: ["/og-image.png"],
+  },
   keywords: [
     "IPTV USA channel list",
     "IPTV sports channels",
@@ -22,6 +51,18 @@ export const metadata: Metadata = {
 export default function ChannelsPage() {
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "80px" }}>
+      <WebPageSchema
+        title="Complete 24,000+ Live Channel Lineup & VOD Catalog (4K FHD) | IPTV USA"
+        description="Explore our complete IPTV USA channel list: All major live sports leagues, championship combat PPVs, premium cinema networks, regional state news affiliates, and 110,000+ VOD movies."
+        url="https://www.iptvusa-pro.com/channels"
+        pageType="CollectionPage"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.iptvusa-pro.com/" },
+          { name: "Channels List", url: "https://www.iptvusa-pro.com/channels" },
+        ]}
+      />
       <div className="container">
         {/* Page Header */}
         <div className="section-header">
