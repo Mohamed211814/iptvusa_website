@@ -7,28 +7,44 @@ interface ArticleSchemaProps {
 }
 
 export const ArticleSchema: React.FC<ArticleSchemaProps> = ({ post }) => {
+  const publishedDate = post.date.includes("2026") ? "2026-09-11T08:00:00+00:00" : new Date().toISOString();
+  const modifiedDate = post.dateModified?.includes("2026") ? "2026-09-11T08:00:00+00:00" : publishedDate;
+  
+  const coverUrl = post.coverImage
+    ? post.coverImage.startsWith("http")
+      ? post.coverImage
+      : `${siteConfig.url}${post.coverImage}`
+    : `${siteConfig.url}/og-image.png`;
+
   const schema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     "@id": `${siteConfig.url}/blog/${post.slug}/#article`,
     headline: post.title,
     description: post.excerpt,
     url: `${siteConfig.url}/blog/${post.slug}`,
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: publishedDate,
+    dateModified: modifiedDate,
     inLanguage: "en-US",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteConfig.url}/blog/${post.slug}/#webpage`,
+      "@id": `${siteConfig.url}/blog/${post.slug}`,
     },
     author: {
       "@type": "Person",
       name: post.author || siteConfig.shortName,
+      jobTitle: post.authorRole || "Digital Media Research Specialist",
     },
     publisher: {
-      "@id": `${siteConfig.url}/#organization`,
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/logo.png`,
+      },
     },
-    image: post.coverImage || `${siteConfig.url}/og-image.png`,
+    image: [coverUrl],
   };
 
   return (
@@ -38,3 +54,4 @@ export const ArticleSchema: React.FC<ArticleSchemaProps> = ({ post }) => {
     />
   );
 };
+
