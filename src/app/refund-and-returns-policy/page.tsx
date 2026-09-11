@@ -433,7 +433,7 @@ export default function RefundPolicyPage() {
             <a
               href={siteConfig.links.telegram}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="btn btn-telegram"
             >
               <Zap size={16} />

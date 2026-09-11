@@ -167,7 +167,7 @@ function renderInlineText(text: string): React.ReactNode[] {
             key={key++}
             href={linkUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             style={{
               color: "var(--color-blue)",
               fontWeight: 600,
