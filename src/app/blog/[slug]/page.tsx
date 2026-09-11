@@ -160,29 +160,17 @@ function renderInlineText(text: string): React.ReactNode[] {
         </code>
       );
     } else if (linkText && linkUrl) {
-      const isExternal = linkUrl.startsWith("http://") || linkUrl.startsWith("https://");
-      if (isExternal) {
-        elements.push(
-          <a
-            key={key++}
-            href={linkUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            style={{
-              color: "var(--color-blue)",
-              fontWeight: 600,
-              textDecoration: "underline",
-              textUnderlineOffset: "3px",
-            }}
-          >
-            {linkText}
-          </a>
-        );
-      } else {
+      const isInternal =
+        linkUrl.startsWith("/") ||
+        linkUrl.startsWith("#") ||
+        linkUrl.includes("iptvusa-pro.com");
+
+      if (isInternal) {
+        const cleanHref = linkUrl.replace(/^https?:\/\/(www\.)?iptvusa-pro\.com/, "") || "/";
         elements.push(
           <Link
             key={key++}
-            href={linkUrl}
+            href={cleanHref}
             style={{
               color: "var(--color-blue)",
               fontWeight: 600,
@@ -192,6 +180,19 @@ function renderInlineText(text: string): React.ReactNode[] {
           >
             {linkText}
           </Link>
+        );
+      } else {
+        // External references stay on the page as styled text without taking user away
+        elements.push(
+          <strong
+            key={key++}
+            style={{
+              fontWeight: 700,
+              color: "#0f172a",
+            }}
+          >
+            {linkText}
+          </strong>
         );
       }
     }
