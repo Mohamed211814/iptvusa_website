@@ -5,13 +5,50 @@ import path from "path";
 import { BlogPost, initialBlogPosts } from "@/data/blog";
 import { Tv, Clock, User, ArrowRight, Tag, Sparkles, BookOpen, ShieldCheck } from "lucide-react";
 
+import { siteConfig } from "@/config/site";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
+
 export const metadata: Metadata = {
-  title: "IPTV USA Blog - Streaming Guides, News & Tutorials",
+  title: "IPTV USA Blog - Streaming Guides, News & Tutorials | IPTV USA Pro",
   description:
-    "Official IPTV USA blog featuring step-by-step installation guides for Firestick and Smart TVs, Anti Freeze streaming technology updates, and cord-cutting tips.",
+    "Official IPTV USA blog featuring step-by-step installation guides for Firestick and Smart TVs, IPTV legality insights, Anti Freeze streaming technology updates, and cord-cutting tips.",
+  alternates: {
+    canonical: `${siteConfig.url}/blog/`,
+  },
+  openGraph: {
+    title: "IPTV USA Blog - Streaming Guides, News & Tutorials | IPTV USA Pro",
+    description:
+      "Official IPTV USA blog featuring step-by-step installation guides for Firestick and Smart TVs, IPTV legality insights, Anti Freeze streaming technology updates, and cord-cutting tips.",
+    url: `${siteConfig.url}/blog/`,
+    siteName: siteConfig.shortName,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IPTV USA Knowledge Hub & Guides",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV USA Blog - Streaming Guides, News & Tutorials | IPTV USA Pro",
+    description:
+      "Official IPTV USA blog featuring step-by-step installation guides for Firestick and Smart TVs, IPTV legality insights, Anti Freeze streaming technology updates, and cord-cutting tips.",
+    images: ["/og-image.png"],
+  },
   robots: {
-    index: false, // Hidden in the background
-    follow: false,
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -36,6 +73,12 @@ export default async function BlogIndexPage() {
 
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "100px", minHeight: "100vh" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: `${siteConfig.url}/` },
+          { name: "Blog", url: `${siteConfig.url}/blog/` },
+        ]}
+      />
       <div className="container">
         {/* Header */}
         <div className="section-header">

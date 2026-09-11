@@ -2,8 +2,14 @@ import React from "react";
 import { siteConfig } from "@/config/site";
 import { faqs as defaultFaqs, FAQItem } from "@/data/faqs";
 
+export interface FaqEntry {
+  question: string;
+  answer: string;
+  category?: string;
+}
+
 interface FaqSchemaProps {
-  items?: FAQItem[];
+  items?: FaqEntry[];
   pageUrl?: string;
 }
 

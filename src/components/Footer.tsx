@@ -117,6 +117,11 @@ export const Footer: React.FC = () => {
                   Installation Guides
                 </Link>
               </li>
+              <li>
+                <Link href="/blog" style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
+                  Blog & Guides
+                </Link>
+              </li>
             </ul>
           </div>
 
