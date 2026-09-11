@@ -171,7 +171,7 @@ export default function ResellerPage() {
                 <a
                   href={siteConfig.links.telegram}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="btn btn-secondary"
                   style={{ width: "100%", justifyContent: "center", fontSize: "0.85rem", padding: "10px" }}
                 >

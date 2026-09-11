@@ -137,7 +137,7 @@ export const Footer: React.FC = () => {
               <a
                 href={siteConfig.links.telegram}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="btn btn-telegram"
                 style={{ padding: "9px 16px", fontSize: "0.85rem", width: "fit-content" }}
               >

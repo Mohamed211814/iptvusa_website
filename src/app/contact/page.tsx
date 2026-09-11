@@ -121,7 +121,7 @@ export default function ContactPage() {
               <a
                 href={siteConfig.links.telegram}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="btn btn-telegram"
                 style={{ width: "100%", justifyContent: "center" }}
               >

@@ -138,7 +138,7 @@ export const EmailSupportButton: React.FC<EmailSupportButtonProps> = ({
           <a
             href={gmailUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             style={{
               color: lightText ? "#93c5fd" : "var(--color-blue-bright)",
               display: "inline-flex",
