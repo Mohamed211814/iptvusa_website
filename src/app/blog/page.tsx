@@ -68,8 +68,8 @@ async function getBlogPosts(): Promise<BlogPost[]> {
 
 export default async function BlogIndexPage() {
   const posts = await getBlogPosts();
-  const featuredPost = posts.find((p) => p.featured) || posts[0];
-  const regularPosts = posts.filter((p) => p.id !== featuredPost?.id);
+  const featuredPost = posts[0];
+  const allPosts = posts;
 
   return (
     <div style={{ paddingTop: "40px", paddingBottom: "100px", minHeight: "100vh" }}>
@@ -137,114 +137,121 @@ export default async function BlogIndexPage() {
           <>
             {/* Featured Post Card */}
             {featuredPost && (
-          <div
-            className="card-glass"
-            style={{
-              padding: "clamp(24px, 4vw, 36px)",
-              border: "2.5px solid #0055ff",
-              boxShadow: "0 0 0 3px rgba(0, 85, 255, 0.15), 0 10px 30px rgba(0, 85, 255, 0.12)",
-              borderRadius: "var(--radius-lg)",
-              marginBottom: "48px",
-              background: "#ffffff",
-            }}
-          >
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "28px", alignItems: "center" }}>
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px", flexWrap: "wrap" }}>
-                  <span
-                    style={{
-                      fontSize: "0.75rem",
-                      fontWeight: 800,
-                      background: "var(--color-blue)",
-                      color: "#ffffff",
-                      padding: "4px 10px",
-                      borderRadius: "var(--radius-full)",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.05em",
-                    }}
-                  >
-                    ★ Featured Article
-                  </span>
-                  <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--color-green)" }}>
-                    {featuredPost.category}
-                  </span>
-                  <span style={{ fontSize: "0.8rem", color: "#64748b" }}>•</span>
-                  <span style={{ fontSize: "0.85rem", color: "#64748b" }}>{featuredPost.readTime}</span>
-                </div>
-
-                <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 900, color: "#000000", marginBottom: "14px", lineHeight: 1.3 }}>
-                  <Link href={`/blog/${featuredPost.slug}`} style={{ color: "#000000" }}>
-                    {featuredPost.title}
-                  </Link>
-                </h2>
-
-                <p style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.65, marginBottom: "20px" }}>
-                  {featuredPost.excerpt}
-                </p>
-
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "14px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                    <div
-                      style={{
-                        width: "36px",
-                        height: "36px",
-                        borderRadius: "50%",
-                        background: "rgba(0, 85, 255, 0.12)",
-                        color: "var(--color-blue)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontWeight: 800,
-                        fontSize: "0.85rem",
-                      }}
-                    >
-                      {featuredPost.author.charAt(0)}
+              <div
+                className="card-glass"
+                style={{
+                  padding: "clamp(24px, 4vw, 36px)",
+                  border: "2.5px solid #0055ff",
+                  boxShadow: "0 0 0 3px rgba(0, 85, 255, 0.15), 0 10px 30px rgba(0, 85, 255, 0.12)",
+                  borderRadius: "var(--radius-lg)",
+                  marginBottom: "48px",
+                  background: "#ffffff",
+                }}
+              >
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "28px", alignItems: "center" }}>
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "12px", flexWrap: "wrap" }}>
+                      <span
+                        style={{
+                          fontSize: "0.75rem",
+                          fontWeight: 800,
+                          background: "var(--color-blue)",
+                          color: "#ffffff",
+                          padding: "4px 10px",
+                          borderRadius: "var(--radius-full)",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
+                        }}
+                      >
+                        ★ Latest Featured Guide
+                      </span>
+                      <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--color-green)" }}>
+                        {featuredPost.category}
+                      </span>
+                      <span style={{ fontSize: "0.8rem", color: "#64748b" }}>•</span>
+                      <span style={{ fontSize: "0.85rem", color: "#64748b" }}>{featuredPost.readTime}</span>
                     </div>
-                    <div>
-                      <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#000000" }}>
-                        {featuredPost.author}
+
+                    <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 900, color: "#000000", marginBottom: "14px", lineHeight: 1.3 }}>
+                      <Link href={`/blog/${featuredPost.slug}`} style={{ color: "#000000" }}>
+                        {featuredPost.title}
+                      </Link>
+                    </h2>
+
+                    <p style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.65, marginBottom: "20px" }}>
+                      {featuredPost.excerpt}
+                    </p>
+
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "14px" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                        <div
+                          style={{
+                            width: "36px",
+                            height: "36px",
+                            borderRadius: "50%",
+                            background: "rgba(0, 85, 255, 0.12)",
+                            color: "var(--color-blue)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontWeight: 800,
+                            fontSize: "0.85rem",
+                          }}
+                        >
+                          {featuredPost.author.charAt(0)}
+                        </div>
+                        <div>
+                          <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#000000" }}>
+                            {featuredPost.author}
+                          </div>
+                          <div style={{ fontSize: "0.75rem", color: "#64748b" }}>
+                            {featuredPost.date}
+                          </div>
+                        </div>
                       </div>
-                      <div style={{ fontSize: "0.75rem", color: "#64748b" }}>
-                        {featuredPost.date}
-                      </div>
+
+                      <Link
+                        href={`/blog/${featuredPost.slug}`}
+                        className="btn btn-primary"
+                        style={{ padding: "10px 20px", fontSize: "0.875rem" }}
+                      >
+                        <span>Read Full Guide</span>
+                        <ArrowRight size={15} />
+                      </Link>
                     </div>
                   </div>
 
-                  <Link
-                    href={`/blog/${featuredPost.slug}`}
-                    className="btn btn-primary"
-                    style={{ padding: "10px 20px", fontSize: "0.875rem" }}
+                  {/* Thumbnail / Graphic */}
+                  <div
+                    style={{
+                      borderRadius: "14px",
+                      overflow: "hidden",
+                      border: "1px solid var(--border-subtle)",
+                      aspectRatio: "16 / 10",
+                      position: "relative",
+                      background: "#0b101e",
+                    }}
                   >
-                    <span>Read Full Guide</span>
-                    <ArrowRight size={15} />
-                  </Link>
+                    <img
+                      src={featuredPost.coverImage || featuredPost.image || "/images/hero_streaming_preview.webp"}
+                      alt={featuredPost.title}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </div>
                 </div>
               </div>
+            )}
 
-              {/* Thumbnail / Graphic */}
-              <div
-                style={{
-                  borderRadius: "14px",
-                  overflow: "hidden",
-                  border: "1px solid var(--border-subtle)",
-                  aspectRatio: "16 / 10",
-                  position: "relative",
-                  background: "#0b101e",
-                }}
-              >
-                <img
-                  src={featuredPost.coverImage || "/images/hero_streaming_preview.webp"}
-                  alt={featuredPost.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
+            {/* All Articles Section Header */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "24px", flexWrap: "wrap", gap: "12px" }}>
+              <h2 style={{ fontSize: "1.45rem", fontWeight: 900, color: "#000000", margin: 0 }}>
+                All Published Guides & Articles ({allPosts.length})
+              </h2>
             </div>
-          </div>
-        )}
 
-        {/* Regular Posts Grid */}
-        <div className="grid-3" style={{ gap: "24px" }}>
-          {regularPosts.map((post) => (
+            {/* Posts Grid */}
+            <div className="grid-3" style={{ gap: "24px" }}>
+              {allPosts.map((post) => (
             <article
               key={post.id}
               className="card-glass"
