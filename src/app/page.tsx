@@ -6,6 +6,7 @@ import { FeaturesGrid } from "@/components/FeaturesGrid";
 import { ChannelExplorer } from "@/components/ChannelExplorer";
 import { DeviceCompatibility } from "@/components/DeviceCompatibility";
 import { Testimonials } from "@/components/Testimonials";
+import { LatestBlogPosts } from "@/components/LatestBlogPosts";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { WebPageSchema } from "@/components/schema/WebPageSchema";
 import { ProductOffersSchema } from "@/components/schema/ProductOffersSchema";
@@ -77,7 +78,10 @@ export default function HomePage() {
       {/* 6. Customer Testimonials (Server Component) */}
       <Testimonials />
 
-      {/* 7. Frequently Asked Questions (Interactive Client Component) */}
+      {/* 7. Latest Articles & Knowledge Guides (Server Component) */}
+      <LatestBlogPosts />
+
+      {/* 8. Frequently Asked Questions (Interactive Client Component) */}
       <FaqAccordion />
     </>
   );
