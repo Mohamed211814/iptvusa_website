@@ -1709,7 +1709,7 @@ export const initialBlogPosts: BlogPost[] = [
     "author": "IPTV USA Customer Onboarding & Technical Team",
     "authorRole": "Subscription & Streaming Architecture Specialist",
     "date": "September 15, 2026",
-    "dateModified": "September 15, 2026",
+    "dateModified": "September 18, 2026",
     "readTime": "11 min read",
     "coverImage": "/images/subscribe-iptv-buyer-guide-cover.jpg",
     "image": "/images/subscribe-iptv-buyer-guide-cover.jpg",
