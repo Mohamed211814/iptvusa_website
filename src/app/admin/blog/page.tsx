@@ -155,7 +155,7 @@ export default function BlogAdminPage() {
     setReadTime(post.readTime);
     setCoverImage(post.coverImage || "/images/hero_streaming_preview.webp");
     setTags(Array.isArray(post.tags) ? post.tags.join(", ") : "");
-    setStatus(post.status);
+    setStatus(post.status || "published");
     setFeatured(Boolean(post.featured));
     setActiveTab("create");
     window.scrollTo({ top: 300, behavior: "smooth" });
