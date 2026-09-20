@@ -390,13 +390,22 @@ export default function PrivacyPolicyPage() {
             }}
           >
             <a
+              href={siteConfig.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+            >
+              <Zap size={16} />
+              WhatsApp ({siteConfig.whatsappRaw})
+            </a>
+            <a
               href={siteConfig.links.telegram}
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="btn btn-telegram"
             >
               <Zap size={16} />
-              Contact Privacy Team on Telegram
+              Telegram Support (@{siteConfig.telegramUsername})
             </a>
             <Link href="/contact" className="btn btn-secondary">
               <Mail size={16} />

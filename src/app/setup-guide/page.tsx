@@ -232,15 +232,26 @@ export default function SetupGuidePage() {
             </p>
           </div>
 
-          <a
-            href={siteConfig.links.telegram}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="btn btn-telegram"
-          >
-            <Zap size={18} />
-            Chat with Setup Specialist on Telegram
-          </a>
+          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+            <a
+              href={siteConfig.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+            >
+              <Zap size={18} />
+              Setup Help on WhatsApp ({siteConfig.whatsappRaw})
+            </a>
+            <a
+              href={siteConfig.links.telegram}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="btn btn-telegram"
+            >
+              <Zap size={18} />
+              Telegram (@{siteConfig.telegramUsername})
+            </a>
+          </div>
         </div>
       </div>
     </div>

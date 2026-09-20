@@ -85,7 +85,50 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid-2" style={{ gap: "20px" }}>
+          <div className="grid-3" style={{ gap: "20px" }}>
+            {/* WhatsApp Card */}
+            <div
+              className="card-glass"
+              style={{
+                textAlign: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                padding: "24px 20px",
+              }}
+            >
+              <div
+                style={{
+                  width: "52px",
+                  height: "52px",
+                  borderRadius: "50%",
+                  background: "rgba(37, 211, 102, 0.15)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#25d366",
+                  marginBottom: "14px",
+                }}
+              >
+                <Zap size={26} />
+              </div>
+              <h4 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#000000", marginBottom: "6px" }}>
+                WhatsApp Direct Order & Help
+              </h4>
+              <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "18px", flex: 1 }}>
+                Instant activation, order checkout, and live human support on WhatsApp.
+              </p>
+              <a
+                href={siteConfig.links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
+                style={{ width: "100%", justifyContent: "center" }}
+              >
+                Chat on WhatsApp ({siteConfig.whatsappRaw})
+              </a>
+            </div>
+
             {/* Telegram Card */}
             <div
               className="card-glass"
@@ -125,7 +168,7 @@ export default function ContactPage() {
                 className="btn btn-telegram"
                 style={{ width: "100%", justifyContent: "center" }}
               >
-                Chat on Telegram (@contactexe)
+                Chat on Telegram (@{siteConfig.telegramUsername})
               </a>
             </div>
 

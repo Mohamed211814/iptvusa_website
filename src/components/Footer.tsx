@@ -131,9 +131,19 @@ export const Footer: React.FC = () => {
               24/7 Support
             </h3>
             <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "16px" }}>
-              Contact our live support team directly on Telegram or Email for immediate activation.
+              Contact our live support team directly on WhatsApp, Telegram or Email for immediate activation.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              <a
+                href={siteConfig.links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
+                style={{ padding: "9px 16px", fontSize: "0.85rem", width: "fit-content" }}
+              >
+                <Zap size={16} />
+                WhatsApp ({siteConfig.whatsappRaw})
+              </a>
               <a
                 href={siteConfig.links.telegram}
                 target="_blank"

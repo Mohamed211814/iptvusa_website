@@ -210,6 +210,8 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ isH1 = false }) 
                 {/* Order Now Button */}
                 <a
                   href={plan.checkoutUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`btn ${config.btnClass}`}
                   style={{
                     width: "100%",
@@ -222,7 +224,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ isH1 = false }) 
                   }}
                 >
                   <Zap size={16} />
-                  <span>Order Now</span>
+                  <span>Order Now on WhatsApp</span>
                 </a>
               </div>
             );

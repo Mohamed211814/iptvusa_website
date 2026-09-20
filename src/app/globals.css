@@ -244,6 +244,17 @@ button {
   transform: translateY(-2px);
 }
 
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+}
+
 /* Glass & Clean Light Cards */
 .card-glass {
   background: #ffffff;

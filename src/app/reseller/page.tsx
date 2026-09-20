@@ -161,8 +161,18 @@ export default function ResellerPage() {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "auto" }}>
+                <a
+                  href={`https://wa.me/212779395271?text=${encodeURIComponent(`Hello, I want to order the IPTV Reseller Panel - ${tier.name} (${tier.credits} for ${tier.price})`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-whatsapp"
+                  style={{ width: "100%", justifyContent: "center", fontSize: "0.85rem", padding: "10px" }}
+                >
+                  <Zap size={15} />
+                  Order on WhatsApp (0779395271)
+                </a>
                 <EmailSupportButton
-                  variant={tier.isPopular ? "green" : "primary"}
+                  variant={tier.isPopular ? "green" : "secondary"}
                   label="Order Panel via Email"
                   subject={`Order IPTV USA Reseller Panel - ${tier.name} (${tier.credits})`}
                   body={`Hello IPTV USA Reseller Desk,\n\nI want to order the ${tier.name} package (${tier.credits} at ${tier.price}).\n\nPlease provide payment details and panel setup instructions.`}

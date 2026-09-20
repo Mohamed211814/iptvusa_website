@@ -8,10 +8,14 @@ export const siteConfig = {
   domain: "www.iptvusa-pro.com",
   ogImage: "https://www.iptvusa-pro.com/og-image.png",
   supportEmail: "iptvusapro@gmail.com",
-  supportPhone: "+1 (555) 349 8822",
+  supportPhone: "+212 779-395271",
+  whatsappNumber: "+212779395271",
+  whatsappDisplay: "+212 779 395 271",
+  whatsappRaw: "0779395271",
   telegramUsername: "contactexe",
   links: {
     telegram: "https://t.me/contactexe",
+    whatsapp: "https://wa.me/212779395271",
   },
   googleSiteVerification: "9hVbuN1WeHJ3wZbAurex67uyWuD45Q98vnrzJTXLueg",
   keywords: [

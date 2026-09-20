@@ -256,11 +256,13 @@ export const OrderModal: React.FC<OrderModalProps> = ({
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               <a
                 href={currentPlan.checkoutUrl}
-                className="btn btn-green"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
                 style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "0.95rem", textDecoration: "none" }}
               >
                 <Zap size={18} />
-                Order Now - Instant Online Checkout
+                Order Now via WhatsApp ({siteConfig.whatsappRaw})
               </a>
 
               <a
