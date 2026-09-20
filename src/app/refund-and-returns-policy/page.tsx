@@ -431,6 +431,15 @@ export default function RefundPolicyPage() {
             }}
           >
             <a
+              href={siteConfig.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+            >
+              <Zap size={16} />
+              WhatsApp ({siteConfig.whatsappRaw})
+            </a>
+            <a
               href={siteConfig.links.telegram}
               target="_blank"
               rel="noopener noreferrer nofollow"
